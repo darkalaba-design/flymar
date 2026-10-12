@@ -1,0 +1,267 @@
+export type Locale = "en" | "ru";
+export const content = {
+  en: {
+    nav: ["Our vessels", "Technology", "Applications", "About"],
+    contact: "Get in touch",
+    explore: "Explore the F8",
+    eyebrow: "ELECTRIC. INTELLIGENT. ELEVATED.",
+    hero: ["A new perspective.", "Above the water."],
+    intro:
+      "Meet the electric hydrofoil that moves your business forward. Quietly. Intelligently. Effortlessly.",
+    discover: "Discover a different way to move",
+    heroCaptions: [
+      "A new horizon for urban mobility",
+      "Less resistance. More possibility.",
+      "Designed for the cities of tomorrow",
+    ],
+    manifestoLabel: "01 / A BETTER WAY FORWARD",
+    manifesto: ["More than a boat.", "A smarter way to move."],
+    manifestoBody:
+      "We bring electric propulsion, hydrofoil engineering and intelligent navigation together. For better journeys. And better business.",
+    benefits: [
+      {
+        title: "Intelligent by nature.",
+        text: "A digital skipper, always on duty. Less workload for your crew. More confidence on every journey.",
+        tag: "AUTONOMY FIRST",
+      },
+      {
+        title: "Quietly extraordinary.",
+        text: "Rise above the waves. Leave noise, fumes and vibration behind. Give your passengers a new perspective.",
+        tag: "PASSENGER COMFORT",
+      },
+      {
+        title: "Better for your business.",
+        text: "Up to 50% lower annual operating costs. Electric propulsion with virtually no engine maintenance.",
+        tag: "OPERATIONAL EFFICIENCY",
+      },
+    ],
+    vesselLabel: "02 / MEET YOUR NEXT VESSEL",
+    vesselHeading: "Small footprint.\nNew possibilities.",
+    vesselBody:
+      "Purpose-built for passenger transport. The F8 combines the ease of an electric boat with the smooth flight of a hydrofoil.",
+    passengers: "Passengers",
+    speed: "Cruise speed",
+    range: "Range",
+    knots: "knots",
+    nm: "NM",
+    details: "Discover the details",
+    gallery: "Explore the interior",
+    vesselNote: "Range depends on load and operating conditions.",
+    techLabel: "03 / AUTONOMY FIRST",
+    techHeading: "Intelligence comes\nas standard.",
+    techBody:
+      "Built to think ahead. Our integrated technology brings navigation, electric propulsion and vessel control into one connected experience.",
+    techLink: "Inside the technology",
+    techTags: [
+      "Intelligent navigation",
+      "Direct electric drive",
+      "Connected by design",
+    ],
+    applicationsLabel: "05 / MADE FOR YOUR WORLD",
+    applicationsHeading: "New routes.\nBetter experiences.",
+    applicationsIntro:
+      "From the everyday commute to an unforgettable arrival. Make the water work for you.",
+    applications: [
+      {
+        title: "The city. Reconnected.",
+        tag: "URBAN & REGIONAL TRANSPORT",
+        text: "Connect communities with quiet, efficient passenger routes. Turn waterways into a better way across the city.",
+      },
+      {
+        title: "Every arrival, an experience.",
+        tag: "TOURISM & RESORT MOBILITY",
+        text: "A quiet escape from the ordinary. Bring effortless electric journeys to waterfront destinations.",
+      },
+    ],
+    discuss: "Discuss your route",
+    aboutLabel: "04 / THE FLYMAR PHILOSOPHY",
+    aboutHeading: "The future of water mobility\nshould feel effortless.",
+    aboutText:
+      "We see waterways as an opportunity to move differently. FLYMAR brings intelligent systems and electric hydrofoil technology together — with the operator and passenger at the heart of every decision.",
+    ctaLabel: "YOUR NEXT CHAPTER STARTS HERE",
+    ctaHeading: ["Let’s move", "forward."],
+    ctaText:
+      "A route in mind? A new possibility on the horizon? Let’s explore what FLYMAR can do for you.",
+    cta: "Register your interest",
+    footerTag: "A new perspective on water.",
+    rights: "© 2026 FLYMAR. All rights reserved.",
+    top: "Back to top",
+    close: "Close",
+    previous: "Previous image",
+    next: "Next image",
+    menu: "Open navigation",
+    formTitle: "A conversation.\nA new beginning.",
+    formIntro:
+      "Tell us a little about your plans. Let’s find the right way forward.",
+    name: "Your name",
+    email: "Work email",
+    company: "Company",
+    message: "Your route or project",
+    optional: "optional",
+    consent:
+      "I agree to the processing of the details I provide to respond to this enquiry.",
+    submit: "Send enquiry",
+    sending: "Sending…",
+    successTitle: "Thank you for your interest.",
+    successText:
+      "Your enquiry has been delivered. We look forward to exploring your project.",
+    unavailable:
+      "Enquiry delivery is not connected yet. Your details have not been sent. Please try again once the service is available.",
+    error: "We couldn’t deliver your enquiry. Please try again.",
+    techModalTitle: "Designed to work together.",
+    techModalIntro: "Three core technologies. One integrated vessel.",
+    techDetails: [
+      {
+        title: "A digital skipper on duty",
+        text: "Intelligent navigation supports the skipper day and night, reducing workload and helping the crew stay focused.",
+      },
+      {
+        title: "Less resistance. Smoother journeys.",
+        text: "Hydrofoils lift the hull above the water, reducing drag and making the passenger experience quieter and more comfortable.",
+      },
+      {
+        title: "Direct electric propulsion",
+        text: "A direct-drive electric engine reduces maintenance needs. Connected systems make the vessel easier to integrate into your operation.",
+      },
+    ],
+    specsTitle: "Meet the FLYMAR F8.",
+    specsIntro: "Designed around the way people move.",
+    specsFeatures: [
+      "Front and rear access",
+      "Steering wheel and joystick control",
+      "Dedicated luggage space",
+      "Electric propulsion",
+      "Hydrofoil and displacement modes",
+    ],
+    interiorTitle: "Space to enjoy the journey.",
+  },
+  ru: {
+    nav: ["Наши суда", "Технологии", "Применение", "О компании"],
+    contact: "Связаться",
+    explore: "Открыть F8",
+    eyebrow: "ЭЛЕКТРИЧЕСТВО. ИНТЕЛЛЕКТ. СВОБОДА.",
+    hero: ["Новый взгляд.", "Выше волн."],
+    intro:
+      "Электрическое судно на подводных крыльях, которое движет ваш бизнес вперёд. Тихо. Умно. Легко.",
+    discover: "Откройте новый способ двигаться",
+    heroCaptions: [
+      "Новый горизонт городской мобильности",
+      "Меньше сопротивления. Больше возможностей.",
+      "Для городов завтрашнего дня",
+    ],
+    manifestoLabel: "01 / НОВОЕ НАПРАВЛЕНИЕ",
+    manifesto: ["Больше, чем судно.", "Умнее каждый маршрут."],
+    manifestoBody:
+      "Мы объединяем электрическую тягу, подводные крылья и интеллектуальную навигацию. Для комфорта пассажиров. Для эффективности бизнеса.",
+    benefits: [
+      {
+        title: "Интеллект в основе.",
+        text: "Цифровой шкипер всегда на посту. Меньше нагрузки на экипаж. Больше уверенности в каждом рейсе.",
+        tag: "AUTONOMY FIRST",
+      },
+      {
+        title: "Тишина впечатляет.",
+        text: "Поднимитесь над волнами. Оставьте шум, выхлопы и вибрации позади. Откройте пассажирам новые ощущения.",
+        tag: "КОМФОРТ ПАССАЖИРОВ",
+      },
+      {
+        title: "Выгодно для бизнеса.",
+        text: "До 50% ниже ежегодные эксплуатационные расходы. Электродвигатель практически не требует обслуживания.",
+        tag: "ЭФФЕКТИВНОСТЬ",
+      },
+    ],
+    vesselLabel: "02 / ВАШЕ НОВОЕ СУДНО",
+    vesselHeading: "Компактная форма.\nБольшие возможности.",
+    vesselBody:
+      "Создан для пассажирских перевозок. F8 сочетает удобство электрического судна и плавный полёт на подводных крыльях.",
+    passengers: "Пассажиров",
+    speed: "Крейсерская скорость",
+    range: "Запас хода",
+    knots: "узла",
+    nm: "мор. миль",
+    details: "В деталях",
+    gallery: "Заглянуть в салон",
+    vesselNote: "Запас хода зависит от загрузки и условий эксплуатации.",
+    techLabel: "03 / AUTONOMY FIRST",
+    techHeading: "Интеллект —\nв базовой комплектации.",
+    techBody:
+      "На шаг впереди. Интегрированные технологии объединяют навигацию, электрическую тягу и управление судном в единую систему.",
+    techLink: "Как это устроено",
+    techTags: ["Умная навигация", "Прямой электропривод", "Всегда на связи"],
+    applicationsLabel: "05 / СОЗДАН ДЛЯ ВАШИХ ЗАДАЧ",
+    applicationsHeading: "Новые маршруты.\nНовые впечатления.",
+    applicationsIntro:
+      "От ежедневной поездки до незабываемого путешествия. Откройте потенциал водных маршрутов.",
+    applications: [
+      {
+        title: "Город становится ближе.",
+        tag: "ГОРОДСКИЕ И РЕГИОНАЛЬНЫЕ ПЕРЕВОЗКИ",
+        text: "Соединяйте районы тихими и эффективными пассажирскими маршрутами. Превратите водные пути в удобный городской транспорт.",
+      },
+      {
+        title: "Впечатления с первой минуты.",
+        tag: "ТУРИЗМ И КУРОРТЫ",
+        text: "Тихое путешествие за пределы привычного. Комфортные электрические трансферы к вашим любимым местам у воды.",
+      },
+    ],
+    discuss: "Обсудить маршрут",
+    aboutLabel: "04 / ФИЛОСОФИЯ FLYMAR",
+    aboutHeading: "Будущее водного транспорта —\nв ощущении лёгкости.",
+    aboutText:
+      "Водные пути дают нам возможность двигаться по-новому. FLYMAR объединяет интеллектуальные системы и электрические суда на подводных крыльях. В центре каждого решения — оператор и пассажир.",
+    ctaLabel: "НОВАЯ ГЛАВА НАЧИНАЕТСЯ ЗДЕСЬ",
+    ctaHeading: ["Двигаться", "вперёд."],
+    ctaText:
+      "Планируете маршрут? Видите новые возможности? Давайте обсудим, что FLYMAR может сделать для вас.",
+    cta: "Обсудить проект",
+    footerTag: "Новый взгляд на движение по воде.",
+    rights: "© 2026 FLYMAR. Все права защищены.",
+    top: "Наверх",
+    close: "Закрыть",
+    previous: "Предыдущее изображение",
+    next: "Следующее изображение",
+    menu: "Открыть меню",
+    formTitle: "Один разговор.\nНовые возможности.",
+    formIntro: "Расскажите о ваших планах. Вместе найдём лучшее решение.",
+    name: "Ваше имя",
+    email: "Рабочий email",
+    company: "Компания",
+    message: "Ваш маршрут или проект",
+    optional: "необязательно",
+    consent:
+      "Я согласен на обработку указанных данных для ответа на мой запрос.",
+    submit: "Отправить запрос",
+    sending: "Отправляем…",
+    successTitle: "Спасибо за интерес.",
+    successText: "Ваш запрос доставлен. Будем рады обсудить ваш проект.",
+    unavailable:
+      "Отправка заявок пока не подключена. Ваши данные не отправлены. Попробуйте, когда сервис станет доступен.",
+    error: "Не удалось доставить запрос. Пожалуйста, попробуйте ещё раз.",
+    techModalTitle: "Созданы работать вместе.",
+    techModalIntro: "Три ключевые технологии. Единая система.",
+    techDetails: [
+      {
+        title: "Цифровой шкипер на посту",
+        text: "Интеллектуальная навигация поддерживает шкипера днём и ночью, снижая нагрузку и помогая экипажу сосредоточиться на главном.",
+      },
+      {
+        title: "Меньше сопротивления. Больше комфорта.",
+        text: "Подводные крылья поднимают корпус над водой, снижая сопротивление и делая поездку тише и комфортнее.",
+      },
+      {
+        title: "Прямая электрическая тяга",
+        text: "Электродвигатель с прямым приводом требует минимального обслуживания. Подключённые системы упрощают интеграцию судна в вашу работу.",
+      },
+    ],
+    specsTitle: "Знакомьтесь: FLYMAR F8.",
+    specsIntro: "Продуман для движения людей.",
+    specsFeatures: [
+      "Входы спереди и сзади",
+      "Управление рулём и джойстиком",
+      "Место для багажа",
+      "Электрическая тяга",
+      "Движение на крыльях и в водоизмещающем режиме",
+    ],
+    interiorTitle: "Место для новых впечатлений.",
+  },
+};
