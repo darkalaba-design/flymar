@@ -79,7 +79,7 @@ export function FleetCarousel({
               >
                 <div className="fleet-image">
                   <Photo
-                    src={id === "f8" ? "leisure" : "f11-profile"}
+                    src={id === "f8" ? "leisure" : "f11-interior"}
                     alt={`FLYMAR ${id.toUpperCase()}`}
                   />
                   <span className="fleet-card-index">

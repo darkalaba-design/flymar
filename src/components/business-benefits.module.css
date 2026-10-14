@@ -61,10 +61,11 @@
   line-height: var(--fm-leading-1p8);
   color: var(--fm-tone-61716c);
 }
-.economics {
+.section.economics {
   --benefit-card: var(--fm-tone-e8ede6);
   background: var(--fm-tone-f6f5ef);
-  padding-top: 0;
+  padding-top: var(--fm-space-55);
+  padding-bottom: var(--fm-space-55);
 }
 @media (max-width: 960px) {
   .grid {
