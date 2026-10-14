@@ -73,7 +73,7 @@ export const content = {
         text: "A quiet escape from the ordinary. Bring effortless electric journeys to waterfront destinations.",
       },
     ],
-    discuss: "Discuss your route",
+    discuss: "Get in touch",
     aboutLabel: "04 / THE FLYMAR PHILOSOPHY",
     aboutHeading: "The future of water mobility\nshould feel effortless.",
     aboutText:
@@ -204,7 +204,7 @@ export const content = {
         text: "Тихое путешествие за пределы привычного. Комфортные электрические трансферы к вашим любимым местам у воды.",
       },
     ],
-    discuss: "Обсудить маршрут",
+    discuss: "Связаться",
     aboutLabel: "04 / ФИЛОСОФИЯ FLYMAR",
     aboutHeading: "Будущее водного транспорта —\nв ощущении лёгкости.",
     aboutText:

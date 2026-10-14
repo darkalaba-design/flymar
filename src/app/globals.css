@@ -878,10 +878,9 @@ h1 span {
 .modal-close:hover {
   background: var(--fm-tone-d5e0d8);
 }
-.modal-close span {
-  font-size: var(--fm-font-25);
-  font-weight: 300;
-  margin-top: calc(-1 * var(--fm-space-2));
+.modal-close svg {
+  display: block;
+  flex-shrink: 0;
 }
 .modal-copy {
   padding: var(--fm-space-55);
