@@ -42,7 +42,8 @@ export function Home({
   const identity = model ? positioning[locale][model] : null;
   const homePath = locale === "ru" ? "/ru" : "/";
   const navigation = [
-    { label: t.nav[0], href: `${model || page ? homePath : ""}#vessel` },
+    { label: "FLYMAR F8", href: modelHref("f8", locale), model: "f8" },
+    { label: "FLYMAR F11", href: modelHref("f11", locale), model: "f11" },
     {
       label: companyCopy[locale].labels.technology,
       href: companyHref("technology", locale),
@@ -234,7 +235,7 @@ export function Home({
             <Link
               key={item.label}
               href={item.href}
-              aria-current={page && page === item.page ? "page" : undefined}
+              aria-current={(page && page === item.page) || (model && model === item.model) ? "page" : undefined}
             >
               {item.label}
             </Link>
@@ -298,7 +299,7 @@ export function Home({
               <Link
                 key={item.label}
                 href={item.href}
-                aria-current={page && page === item.page ? "page" : undefined}
+                aria-current={(page && page === item.page) || (model && model === item.model) ? "page" : undefined}
                 onClick={() => setMenu(false)}
               >
                 <span>0{i + 1}</span>
