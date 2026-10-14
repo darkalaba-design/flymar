@@ -756,6 +756,9 @@ h1 span {
 .about-copy h2 {
   font-size: var(--fm-font-fluid-5);
 }
+.about-copy h2 + p {
+  margin-top: var(--fm-space-28);
+}
 .about-copy > p:last-child {
   max-width: 430px;
   font-size: var(--fm-font-15);
