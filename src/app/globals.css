@@ -945,10 +945,10 @@ form textarea {
   display: block;
   width: 100%;
   border: 0;
-  border-bottom: 1px solid var(--fm-tone-9aaa9e);
-  background: transparent;
-  border-radius: 0;
-  padding: var(--fm-space-9) 0;
+  background: var(--fm-input-background);
+  border-radius: var(--fm-radius);
+  padding: var(--fm-input-padding-y) var(--fm-input-padding-x);
+  margin-top: var(--fm-space-8);
   color: var(--ink);
   font: inherit;
   font-size: var(--fm-font-16);
