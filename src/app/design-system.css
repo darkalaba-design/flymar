@@ -1,0 +1,100 @@
+/* Shared component contracts used by the site and its live UI Kit. */
+.header.header-solid {
+  background: var(--fm-paper);
+  color: var(--fm-ink);
+  border-bottom-color: var(--line);
+}
+.header.header-solid .brand img {
+  filter: none;
+}
+.header.header-solid .header-cta {
+  border-color: var(--line);
+}
+.header.header-solid .menu-toggle span {
+  background: currentColor;
+}
+html[data-motion="0"] {
+  scroll-behavior: auto;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fm-heading-font);
+}
+.button,
+.header-cta {
+  min-height: var(--fm-button-height);
+  border-radius: var(--fm-radius);
+}
+.button:disabled {
+  cursor: not-allowed;
+  transform: none;
+}
+form input:not([type="checkbox"]),
+form textarea {
+  border-radius: var(--fm-radius);
+}
+.fleet-card,
+.mission-card,
+.company-capabilities article {
+  border-radius: var(--fm-card-radius);
+  overflow: hidden;
+}
+.application-image,
+.product-gallery-photo,
+.mission-photo {
+  border-radius: var(--fm-image-radius);
+  overflow: hidden;
+}
+.modal {
+  box-shadow: 0 30px 150px
+    rgb(from var(--fm-ink) r g b / calc(0.33 * var(--fm-shadow)));
+  border-radius: var(--fm-card-radius);
+}
+.theme-preview-banner {
+  position: fixed;
+  z-index: 9999;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  padding: 10px 16px;
+  background: #152c31;
+  color: #fff;
+  border: 1px solid #ffffff55;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #0003;
+  font:
+    13px/1.4 Arial,
+    sans-serif;
+}
+.theme-preview-banner a {
+  color: #fff;
+  text-decoration: underline;
+}
+.theme-preview-banner button {
+  color: #152c31;
+  background: #fff;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

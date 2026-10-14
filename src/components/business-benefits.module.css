@@ -1,0 +1,101 @@
+.section {
+  --benefit-card: var(--fm-tone-f0f1eb);
+  background: var(--fm-tone-fafaf6);
+}
+.heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: var(--fm-space-48);
+  margin-bottom: var(--fm-space-52);
+}
+.heading h2 {
+  font-size: var(--fm-font-fluid-43);
+  max-width: 520px;
+}
+.heading p {
+  font-size: var(--fm-font-17);
+  line-height: var(--fm-leading-1p75);
+  color: var(--fm-tone-61716c);
+  max-width: 560px;
+}
+.link {
+  margin-top: var(--fm-space-24);
+  text-align: left;
+  line-height: var(--fm-leading-1p5);
+}
+.link svg {
+  flex-shrink: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--fm-space-22);
+}
+.card {
+  background: var(--benefit-card);
+  border: 1px solid var(--fm-tone-152c310a);
+  border-radius: var(--fm-card-radius);
+  padding: clamp(var(--fm-space-26), 3vw, var(--fm-space-48));
+}
+.icon {
+  background: currentColor;
+  mask: var(--icon-url) left center / contain no-repeat;
+  display: block;
+  width: var(--fm-icon-width);
+  height: var(--fm-icon-height);
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: var(--fm-space-36);
+}
+.card h3 {
+  font-size: var(--fm-font-fluid-44);
+  font-weight: 400;
+  letter-spacing: var(--fm-tracking-neg0p04);
+  line-height: var(--fm-leading-1p15);
+  margin-bottom: var(--fm-space-20);
+  overflow-wrap: break-word;
+}
+.card p {
+  font-size: var(--fm-font-16);
+  line-height: var(--fm-leading-1p8);
+  color: var(--fm-tone-61716c);
+}
+.economics {
+  --benefit-card: var(--fm-tone-e8ede6);
+  background: var(--fm-tone-f6f5ef);
+  padding-top: 0;
+}
+@media (max-width: 960px) {
+  .grid {
+    gap: var(--fm-space-14);
+  }
+  .card {
+    padding: var(--fm-space-26) var(--fm-space-22);
+  }
+}
+@media (max-width: 760px) {
+  .heading {
+    grid-template-columns: 1fr;
+    gap: var(--fm-space-24);
+    margin-bottom: var(--fm-space-32);
+  }
+  .heading p {
+    font-size: var(--fm-font-16);
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--fm-space-16);
+  }
+  .card {
+    padding: var(--fm-space-30);
+  }
+  .card .icon {
+    width: var(--fm-icon-mobile-width);
+    height: var(--fm-icon-mobile-height);
+    margin-bottom: var(--fm-space-26);
+  }
+  .card h3 {
+    font-size: var(--fm-font-29);
+  }
+}

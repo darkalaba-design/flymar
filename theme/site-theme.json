@@ -1,0 +1,23 @@
+{
+  "ink": "#122e50",
+  "paper": "#ffffff",
+  "muted": "#718295",
+  "white": "#ffffff",
+  "accent": "#148aab",
+  "success": "#507b6b",
+  "danger": "#a84343",
+  "font": "sans",
+  "headingFont": "sans",
+  "bodyScale": 1,
+  "headingScale": 1,
+  "density": 1,
+  "tracking": 1,
+  "leading": 1,
+  "radius": 26,
+  "cardRadius": 20,
+  "imageRadius": 12,
+  "buttonHeight": 52,
+  "borderOpacity": 0.19,
+  "shadow": 1,
+  "motion": 1
+}

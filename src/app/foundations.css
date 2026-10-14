@@ -1,0 +1,785 @@
+/* Shared foundations. Palette, type and spacing aliases resolve from the live UI Kit controls. */
+:root,
+[data-flymar-theme] {
+  --fm-radius-round: 50%;
+  --fm-radius-pill: 999px;
+  --fm-icon-width: 72px;
+  --fm-icon-height: 64px;
+  --fm-icon-mobile-width: 64px;
+  --fm-icon-mobile-height: 56px;
+  --fm-ink: #152c31;
+  --fm-paper: #f3f3ed;
+  --fm-muted: #7b8582;
+  --fm-white: #ffffff;
+  --fm-accent: #56b4b1;
+  --fm-success: #507b6b;
+  --fm-danger: #a84343;
+  --fm-font: Arial, Helvetica, sans-serif;
+  --fm-heading-font: Arial, Helvetica, sans-serif;
+  --fm-body-scale: 1;
+  --fm-heading-scale: 1;
+  --fm-tracking: 1;
+  --fm-leading: 1;
+  --fm-density: 1;
+  --fm-radius: 2px;
+  --fm-card-radius: 5px;
+  --fm-image-radius: 0px;
+  --fm-button-height: 52px;
+  --fm-border-opacity: 0.19;
+  --fm-shadow: 1;
+  --fm-motion: 1;
+  --fm-tone-56b4b1: rgb(from var(--fm-accent) r g b / 1);
+  --fm-tone-b6d2c9: rgb(
+    from var(--fm-paper) calc(r + -61) calc(g + -33) calc(b + -36) / 1
+  );
+  --fm-tone-d4e1da: rgb(
+    from var(--fm-paper) calc(r + -31) calc(g + -18) calc(b + -19) / 1
+  );
+  --fm-tone-31565a: rgb(
+    from var(--fm-ink) calc(r + 28) calc(g + 42) calc(b + 41) / 1
+  );
+  --fm-tone-ffffff55: rgb(from var(--fm-white) r g b / 0.3333);
+  --fm-tone-ffffff25: rgb(from var(--fm-white) r g b / 0.1451);
+  --fm-tone-ffffff: rgb(from var(--fm-white) r g b / 1);
+  --fm-tone-ffffff26: rgb(from var(--fm-white) r g b / 0.149);
+  --fm-tone-122a2eed: rgb(
+    from var(--fm-ink) calc(r + -3) calc(g + -2) calc(b + -3) / 0.9294
+  );
+  --fm-tone-ffffff66: rgb(from var(--fm-white) r g b / 0.4);
+  --fm-tone-183038: rgb(
+    from var(--fm-ink) calc(r + 3) calc(g + 4) calc(b + 7) / 1
+  );
+  --fm-tone-05191f7d: rgb(
+    from var(--fm-ink) calc(r + -16) calc(g + -19) calc(b + -18) / 0.4902
+  );
+  --fm-tone-05191f17: rgb(
+    from var(--fm-ink) calc(r + -16) calc(g + -19) calc(b + -18) / 0.0902
+  );
+  --fm-tone-0619215c: rgb(
+    from var(--fm-ink) calc(r + -15) calc(g + -19) calc(b + -16) / 0.3608
+  );
+  --fm-tone-0619217a: rgb(
+    from var(--fm-ink) calc(r + -15) calc(g + -19) calc(b + -16) / 0.4784
+  );
+  --fm-tone-c3dace: rgb(
+    from var(--fm-paper) calc(r + -48) calc(g + -25) calc(b + -31) / 1
+  );
+  --fm-tone-d7f0e212: rgb(
+    from var(--fm-paper) calc(r + -28) calc(g + -3) calc(b + -11) / 0.0706
+  );
+  --fm-tone-e8ece6: rgb(
+    from var(--fm-paper) calc(r + -11) calc(g + -7) calc(b + -7) / 1
+  );
+  --fm-tone-f0f0e9: rgb(
+    from var(--fm-paper) calc(r + -3) calc(g + -3) calc(b + -4) / 1
+  );
+  --fm-tone-ffffff45: rgb(from var(--fm-white) r g b / 0.2706);
+  --fm-tone-ffffff70: rgb(from var(--fm-white) r g b / 0.4392);
+  --fm-tone-62716d: rgb(
+    from var(--fm-muted) calc(r + -25) calc(g + -20) calc(b + -21) / 1
+  );
+  --fm-tone-46625d: rgb(
+    from var(--fm-ink) calc(r + 49) calc(g + 54) calc(b + 44) / 1
+  );
+  --fm-tone-e8ebe5: rgb(
+    from var(--fm-paper) calc(r + -11) calc(g + -8) calc(b + -8) / 1
+  );
+  --fm-tone-8d9c94: rgb(
+    from var(--fm-muted) calc(r + 18) calc(g + 23) calc(b + 18) / 1
+  );
+  --fm-tone-a3afa6: rgb(
+    from var(--fm-muted) calc(r + 40) calc(g + 42) calc(b + 36) / 1
+  );
+  --fm-tone-24292b: rgb(
+    from var(--fm-ink) calc(r + 15) calc(g + -3) calc(b + -6) / 1
+  );
+  --fm-tone-101e25a6: rgb(
+    from var(--fm-ink) calc(r + -5) calc(g + -14) calc(b + -12) / 0.651
+  );
+  --fm-tone-ffffff0b: rgb(from var(--fm-white) r g b / 0.0431);
+  --fm-tone-596c64: rgb(
+    from var(--fm-muted) calc(r + -34) calc(g + -25) calc(b + -30) / 1
+  );
+  --fm-tone-68796f: rgb(
+    from var(--fm-muted) calc(r + -19) calc(g + -12) calc(b + -19) / 1
+  );
+  --fm-tone-748078: rgb(
+    from var(--fm-muted) calc(r + -7) calc(g + -5) calc(b + -10) / 1
+  );
+  --fm-tone-0e232ad9: rgb(
+    from var(--fm-ink) calc(r + -7) calc(g + -9) calc(b + -7) / 0.851
+  );
+  --fm-tone-67736d: rgb(
+    from var(--fm-muted) calc(r + -20) calc(g + -18) calc(b + -21) / 1
+  );
+  --fm-tone-8b968f: rgb(
+    from var(--fm-muted) calc(r + 16) calc(g + 17) calc(b + 13) / 1
+  );
+  --fm-tone-f8f8f3: rgb(
+    from var(--fm-paper) calc(r + 5) calc(g + 5) calc(b + 6) / 1
+  );
+  --fm-tone-142c3280: rgb(
+    from var(--fm-ink) calc(r + -1) g calc(b + 1) / 0.502
+  );
+  --fm-tone-6f7c73: rgb(
+    from var(--fm-muted) calc(r + -12) calc(g + -9) calc(b + -15) / 1
+  );
+  --fm-tone-082931c9: rgb(
+    from var(--fm-ink) calc(r + -13) calc(g + -3) b / 0.7882
+  );
+  --fm-tone-08293110: rgb(
+    from var(--fm-ink) calc(r + -13) calc(g + -3) b / 0.0627
+  );
+  --fm-tone-e0e6e1: rgb(
+    from var(--fm-paper) calc(r + -19) calc(g + -13) calc(b + -12) / 1
+  );
+  --fm-tone-142f33: rgb(
+    from var(--fm-ink) calc(r + -1) calc(g + 3) calc(b + 2) / 1
+  );
+  --fm-tone-9aafaa: rgb(
+    from var(--fm-muted) calc(r + 31) calc(g + 42) calc(b + 40) / 1
+  );
+  --fm-tone-9bb5ab: rgb(
+    from var(--fm-muted) calc(r + 32) calc(g + 48) calc(b + 41) / 1
+  );
+  --fm-tone-bdcdc7: rgb(
+    from var(--fm-paper) calc(r + -54) calc(g + -38) calc(b + -38) / 1
+  );
+  --fm-tone-ffffff29: rgb(from var(--fm-white) r g b / 0.1608);
+  --fm-tone-b6c8c0: rgb(
+    from var(--fm-paper) calc(r + -61) calc(g + -43) calc(b + -45) / 1
+  );
+  --fm-tone-ffffff20: rgb(from var(--fm-white) r g b / 0.1255);
+  --fm-tone-90aaa2: rgb(
+    from var(--fm-muted) calc(r + 21) calc(g + 37) calc(b + 32) / 1
+  );
+  --fm-tone-00131955: rgb(
+    from var(--fm-ink) calc(r + -21) calc(g + -25) calc(b + -24) / 0.3333
+  );
+  --fm-tone-071c28a8: rgb(
+    from var(--fm-ink) calc(r + -14) calc(g + -16) calc(b + -9) / 0.6588
+  );
+  --fm-tone-75877d55: rgb(
+    from var(--fm-muted) calc(r + -6) calc(g + 2) calc(b + -5) / 0.3333
+  );
+  --fm-tone-f3f3ede6: rgb(from var(--fm-paper) r g b / 0.902);
+  --fm-tone-d5e0d8: rgb(
+    from var(--fm-paper) calc(r + -30) calc(g + -19) calc(b + -21) / 1
+  );
+  --fm-tone-6b7a72: rgb(
+    from var(--fm-muted) calc(r + -16) calc(g + -11) calc(b + -16) / 1
+  );
+  --fm-tone-122c35bd: rgb(
+    from var(--fm-ink) calc(r + -3) g calc(b + 4) / 0.7412
+  );
+  --fm-tone-9aaa9e: rgb(
+    from var(--fm-muted) calc(r + 31) calc(g + 37) calc(b + 28) / 1
+  );
+  --fm-tone-8a948e: rgb(
+    from var(--fm-muted) calc(r + 15) calc(g + 15) calc(b + 12) / 1
+  );
+  --fm-tone-6f7d74: rgb(
+    from var(--fm-muted) calc(r + -12) calc(g + -8) calc(b + -14) / 1
+  );
+  --fm-tone-e9dfd2: rgb(
+    from var(--fm-paper) calc(r + -10) calc(g + -20) calc(b + -27) / 1
+  );
+  --fm-tone-734a30: rgb(
+    from var(--fm-danger) calc(r + -53) calc(g + 7) calc(b + -19) / 1
+  );
+  --fm-tone-e5e7e1: rgb(
+    from var(--fm-paper) calc(r + -14) calc(g + -12) calc(b + -12) / 1
+  );
+  --fm-tone-222a2c: rgb(
+    from var(--fm-ink) calc(r + 13) calc(g + -2) calc(b + -5) / 1
+  );
+  --fm-tone-142f3344: rgb(
+    from var(--fm-ink) calc(r + -1) calc(g + 3) calc(b + 2) / 0.2667
+  );
+  --fm-tone-ffffff22: rgb(from var(--fm-white) r g b / 0.1333);
+  --fm-tone-99b2a8: rgb(
+    from var(--fm-muted) calc(r + 30) calc(g + 45) calc(b + 38) / 1
+  );
+  --fm-tone-0a283956: rgb(
+    from var(--fm-ink) calc(r + -11) calc(g + -4) calc(b + 8) / 0.3373
+  );
+  --fm-tone-0a283912: rgb(
+    from var(--fm-ink) calc(r + -11) calc(g + -4) calc(b + 8) / 0.0706
+  );
+  --fm-tone-0a283970: rgb(
+    from var(--fm-ink) calc(r + -11) calc(g + -4) calc(b + 8) / 0.4392
+  );
+  --fm-tone-0a28394d: rgb(
+    from var(--fm-ink) calc(r + -11) calc(g + -4) calc(b + 8) / 0.302
+  );
+  --fm-tone-0b2934cc: rgb(
+    from var(--fm-ink) calc(r + -10) calc(g + -3) calc(b + 3) / 0.8
+  );
+  --fm-tone-0b293422: rgb(
+    from var(--fm-ink) calc(r + -10) calc(g + -3) calc(b + 3) / 0.1333
+  );
+  --fm-font-12: calc(12px * var(--fm-body-scale));
+  --fm-font-fluid-1: calc(clamp(36px, 4.2vw, 70px) * var(--fm-heading-scale));
+  --fm-font-14: calc(14px * var(--fm-body-scale));
+  --fm-font-13: calc(13px * var(--fm-body-scale));
+  --fm-font-11: calc(11px * var(--fm-body-scale));
+  --fm-font-fluid-2: calc(clamp(56px, 6.4vw, 112px) * var(--fm-heading-scale));
+  --fm-font-15: calc(15px * var(--fm-body-scale));
+  --fm-font-36: calc(36px * var(--fm-heading-scale));
+  --fm-font-19: calc(19px * var(--fm-body-scale));
+  --fm-font-25: calc(25px * var(--fm-heading-scale));
+  --fm-font-48: calc(48px * var(--fm-heading-scale));
+  --fm-font-fluid-3: calc(clamp(120px, 23vw, 330px) * var(--fm-heading-scale));
+  --fm-font-54: calc(54px * var(--fm-heading-scale));
+  --fm-font-fluid-4: calc(clamp(35px, 3.5vw, 56px) * var(--fm-heading-scale));
+  --fm-font-20: calc(20px * var(--fm-body-scale));
+  --fm-font-30: calc(30px * var(--fm-heading-scale));
+  --fm-font-fluid-5: calc(clamp(35px, 4vw, 62px) * var(--fm-heading-scale));
+  --fm-font-fluid-6: calc(clamp(70px, 10vw, 165px) * var(--fm-heading-scale));
+  --fm-font-44: calc(44px * var(--fm-heading-scale));
+  --fm-font-35: calc(35px * var(--fm-heading-scale));
+  --fm-font-37: calc(37px * var(--fm-heading-scale));
+  --fm-font-16: calc(16px * var(--fm-body-scale));
+  --fm-font-24: calc(24px * var(--fm-heading-scale));
+  --fm-font-32: calc(32px * var(--fm-heading-scale));
+  --fm-font-26: calc(26px * var(--fm-heading-scale));
+  --fm-font-fluid-7: calc(clamp(46px, 9.3vw, 70px) * var(--fm-heading-scale));
+  --fm-font-28: calc(28px * var(--fm-heading-scale));
+  --fm-font-85: calc(85px * var(--fm-heading-scale));
+  --fm-space-100: calc(100px * var(--fm-density));
+  --fm-space-110: calc(110px * var(--fm-density));
+  --fm-space-36: calc(36px * var(--fm-density));
+  --fm-space-22: calc(22px * var(--fm-density));
+  --fm-space-42: calc(42px * var(--fm-density));
+  --fm-space-35: calc(35px * var(--fm-density));
+  --fm-space-10: calc(10px * var(--fm-density));
+  --fm-space-12: calc(12px * var(--fm-density));
+  --fm-space-32: calc(32px * var(--fm-density));
+  --fm-space-34: calc(34px * var(--fm-density));
+  --fm-space-28: calc(28px * var(--fm-density));
+  --fm-space-8: calc(8px * var(--fm-density));
+  --fm-space-11: calc(11px * var(--fm-density));
+  --fm-space-16: calc(16px * var(--fm-density));
+  --fm-space-158: calc(158px * var(--fm-density));
+  --fm-space-230: calc(230px * var(--fm-density));
+  --fm-space-170: calc(170px * var(--fm-density));
+  --fm-space-27: calc(27px * var(--fm-density));
+  --fm-space-30: calc(30px * var(--fm-density));
+  --fm-space-29: calc(29px * var(--fm-density));
+  --fm-space-20: calc(20px * var(--fm-density));
+  --fm-space-14: calc(14px * var(--fm-density));
+  --fm-space-15: calc(15px * var(--fm-density));
+  --fm-space-60: calc(60px * var(--fm-density));
+  --fm-space-3: calc(3px * var(--fm-density));
+  --fm-space-45: calc(45px * var(--fm-density));
+  --fm-space-78: calc(78px * var(--fm-density));
+  --fm-space-90: calc(90px * var(--fm-density));
+  --fm-space-70: calc(70px * var(--fm-density));
+  --fm-space-6: calc(6px * var(--fm-density));
+  --fm-space-17: calc(17px * var(--fm-density));
+  --fm-space-80: calc(80px * var(--fm-density));
+  --fm-space-13: calc(13px * var(--fm-density));
+  --fm-space-24: calc(24px * var(--fm-density));
+  --fm-space-95: calc(95px * var(--fm-density));
+  --fm-space-25: calc(25px * var(--fm-density));
+  --fm-space-50: calc(50px * var(--fm-density));
+  --fm-space-40: calc(40px * var(--fm-density));
+  --fm-space-2: calc(2px * var(--fm-density));
+  --fm-space-55: calc(55px * var(--fm-density));
+  --fm-space-65: calc(65px * var(--fm-density));
+  --fm-space-9: calc(9px * var(--fm-density));
+  --fm-space-26: calc(26px * var(--fm-density));
+  --fm-space-85: calc(85px * var(--fm-density));
+  --fm-space-75: calc(75px * var(--fm-density));
+  --fm-space-7: calc(7px * var(--fm-density));
+  --fm-space-18: calc(18px * var(--fm-density));
+  --fm-space-155: calc(155px * var(--fm-density));
+  --fm-space-140: calc(140px * var(--fm-density));
+  --fm-space-62: calc(62px * var(--fm-density));
+  --fm-space-4: calc(4px * var(--fm-density));
+  --fm-space-5: calc(5px * var(--fm-density));
+  --fm-space-38: calc(38px * var(--fm-density));
+  --fm-space-23: calc(23px * var(--fm-density));
+  --fm-tracking-0p14: calc(0.14em * var(--fm-tracking));
+  --fm-tracking-neg0p055: calc(-0.055em * var(--fm-tracking));
+  --fm-tracking-neg0p035: calc(-0.035em * var(--fm-tracking));
+  --fm-tracking-0p06: calc(0.06em * var(--fm-tracking));
+  --fm-tracking-0p2: calc(0.2em * var(--fm-tracking));
+  --fm-tracking-neg0p06: calc(-0.06em * var(--fm-tracking));
+  --fm-tracking-0p07: calc(0.07em * var(--fm-tracking));
+  --fm-tracking-neg0p025: calc(-0.025em * var(--fm-tracking));
+  --fm-tracking-neg0p07: calc(-0.07em * var(--fm-tracking));
+  --fm-tracking-0p12: calc(0.12em * var(--fm-tracking));
+  --fm-tracking-neg0p065: calc(-0.065em * var(--fm-tracking));
+  --fm-tracking-0: calc(0em * var(--fm-tracking));
+  --fm-tracking-0p1: calc(0.1em * var(--fm-tracking));
+  --fm-tracking-neg0p04: calc(-0.04em * var(--fm-tracking));
+  --fm-tracking-0p13: calc(0.13em * var(--fm-tracking));
+  --fm-leading-1p5: calc(1.5 * var(--fm-leading));
+  --fm-leading-1p08: calc(1.08 * var(--fm-leading));
+  --fm-leading-1: calc(1 * var(--fm-leading));
+  --fm-leading-1p02: calc(1.02 * var(--fm-leading));
+  --fm-leading-1p75: calc(1.75 * var(--fm-leading));
+  --fm-leading-1p85: calc(1.85 * var(--fm-leading));
+  --fm-leading-1p8: calc(1.8 * var(--fm-leading));
+  --fm-leading-1p3: calc(1.3 * var(--fm-leading));
+  --fm-leading-1p6: calc(1.6 * var(--fm-leading));
+  --fm-leading-1p2: calc(1.2 * var(--fm-leading));
+  --fm-leading-1p9: calc(1.9 * var(--fm-leading));
+  --fm-leading-0p94: calc(0.94 * var(--fm-leading));
+  --fm-leading-1p7: calc(1.7 * var(--fm-leading));
+  --fm-leading-1p12: calc(1.12 * var(--fm-leading));
+  --fm-leading-1p15: calc(1.15 * var(--fm-leading));
+  --fm-leading-1p05: calc(1.05 * var(--fm-leading));
+  --fm-duration-0p25: calc(0.25s * var(--fm-motion));
+  --fm-duration-0p35: calc(0.35s * var(--fm-motion));
+  --fm-duration-0p9: calc(0.9s * var(--fm-motion));
+  --fm-tone-f3f3ed: rgb(from var(--fm-paper) r g b / 1);
+  --fm-tone-6b7972: rgb(
+    from var(--fm-muted) calc(r + -16) calc(g + -12) calc(b + -16) / 1
+  );
+  --fm-tone-718278: rgb(
+    from var(--fm-muted) calc(r + -10) calc(g + -3) calc(b + -10) / 1
+  );
+  --fm-tone-13252e: rgb(
+    from var(--fm-ink) calc(r + -2) calc(g + -7) calc(b + -3) / 1
+  );
+  --fm-tone-e2ebe5: rgb(
+    from var(--fm-paper) calc(r + -17) calc(g + -8) calc(b + -8) / 1
+  );
+  --fm-tone-73877970: rgb(
+    from var(--fm-muted) calc(r + -8) calc(g + 2) calc(b + -9) / 0.4392
+  );
+  --fm-tone-d2dbd3: rgb(
+    from var(--fm-paper) calc(r + -33) calc(g + -24) calc(b + -26) / 1
+  );
+  --fm-tone-9baaa14a: rgb(
+    from var(--fm-muted) calc(r + 32) calc(g + 37) calc(b + 31) / 0.2902
+  );
+  --fm-tone-7b8a81: rgb(from var(--fm-muted) r calc(g + 5) calc(b + -1) / 1);
+  --fm-tone-173b36: rgb(
+    from var(--fm-ink) calc(r + 2) calc(g + 15) calc(b + 5) / 1
+  );
+  --fm-tone-f6f7f1ed: rgb(
+    from var(--fm-paper) calc(r + 3) calc(g + 4) calc(b + 4) / 0.9294
+  );
+  --fm-tone-ffffffb3: rgb(from var(--fm-white) r g b / 0.702);
+  --fm-tone-0a242326: rgb(
+    from var(--fm-ink) calc(r + -11) calc(g + -8) calc(b + -14) / 0.149
+  );
+  --fm-tone-0a24233d: rgb(
+    from var(--fm-ink) calc(r + -11) calc(g + -8) calc(b + -14) / 0.2392
+  );
+  --fm-tone-7e8d84: rgb(
+    from var(--fm-muted) calc(r + 3) calc(g + 8) calc(b + 2) / 1
+  );
+  --fm-tone-f6f7f1c9: rgb(
+    from var(--fm-paper) calc(r + 3) calc(g + 4) calc(b + 4) / 0.7882
+  );
+  --fm-tone-f6f7f1: rgb(
+    from var(--fm-paper) calc(r + 3) calc(g + 4) calc(b + 4) / 1
+  );
+  --fm-tone-242a2d: rgb(
+    from var(--fm-ink) calc(r + 15) calc(g + -2) calc(b + -4) / 1
+  );
+  --fm-tone-eef0ef: rgb(
+    from var(--fm-paper) calc(r + -5) calc(g + -3) calc(b + 2) / 1
+  );
+  --fm-tone-8e9f94: rgb(
+    from var(--fm-muted) calc(r + 19) calc(g + 26) calc(b + 18) / 1
+  );
+  --fm-tone-687a70: rgb(
+    from var(--fm-muted) calc(r + -19) calc(g + -11) calc(b + -18) / 1
+  );
+  --fm-tone-7b8b80: rgb(from var(--fm-muted) r calc(g + 6) calc(b + -2) / 1);
+  --fm-tone-86968c: rgb(
+    from var(--fm-muted) calc(r + 11) calc(g + 17) calc(b + 10) / 1
+  );
+  --fm-tone-35545a: rgb(
+    from var(--fm-ink) calc(r + 32) calc(g + 40) calc(b + 41) / 1
+  );
+  --fm-tone-152e33: rgb(from var(--fm-ink) r calc(g + 2) calc(b + 2) / 1);
+  --fm-tone-d6e5dc1c: rgb(
+    from var(--fm-paper) calc(r + -29) calc(g + -14) calc(b + -17) / 0.1098
+  );
+  --fm-tone-d6e5dc16: rgb(
+    from var(--fm-paper) calc(r + -29) calc(g + -14) calc(b + -17) / 0.0863
+  );
+  --fm-tone-d2dfd6a6: rgb(
+    from var(--fm-paper) calc(r + -33) calc(g + -20) calc(b + -23) / 0.651
+  );
+  --fm-tone-f6f5ef: rgb(
+    from var(--fm-paper) calc(r + 3) calc(g + 2) calc(b + 2) / 1
+  );
+  --fm-tone-e9ede6: rgb(
+    from var(--fm-paper) calc(r + -10) calc(g + -6) calc(b + -7) / 1
+  );
+  --fm-tone-758a7d: rgb(
+    from var(--fm-muted) calc(r + -6) calc(g + 5) calc(b + -5) / 1
+  );
+  --fm-tone-7d9486: rgb(
+    from var(--fm-muted) calc(r + 2) calc(g + 15) calc(b + 4) / 1
+  );
+  --fm-tone-718076: rgb(
+    from var(--fm-muted) calc(r + -10) calc(g + -5) calc(b + -12) / 1
+  );
+  --fm-tone-0b27349e: rgb(
+    from var(--fm-ink) calc(r + -10) calc(g + -5) calc(b + 3) / 0.6196
+  );
+  --fm-tone-e8ede6: rgb(
+    from var(--fm-paper) calc(r + -11) calc(g + -6) calc(b + -7) / 1
+  );
+  --fm-tone-b6d2c929: rgb(
+    from var(--fm-paper) calc(r + -61) calc(g + -33) calc(b + -36) / 0.1608
+  );
+  --fm-tone-acc2b6: rgb(
+    from var(--fm-paper) calc(r + -71) calc(g + -49) calc(b + -55) / 1
+  );
+  --fm-tone-8c9e8f: rgb(
+    from var(--fm-muted) calc(r + 17) calc(g + 25) calc(b + 13) / 1
+  );
+  --fm-tone-6b7d70: rgb(
+    from var(--fm-muted) calc(r + -16) calc(g + -8) calc(b + -18) / 1
+  );
+  --fm-tone-aab9ac70: rgb(
+    from var(--fm-muted) calc(r + 47) calc(g + 52) calc(b + 42) / 0.4392
+  );
+  --fm-tone-798b7d: rgb(
+    from var(--fm-muted) calc(r + -2) calc(g + 6) calc(b + -5) / 1
+  );
+  --fm-tone-e9ece7: rgb(
+    from var(--fm-paper) calc(r + -10) calc(g + -7) calc(b + -6) / 1
+  );
+  --fm-tone-728275: rgb(
+    from var(--fm-muted) calc(r + -9) calc(g + -3) calc(b + -13) / 1
+  );
+  --fm-tone-cad4cb: rgb(
+    from var(--fm-paper) calc(r + -41) calc(g + -31) calc(b + -34) / 1
+  );
+  --fm-font-fluid-8: calc(clamp(48px, 5.9vw, 100px) * var(--fm-heading-scale));
+  --fm-font-18: calc(18px * var(--fm-body-scale));
+  --fm-font-fluid-9: calc(
+    clamp(44px, min(6.4vw, 9svh), 78px) * var(--fm-heading-scale)
+  );
+  --fm-font-fluid-10: calc(clamp(38px, 3.8vw, 65px) * var(--fm-heading-scale));
+  --fm-font-fluid-11: calc(clamp(80px, 8.8vw, 155px) * var(--fm-heading-scale));
+  --fm-font-38: calc(38px * var(--fm-heading-scale));
+  --fm-font-fluid-12: calc(clamp(130px, 20vw, 320px) * var(--fm-heading-scale));
+  --fm-font-fluid-13: calc(clamp(38px, 4.5vw, 76px) * var(--fm-heading-scale));
+  --fm-font-fluid-14: calc(clamp(28px, 2.8vw, 44px) * var(--fm-heading-scale));
+  --fm-font-fluid-15: calc(clamp(50px, 5.5vw, 95px) * var(--fm-heading-scale));
+  --fm-font-fluid-16: calc(clamp(30px, 3.1vw, 52px) * var(--fm-heading-scale));
+  --fm-font-fluid-17: calc(clamp(72px, 9vw, 155px) * var(--fm-heading-scale));
+  --fm-font-fluid-18: calc(clamp(34px, 3.8vw, 60px) * var(--fm-heading-scale));
+  --fm-font-21: calc(21px * var(--fm-heading-scale));
+  --fm-font-fluid-19: calc(clamp(32px, 4vw, 60px) * var(--fm-heading-scale));
+  --fm-font-95: calc(95px * var(--fm-heading-scale));
+  --fm-font-fluid-20: calc(clamp(39px, 9vw, 62px) * var(--fm-heading-scale));
+  --fm-font-fluid-21: calc(clamp(85px, 23vw, 125px) * var(--fm-heading-scale));
+  --fm-font-140: calc(140px * var(--fm-heading-scale));
+  --fm-font-29: calc(29px * var(--fm-heading-scale));
+  --fm-font-fluid-22: calc(clamp(42px, 12vw, 58px) * var(--fm-heading-scale));
+  --fm-font-72: calc(72px * var(--fm-heading-scale));
+  --fm-font-17: calc(17px * var(--fm-body-scale));
+  --fm-space-130: calc(130px * var(--fm-density));
+  --fm-space-76: calc(76px * var(--fm-density));
+  --fm-tracking-neg0p08: calc(-0.08em * var(--fm-tracking));
+  --fm-tracking-neg0p045: calc(-0.045em * var(--fm-tracking));
+  --fm-tracking-neg0p05: calc(-0.05em * var(--fm-tracking));
+  --fm-tracking-neg0p015: calc(-0.015em * var(--fm-tracking));
+  --fm-leading-1p06: calc(1.06 * var(--fm-leading));
+  --fm-leading-1p1: calc(1.1 * var(--fm-leading));
+  --fm-leading-1p07: calc(1.07 * var(--fm-leading));
+  --fm-duration-0p2: calc(0.2s * var(--fm-motion));
+  --fm-tone-287d8866: rgb(
+    from var(--fm-muted) calc(r + -83) calc(g + -8) calc(b + 6) / 0.4
+  );
+  --fm-tone-236c77: rgb(
+    from var(--fm-ink) calc(r + 14) calc(g + 64) calc(b + 70) / 1
+  );
+  --fm-tone-e6eff1: rgb(
+    from var(--fm-paper) calc(r + -13) calc(g + -4) calc(b + 4) / 1
+  );
+  --fm-tone-18323e: rgb(
+    from var(--fm-ink) calc(r + 3) calc(g + 6) calc(b + 13) / 1
+  );
+  --fm-tone-f3f7f8: rgb(from var(--fm-paper) r calc(g + 4) calc(b + 11) / 1);
+  --fm-tone-b8d0d9: rgb(
+    from var(--fm-paper) calc(r + -59) calc(g + -35) calc(b + -20) / 1
+  );
+  --fm-tone-287d88: rgb(
+    from var(--fm-muted) calc(r + -83) calc(g + -8) calc(b + 6) / 1
+  );
+  --fm-tone-eaf0f2: rgb(
+    from var(--fm-paper) calc(r + -9) calc(g + -3) calc(b + 5) / 1
+  );
+  --fm-tone-b77746: rgb(
+    from var(--fm-danger) calc(r + 15) calc(g + 52) calc(b + 3) / 1
+  );
+  --fm-tone-f4f0e7: rgb(
+    from var(--fm-paper) calc(r + 1) calc(g + -3) calc(b + -6) / 1
+  );
+  --fm-tone-fffaf0: rgb(
+    from var(--fm-paper) calc(r + 12) calc(g + 7) calc(b + 3) / 1
+  );
+  --fm-tone-387b83: rgb(
+    from var(--fm-muted) calc(r + -67) calc(g + -10) calc(b + 1) / 1
+  );
+  --fm-tone-f8fafb: rgb(
+    from var(--fm-paper) calc(r + 5) calc(g + 7) calc(b + 14) / 1
+  );
+  --fm-tone-5c6e68: rgb(
+    from var(--fm-muted) calc(r + -31) calc(g + -23) calc(b + -26) / 1
+  );
+  --fm-tone-e3e9e6: rgb(
+    from var(--fm-paper) calc(r + -16) calc(g + -10) calc(b + -7) / 1
+  );
+  --fm-tone-eef1f2: rgb(
+    from var(--fm-paper) calc(r + -5) calc(g + -2) calc(b + 5) / 1
+  );
+  --fm-tone-fafcfcf5: rgb(
+    from var(--fm-paper) calc(r + 7) calc(g + 9) calc(b + 15) / 0.9608
+  );
+  --fm-tone-152d33: rgb(from var(--fm-ink) r calc(g + 1) calc(b + 2) / 1);
+  --fm-tone-152d3329: rgb(
+    from var(--fm-ink) r calc(g + 1) calc(b + 2) / 0.1608
+  );
+  --fm-tone-152d3355: rgb(
+    from var(--fm-ink) r calc(g + 1) calc(b + 2) / 0.3333
+  );
+  --fm-tone-f9fbfc: rgb(
+    from var(--fm-paper) calc(r + 6) calc(g + 8) calc(b + 15) / 1
+  );
+  --fm-tone-fffdf8: rgb(
+    from var(--fm-paper) calc(r + 12) calc(g + 10) calc(b + 11) / 1
+  );
+  --fm-tone-fffaf3: rgb(
+    from var(--fm-paper) calc(r + 12) calc(g + 7) calc(b + 6) / 1
+  );
+  --fm-tone-f4eddd: rgb(
+    from var(--fm-paper) calc(r + 1) calc(g + -6) calc(b + -16) / 1
+  );
+  --fm-tone-efc496: rgb(
+    from var(--fm-paper) calc(r + -4) calc(g + -47) calc(b + -87) / 1
+  );
+  --fm-tone-fff8ec: rgb(
+    from var(--fm-paper) calc(r + 12) calc(g + 5) calc(b + -1) / 1
+  );
+  --fm-tone-061d2ad9: rgb(
+    from var(--fm-ink) calc(r + -15) calc(g + -15) calc(b + -7) / 0.851
+  );
+  --fm-tone-061d2a94: rgb(
+    from var(--fm-ink) calc(r + -15) calc(g + -15) calc(b + -7) / 0.5804
+  );
+  --fm-tone-061d2a10: rgb(
+    from var(--fm-ink) calc(r + -15) calc(g + -15) calc(b + -7) / 0.0627
+  );
+  --fm-tone-061d2a80: rgb(
+    from var(--fm-ink) calc(r + -15) calc(g + -15) calc(b + -7) / 0.502
+  );
+  --fm-tone-f1c697: rgb(
+    from var(--fm-paper) calc(r + -2) calc(g + -45) calc(b + -86) / 1
+  );
+  --fm-tone-183037: rgb(
+    from var(--fm-ink) calc(r + 3) calc(g + 4) calc(b + 6) / 1
+  );
+  --fm-tone-eee7dc: rgb(
+    from var(--fm-paper) calc(r + -5) calc(g + -12) calc(b + -17) / 1
+  );
+  --fm-tone-243b3c: rgb(
+    from var(--fm-ink) calc(r + 15) calc(g + 15) calc(b + 11) / 1
+  );
+  --fm-tone-a8978155: rgb(
+    from var(--fm-muted) calc(r + 45) calc(g + 18) calc(b + -1) / 0.3333
+  );
+  --fm-tone-63716a: rgb(
+    from var(--fm-muted) calc(r + -24) calc(g + -20) calc(b + -24) / 1
+  );
+  --fm-tone-e6ece7: rgb(
+    from var(--fm-paper) calc(r + -13) calc(g + -7) calc(b + -6) / 1
+  );
+  --fm-tone-fcf9f2: rgb(
+    from var(--fm-paper) calc(r + 9) calc(g + 6) calc(b + 5) / 1
+  );
+  --fm-tone-143238d9: rgb(
+    from var(--fm-ink) calc(r + -1) calc(g + 6) calc(b + 7) / 0.851
+  );
+  --fm-tone-65736c: rgb(
+    from var(--fm-muted) calc(r + -22) calc(g + -18) calc(b + -22) / 1
+  );
+  --fm-tone-b8b9a980: rgb(
+    from var(--fm-muted) calc(r + 61) calc(g + 52) calc(b + 39) / 0.502
+  );
+  --fm-tone-ece5d7: rgb(
+    from var(--fm-paper) calc(r + -7) calc(g + -14) calc(b + -22) / 1
+  );
+  --fm-tone-eef2f3: rgb(
+    from var(--fm-paper) calc(r + -5) calc(g + -1) calc(b + 6) / 1
+  );
+  --fm-tone-74959e14: rgb(
+    from var(--fm-muted) calc(r + -7) calc(g + 16) calc(b + 28) / 0.0784
+  );
+  --fm-tone-bbcbd155: rgb(
+    from var(--fm-paper) calc(r + -56) calc(g + -40) calc(b + -28) / 0.3333
+  );
+  --fm-tone-315965: rgb(
+    from var(--fm-ink) calc(r + 28) calc(g + 45) calc(b + 52) / 1
+  );
+  --fm-tone-173840: rgb(
+    from var(--fm-ink) calc(r + 2) calc(g + 12) calc(b + 15) / 1
+  );
+  --fm-tone-c3d1d7: rgb(
+    from var(--fm-paper) calc(r + -48) calc(g + -34) calc(b + -22) / 1
+  );
+  --fm-tone-bed0d6: rgb(
+    from var(--fm-paper) calc(r + -53) calc(g + -35) calc(b + -23) / 1
+  );
+  --fm-tone-607d85: rgb(
+    from var(--fm-muted) calc(r + -27) calc(g + -8) calc(b + 3) / 1
+  );
+  --fm-tone-eaf1f3: rgb(
+    from var(--fm-paper) calc(r + -9) calc(g + -2) calc(b + 6) / 1
+  );
+  --fm-tone-c5d5da: rgb(
+    from var(--fm-paper) calc(r + -46) calc(g + -30) calc(b + -19) / 1
+  );
+  --fm-tone-416573: rgb(
+    from var(--fm-muted) calc(r + -58) calc(g + -32) calc(b + -15) / 1
+  );
+  --fm-tone-388894: rgb(
+    from var(--fm-muted) calc(r + -67) calc(g + 3) calc(b + 18) / 1
+  );
+  --fm-tone-66808a: rgb(
+    from var(--fm-muted) calc(r + -21) calc(g + -5) calc(b + 8) / 1
+  );
+  --fm-tone-58727b: rgb(
+    from var(--fm-muted) calc(r + -35) calc(g + -19) calc(b + -7) / 1
+  );
+  --fm-tone-aec6ce: rgb(
+    from var(--fm-paper) calc(r + -69) calc(g + -45) calc(b + -31) / 1
+  );
+  --fm-tone-5a727b: rgb(
+    from var(--fm-muted) calc(r + -33) calc(g + -19) calc(b + -7) / 1
+  );
+  --fm-tone-b8cbd2: rgb(
+    from var(--fm-paper) calc(r + -59) calc(g + -40) calc(b + -27) / 1
+  );
+  --fm-tone-eef3f5: rgb(from var(--fm-paper) calc(r + -5) g calc(b + 8) / 1);
+  --fm-tone-e6eef1: rgb(
+    from var(--fm-paper) calc(r + -13) calc(g + -5) calc(b + 4) / 1
+  );
+  --fm-tone-a3c9d0: rgb(
+    from var(--fm-paper) calc(r + -80) calc(g + -42) calc(b + -29) / 1
+  );
+  --fm-tone-061d2ade: rgb(
+    from var(--fm-ink) calc(r + -15) calc(g + -15) calc(b + -7) / 0.8706
+  );
+  --fm-tone-061d2a66: rgb(
+    from var(--fm-ink) calc(r + -15) calc(g + -15) calc(b + -7) / 0.4
+  );
+  --fm-font-fluid-23: calc(clamp(21px, 2vw, 30px) * var(--fm-heading-scale));
+  --fm-font-fluid-24: calc(clamp(30px, 3vw, 45px) * var(--fm-heading-scale));
+  --fm-font-fluid-25: calc(clamp(46px, 5.4vw, 82px) * var(--fm-heading-scale));
+  --fm-font-fluid-26: calc(clamp(66px, 7vw, 115px) * var(--fm-heading-scale));
+  --fm-font-fluid-27: calc(clamp(25px, 2.3vw, 36px) * var(--fm-heading-scale));
+  --fm-font-fluid-28: calc(clamp(30px, 3vw, 44px) * var(--fm-heading-scale));
+  --fm-font-fluid-29: calc(clamp(40px, 4.8vw, 74px) * var(--fm-heading-scale));
+  --fm-font-fluid-30: calc(clamp(44px, 6vw, 96px) * var(--fm-heading-scale));
+  --fm-font-fluid-31: calc(clamp(42px, 11vw, 70px) * var(--fm-heading-scale));
+  --fm-font-fluid-32: calc(clamp(39px, 10vw, 58px) * var(--fm-heading-scale));
+  --fm-font-fluid-33: calc(clamp(58px, 18vw, 80px) * var(--fm-heading-scale));
+  --fm-font-50: calc(50px * var(--fm-heading-scale));
+  --fm-font-46: calc(46px * var(--fm-heading-scale));
+  --fm-space-115: calc(115px * var(--fm-density));
+  --fm-tracking-0p08: calc(0.08em * var(--fm-tracking));
+  --fm-leading-1p55: calc(1.55 * var(--fm-leading));
+  --fm-leading-1p65: calc(1.65 * var(--fm-leading));
+  --fm-duration-0p8: calc(0.8s * var(--fm-motion));
+  --fm-tone-0e2a32ed: rgb(
+    from var(--fm-ink) calc(r + -7) calc(g + -2) calc(b + 1) / 0.9294
+  );
+  --fm-tone-0d29288c: rgb(
+    from var(--fm-ink) calc(r + -8) calc(g + -3) calc(b + -9) / 0.549
+  );
+  --fm-tone-112d3140: rgb(
+    from var(--fm-ink) calc(r + -4) calc(g + 1) b / 0.251
+  );
+  --fm-tone-d1ded9: rgb(
+    from var(--fm-paper) calc(r + -34) calc(g + -21) calc(b + -20) / 1
+  );
+  --fm-tone-5e706e: rgb(
+    from var(--fm-muted) calc(r + -29) calc(g + -21) calc(b + -20) / 1
+  );
+  --fm-tone-092329eb: rgb(
+    from var(--fm-ink) calc(r + -12) calc(g + -9) calc(b + -8) / 0.9216
+  );
+  --fm-tone-11292ca6: rgb(
+    from var(--fm-ink) calc(r + -4) calc(g + -3) calc(b + -5) / 0.651
+  );
+  --fm-tone-11292c08: rgb(
+    from var(--fm-ink) calc(r + -4) calc(g + -3) calc(b + -5) / 0.0314
+  );
+  --fm-tone-11292cbd: rgb(
+    from var(--fm-ink) calc(r + -4) calc(g + -3) calc(b + -5) / 0.7412
+  );
+  --fm-tone-ffffff42: rgb(from var(--fm-white) r g b / 0.2588);
+  --fm-tone-e6ece5: rgb(
+    from var(--fm-paper) calc(r + -13) calc(g + -7) calc(b + -8) / 1
+  );
+  --fm-tone-e9eeeb: rgb(
+    from var(--fm-paper) calc(r + -10) calc(g + -5) calc(b + -2) / 1
+  );
+  --fm-tone-fcfcfc: rgb(
+    from var(--fm-paper) calc(r + 9) calc(g + 9) calc(b + 15) / 1
+  );
+  --fm-tone-474747: rgb(
+    from var(--fm-ink) calc(r + 50) calc(g + 27) calc(b + 22) / 1
+  );
+  --fm-tone-000000: rgb(
+    from var(--fm-ink) calc(r + -21) calc(g + -44) calc(b + -49) / 1
+  );
+  --fm-tone-11292cd9: rgb(
+    from var(--fm-ink) calc(r + -4) calc(g + -3) calc(b + -5) / 0.851
+  );
+  --fm-tone-708582: rgb(from var(--fm-muted) calc(r + -11) g b / 1);
+  --fm-tone-e3e9e1: rgb(
+    from var(--fm-paper) calc(r + -16) calc(g + -10) calc(b + -12) / 1
+  );
+  --fm-tone-507b6b: rgb(from var(--fm-success) r g b / 1);
+  --fm-tone-102d32ed: rgb(
+    from var(--fm-ink) calc(r + -5) calc(g + 1) calc(b + 1) / 0.9294
+  );
+  --fm-font-fluid-34: calc(clamp(46px, 5.2vw, 88px) * var(--fm-heading-scale));
+  --fm-font-fluid-35: calc(clamp(17px, 1.45vw, 22px) * var(--fm-body-scale));
+  --fm-font-62: calc(62px * var(--fm-heading-scale));
+  --fm-font-fluid-36: calc(clamp(54px, 7.8vw, 120px) * var(--fm-heading-scale));
+  --fm-font-fluid-37: calc(clamp(56px, 7vw, 110px) * var(--fm-heading-scale));
+  --fm-font-fluid-38: calc(clamp(38px, 4vw, 64px) * var(--fm-heading-scale));
+  --fm-font-fluid-39: calc(clamp(25px, 3vw, 45px) * var(--fm-heading-scale));
+  --fm-font-fluid-40: calc(clamp(30px, 3vw, 48px) * var(--fm-heading-scale));
+  --fm-font-fluid-41: calc(clamp(36px, 4vw, 60px) * var(--fm-heading-scale));
+  --fm-font-fluid-42: calc(clamp(43px, 8.9vw, 66px) * var(--fm-heading-scale));
+  --fm-font-42: calc(42px * var(--fm-heading-scale));
+  --fm-space-150: calc(150px * var(--fm-density));
+  --fm-space-46: calc(46px * var(--fm-density));
+  --fm-space-145: calc(145px * var(--fm-density));
+  --fm-space-125: calc(125px * var(--fm-density));
+  --fm-space-135: calc(135px * var(--fm-density));
+  --fm-space-48: calc(48px * var(--fm-density));
+  --fm-tracking-neg0p02: calc(-0.02em * var(--fm-tracking));
+  --fm-leading-1p03: calc(1.03 * var(--fm-leading));
+  --fm-leading-1p4: calc(1.4 * var(--fm-leading));
+  --fm-tone-f0f1eb: rgb(
+    from var(--fm-paper) calc(r + -3) calc(g + -2) calc(b + -2) / 1
+  );
+  --fm-tone-fafaf6: rgb(
+    from var(--fm-paper) calc(r + 7) calc(g + 7) calc(b + 9) / 1
+  );
+  --fm-tone-61716c: rgb(
+    from var(--fm-muted) calc(r + -26) calc(g + -20) calc(b + -22) / 1
+  );
+  --fm-tone-152c310a: rgb(from var(--fm-ink) r g b / 0.0392);
+  --fm-font-fluid-43: calc(clamp(38px, 4.5vw, 72px) * var(--fm-heading-scale));
+  --fm-font-fluid-44: calc(clamp(25px, 2.25vw, 36px) * var(--fm-heading-scale));
+  --fm-space-52: calc(52px * var(--fm-density));
+}

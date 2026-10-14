@@ -139,6 +139,7 @@ export function AdminDashboard() {
         </nav>
         <div className="admin-sidebar-bottom">
           <Link href="/">Открыть сайт ↗</Link>
+          <Link href="/ui-kit">UI Kit · оформление ↗</Link>
           <div className="admin-account">
             <span>A</span>
             <div>

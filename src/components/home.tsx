@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useSiteTheme } from "./theme-provider";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState, type FormEvent } from "react";
@@ -8,6 +9,7 @@ import { content, type Locale } from "@/lib/content";
 import { track, trackingContext } from "@/lib/analytics";
 import { Arrow, Photo, Reveal } from "./visual";
 import { FleetCarousel } from "./fleet-carousel";
+import { BusinessBenefits } from "./business-benefits";
 import { VesselDetail } from "./vessel-detail";
 import { positioning } from "@/lib/positioning";
 import { CompanyPage } from "./company-page";
@@ -34,6 +36,7 @@ export function Home({
   model?: ModelId;
   page?: CompanyPageName;
 }) {
+  const theme = useSiteTheme();
   const t = content[locale];
   const e = evolutionCopy[locale];
   const identity = model ? positioning[locale][model] : null;
@@ -342,8 +345,8 @@ export function Home({
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{
-                        opacity: { duration: 0.8 },
-                        scale: { duration: 7, ease: "linear" },
+                        opacity: { duration: 0.8 * theme.motion },
+                        scale: { duration: 7 * theme.motion, ease: "linear" },
                       }}
                     >
                       <Photo
@@ -365,7 +368,10 @@ export function Home({
                   key={slide}
                   initial={reduced ? false : { opacity: 0, y: 22 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.1 }}
+                  transition={{
+                    duration: 1 * theme.motion,
+                    delay: 0.1 * theme.motion,
+                  }}
                 >
                   <p className="eyebrow hero-eyebrow">
                     <span className="status-dot" />
@@ -377,16 +383,13 @@ export function Home({
                     <span>{e.hero[slide].title[1]}</span>
                   </h1>
                   <p className="hero-intro">{e.hero[slide].description}</p>
-                  <a
+                  <button
                     className="button button-light"
-                    href="#vessel"
-                    onClick={() =>
-                      track("cta_click", { source: "hero-explore" })
-                    }
+                    onClick={() => open("contact", "hero-contact")}
                   >
-                    {t.explore}
+                    {t.contact}
                     <Arrow diagonal />
-                  </a>
+                  </button>
                 </motion.div>
               </div>
               <div className="hero-bottom">
@@ -427,43 +430,32 @@ export function Home({
 
             <section id="vision" className="autonomy-section">
               <Reveal className="autonomy-copy">
-                <p className="eyebrow muted">{e.autonomyLabel}</p>
                 <h2>{e.autonomyTitle}</h2>
-                <p className="autonomy-intro">{e.autonomyText}</p>
+
                 <div className="autonomy-numbers">
                   <div>
                     <span className="micro-label">{e.upTo}</span>
                     <strong>
                       30<small>{e.knots}</small>
                     </strong>
-                    <p>{e.speed}</p>
                   </div>
                   <div>
-                    <span className="micro-label">{e.upTo}</span>
                     <strong>
                       70<small>{e.km}</small>
                     </strong>
                     <p>{e.range}</p>
                   </div>
                 </div>
-                <Link
-                  className="text-link"
-                  href={companyHref("technology", locale)}
+                <button
+                  className="button button-dark"
+                  onClick={() => open("contact", "autonomy-contact")}
                 >
-                  {t.techLink}
+                  {t.contact}
                   <Arrow diagonal />
-                </Link>
-                <p className="spec-note">{e.autonomyNote}</p>
+                </button>
               </Reveal>
               <div className="autonomy-visual">
-                <Photo src="autonomy" alt={e.autonomyImage} />
-                <div className="autonomy-photo-top">
-                  <span className="status-dot" /> INTELLIGENCE IN MOTION
-                </div>
-                <div className="autonomy-photo-bottom">
-                  <span>FLYMAR / AUTONOMOUS SYSTEMS</span>
-                  <span>01 — 03</span>
-                </div>
+                <Photo src="autonomy-control" alt={e.autonomyImage} />
               </div>
             </section>
             <FleetCarousel
@@ -509,29 +501,11 @@ export function Home({
               </Reveal>
             </section>
 
-            <section id="about" className="about">
-              <Photo
-                src="hero-open-water"
-                alt={
-                  locale === "ru"
-                    ? "Судно FLYMAR в открытой воде"
-                    : "FLYMAR on the open water"
-                }
-              />
-              <div className="about-shade" />
-              <Reveal className="about-copy">
-                <p className="eyebrow">{t.aboutLabel}</p>
-                <h2>{t.aboutHeading}</h2>
-                <p>{t.aboutText}</p>
-                <Link className="text-link" href={companyHref("about", locale)}>
-                  {locale === "ru" ? "Больше о компании" : "Meet FLYMAR"}
-                  <Arrow diagonal />
-                </Link>
-              </Reveal>
-              <span className="about-note micro-label">
-                LESS NOISE. MORE HORIZON.
-              </span>
-            </section>
+            <BusinessBenefits
+              locale={locale}
+              variant="management"
+              onContact={() => open("contact", "fleet-management")}
+            />
 
             <section
               id="applications"
@@ -541,19 +515,24 @@ export function Home({
                 <p className="eyebrow muted">{t.applicationsLabel}</p>
                 <div className="section-heading-row">
                   <h2>{e.businessTitle}</h2>
-                  <p className="section-intro">{e.businessIntro}</p>
                 </div>
               </Reveal>
               <div className="application-grid">
                 {e.business.map((item, i) => (
                   <Reveal key={item.tag} className="application">
+                    <div className="application-heading">
+                      <p className="micro-label muted">{item.tag}</p>
+                      <h3>{item.title}</h3>
+                    </div>
                     <Link
-                      className={`application-image ${i === 0 ? "application-transit" : ""}`}
+                      className="application-image"
                       href={modelHref(i === 0 ? "f11" : "f8", locale)}
                       aria-label={`${item.title} — FLYMAR ${i === 0 ? "F11" : "F8"}`}
                     >
                       <Photo
-                        src={i === 0 ? "f11-profile" : "f8-boarding"}
+                        src={
+                          i === 0 ? "application-resort" : "application-city"
+                        }
                         alt={item.title}
                       />
                       <span className="application-index">0{i + 1}</span>
@@ -561,8 +540,7 @@ export function Home({
                         <Arrow diagonal />
                       </span>
                     </Link>
-                    <p className="micro-label muted">{item.tag}</p>
-                    <h3>{item.title}</h3>
+
                     <p className="application-description">{item.text}</p>
                     <button
                       className="text-link"
@@ -577,6 +555,7 @@ export function Home({
                 ))}
               </div>
             </section>
+            <BusinessBenefits locale={locale} variant="savings" />
           </>
         )}
         {page !== "contacts" && (
@@ -683,7 +662,7 @@ export function Home({
             }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: reduced ? 0 : 20 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3 * theme.motion }}
             aria-labelledby="dialog-title"
             onCancel={(event) => {
               event.preventDefault();

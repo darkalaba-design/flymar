@@ -65,13 +65,13 @@ export const evolutionCopy = {
   en: {
     hero: [
       {
+        title: ["Experience the future", "on water today."],
+        description: "Faster, quieter, and effortlessly stable.",
+      },
+      {
         title: ["A new perspective.", "Above the water."],
         description:
           "Everyday freedom. Dedicated transit. Discover two distinct ways to move above the water with FLYMAR.",
-      },
-      {
-        title: ["Experience the future", "on water today."],
-        description: "Faster, quieter, and effortlessly stable.",
       },
       {
         title: ["More freedom.", "Every nautical mile."],
@@ -80,7 +80,7 @@ export const evolutionCopy = {
       },
     ],
     autonomyLabel: "01 / AUTONOMY FIRST",
-    autonomyTitle: "Autonomy first.\nPossibility, amplified.",
+    autonomyTitle: "Autonomy First:\nfull autopilot for\nmaximum efficiency.",
     autonomyText:
       "Full autopilot for maximum efficiency. Hydrofoils for top speed and the comfort of your passengers.",
     upTo: "UP TO",
@@ -89,7 +89,7 @@ export const evolutionCopy = {
     km: "km",
     range: "On one charge",
     autonomyNote: "Performance varies by model and operating conditions.",
-    autonomyImage: "FLYMAR navigation sensors scanning the water",
+    autonomyImage: "FLYMAR vessel and navigation controls on a tablet",
     businessTitle:
       "Unlock a new level\nof efficiency and comfort\nfor your business.",
     businessIntro:
@@ -110,13 +110,13 @@ export const evolutionCopy = {
   ru: {
     hero: [
       {
+        title: ["Будущее на воде.", "Уже сегодня."],
+        description: "Быстрее, тише и с исключительной устойчивостью.",
+      },
+      {
         title: ["Новый взгляд.", "Выше волн."],
         description:
           "Свобода каждый день. Регулярные перевозки. Два разных пути выше волн вместе с FLYMAR.",
-      },
-      {
-        title: ["Будущее на воде.", "Уже сегодня."],
-        description: "Быстрее, тише и с исключительной устойчивостью.",
       },
       {
         title: ["Больше свободы.", "В каждой миле."],
@@ -125,7 +125,8 @@ export const evolutionCopy = {
       },
     ],
     autonomyLabel: "01 / AUTONOMY FIRST",
-    autonomyTitle: "Автономность в основе.\nБольше возможностей.",
+    autonomyTitle:
+      "Автономность прежде всего:\nполный автопилот для\nмаксимальной эффективности.",
     autonomyText:
       "Полный автопилот для максимальной эффективности. Подводные крылья для высокой скорости и комфорта ваших пассажиров.",
     upTo: "ДО",
@@ -134,7 +135,7 @@ export const evolutionCopy = {
     km: "км",
     range: "На одном заряде",
     autonomyNote: "Показатели зависят от модели и условий эксплуатации.",
-    autonomyImage: "Датчики навигации FLYMAR сканируют водное пространство",
+    autonomyImage: "Судно FLYMAR и управление навигацией с планшета",
     businessTitle:
       "Новый уровень\nэффективности и комфорта\nдля вашего бизнеса.",
     businessIntro:

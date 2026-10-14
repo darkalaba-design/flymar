@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useSiteTheme } from "./theme-provider";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Arrow, Photo, Reveal } from "./visual";
@@ -25,6 +26,7 @@ export function VesselDetail({
     summary = fleetCopy[locale][model];
   const [frame, setFrame] = useState(0);
   const reduced = useReducedMotion();
+  const theme = useSiteTheme();
   const other = model === "f8" ? "f11" : "f8";
   const identity = positioning[locale][model];
   function change(index: number) {
@@ -227,7 +229,7 @@ export function VesselDetail({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: reduced ? 0 : 0.45 }}
+              transition={{ duration: reduced ? 0 : 0.45 * theme.motion }}
             >
               <Photo src={p.photos[frame]} alt={p.captions[frame]} />
             </motion.div>

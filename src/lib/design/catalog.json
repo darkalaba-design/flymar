@@ -1,0 +1,1592 @@
+{
+  "colors": [
+    {
+      "name": "--fm-tone-56b4b1",
+      "default": "#56b4b1",
+      "family": "accent"
+    },
+    {
+      "name": "--fm-tone-b6d2c9",
+      "default": "#b6d2c9",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-d4e1da",
+      "default": "#d4e1da",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-31565a",
+      "default": "#31565a",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-ffffff55",
+      "default": "#ffffff55",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-ffffff25",
+      "default": "#ffffff25",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-ffffff",
+      "default": "#ffffff",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-ffffff26",
+      "default": "#ffffff26",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-122a2eed",
+      "default": "#122a2eed",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-ffffff66",
+      "default": "#ffffff66",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-183038",
+      "default": "#183038",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-05191f7d",
+      "default": "#05191f7d",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-05191f17",
+      "default": "#05191f17",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-0619215c",
+      "default": "#0619215c",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-0619217a",
+      "default": "#0619217a",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-c3dace",
+      "default": "#c3dace",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-d7f0e212",
+      "default": "#d7f0e212",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-e8ece6",
+      "default": "#e8ece6",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-f0f0e9",
+      "default": "#f0f0e9",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-ffffff45",
+      "default": "#ffffff45",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-ffffff70",
+      "default": "#ffffff70",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-62716d",
+      "default": "#62716d",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-46625d",
+      "default": "#46625d",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-e8ebe5",
+      "default": "#e8ebe5",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-8d9c94",
+      "default": "#8d9c94",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-a3afa6",
+      "default": "#a3afa6",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-24292b",
+      "default": "#24292b",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-101e25a6",
+      "default": "#101e25a6",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-ffffff0b",
+      "default": "#ffffff0b",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-596c64",
+      "default": "#596c64",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-68796f",
+      "default": "#68796f",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-748078",
+      "default": "#748078",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-0e232ad9",
+      "default": "#0e232ad9",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-67736d",
+      "default": "#67736d",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-8b968f",
+      "default": "#8b968f",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-f8f8f3",
+      "default": "#f8f8f3",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-142c3280",
+      "default": "#142c3280",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-6f7c73",
+      "default": "#6f7c73",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-082931c9",
+      "default": "#082931c9",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-08293110",
+      "default": "#08293110",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-e0e6e1",
+      "default": "#e0e6e1",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-142f33",
+      "default": "#142f33",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-9aafaa",
+      "default": "#9aafaa",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-9bb5ab",
+      "default": "#9bb5ab",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-bdcdc7",
+      "default": "#bdcdc7",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-ffffff29",
+      "default": "#ffffff29",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-b6c8c0",
+      "default": "#b6c8c0",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-ffffff20",
+      "default": "#ffffff20",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-90aaa2",
+      "default": "#90aaa2",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-00131955",
+      "default": "#00131955",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-071c28a8",
+      "default": "#071c28a8",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-75877d55",
+      "default": "#75877d55",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-f3f3ede6",
+      "default": "#f3f3ede6",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-d5e0d8",
+      "default": "#d5e0d8",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-6b7a72",
+      "default": "#6b7a72",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-122c35bd",
+      "default": "#122c35bd",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-9aaa9e",
+      "default": "#9aaa9e",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-8a948e",
+      "default": "#8a948e",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-6f7d74",
+      "default": "#6f7d74",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-e9dfd2",
+      "default": "#e9dfd2",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-734a30",
+      "default": "#734a30",
+      "family": "danger"
+    },
+    {
+      "name": "--fm-tone-e5e7e1",
+      "default": "#e5e7e1",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-222a2c",
+      "default": "#222a2c",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-142f3344",
+      "default": "#142f3344",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-ffffff22",
+      "default": "#ffffff22",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-99b2a8",
+      "default": "#99b2a8",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-0a283956",
+      "default": "#0a283956",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-0a283912",
+      "default": "#0a283912",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-0a283970",
+      "default": "#0a283970",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-0a28394d",
+      "default": "#0a28394d",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-0b2934cc",
+      "default": "#0b2934cc",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-0b293422",
+      "default": "#0b293422",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-f3f3ed",
+      "default": "#f3f3ed",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-6b7972",
+      "default": "#6b7972",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-718278",
+      "default": "#718278",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-13252e",
+      "default": "#13252e",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-e2ebe5",
+      "default": "#e2ebe5",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-73877970",
+      "default": "#73877970",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-d2dbd3",
+      "default": "#d2dbd3",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-9baaa14a",
+      "default": "#9baaa14a",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-7b8a81",
+      "default": "#7b8a81",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-173b36",
+      "default": "#173b36",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-f6f7f1ed",
+      "default": "#f6f7f1ed",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-ffffffb3",
+      "default": "#ffffffb3",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-0a242326",
+      "default": "#0a242326",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-0a24233d",
+      "default": "#0a24233d",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-7e8d84",
+      "default": "#7e8d84",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-f6f7f1c9",
+      "default": "#f6f7f1c9",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-f6f7f1",
+      "default": "#f6f7f1",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-242a2d",
+      "default": "#242a2d",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-eef0ef",
+      "default": "#eef0ef",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-8e9f94",
+      "default": "#8e9f94",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-687a70",
+      "default": "#687a70",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-7b8b80",
+      "default": "#7b8b80",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-86968c",
+      "default": "#86968c",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-35545a",
+      "default": "#35545a",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-152e33",
+      "default": "#152e33",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-d6e5dc1c",
+      "default": "#d6e5dc1c",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-d6e5dc16",
+      "default": "#d6e5dc16",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-d2dfd6a6",
+      "default": "#d2dfd6a6",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-f6f5ef",
+      "default": "#f6f5ef",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-e9ede6",
+      "default": "#e9ede6",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-758a7d",
+      "default": "#758a7d",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-7d9486",
+      "default": "#7d9486",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-718076",
+      "default": "#718076",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-0b27349e",
+      "default": "#0b27349e",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-e8ede6",
+      "default": "#e8ede6",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-b6d2c929",
+      "default": "#b6d2c929",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-acc2b6",
+      "default": "#acc2b6",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-8c9e8f",
+      "default": "#8c9e8f",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-6b7d70",
+      "default": "#6b7d70",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-aab9ac70",
+      "default": "#aab9ac70",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-798b7d",
+      "default": "#798b7d",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-e9ece7",
+      "default": "#e9ece7",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-728275",
+      "default": "#728275",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-cad4cb",
+      "default": "#cad4cb",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-287d8866",
+      "default": "#287d8866",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-236c77",
+      "default": "#236c77",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-e6eff1",
+      "default": "#e6eff1",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-18323e",
+      "default": "#18323e",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-f3f7f8",
+      "default": "#f3f7f8",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-b8d0d9",
+      "default": "#b8d0d9",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-287d88",
+      "default": "#287d88",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-eaf0f2",
+      "default": "#eaf0f2",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-b77746",
+      "default": "#b77746",
+      "family": "danger"
+    },
+    {
+      "name": "--fm-tone-f4f0e7",
+      "default": "#f4f0e7",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-fffaf0",
+      "default": "#fffaf0",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-387b83",
+      "default": "#387b83",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-f8fafb",
+      "default": "#f8fafb",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-5c6e68",
+      "default": "#5c6e68",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-e3e9e6",
+      "default": "#e3e9e6",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-eef1f2",
+      "default": "#eef1f2",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-fafcfcf5",
+      "default": "#fafcfcf5",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-152d33",
+      "default": "#152d33",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-152d3329",
+      "default": "#152d3329",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-152d3355",
+      "default": "#152d3355",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-f9fbfc",
+      "default": "#f9fbfc",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-fffdf8",
+      "default": "#fffdf8",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-fffaf3",
+      "default": "#fffaf3",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-f4eddd",
+      "default": "#f4eddd",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-efc496",
+      "default": "#efc496",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-fff8ec",
+      "default": "#fff8ec",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-061d2ad9",
+      "default": "#061d2ad9",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-061d2a94",
+      "default": "#061d2a94",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-061d2a10",
+      "default": "#061d2a10",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-061d2a80",
+      "default": "#061d2a80",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-f1c697",
+      "default": "#f1c697",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-183037",
+      "default": "#183037",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-eee7dc",
+      "default": "#eee7dc",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-243b3c",
+      "default": "#243b3c",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-a8978155",
+      "default": "#a8978155",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-63716a",
+      "default": "#63716a",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-e6ece7",
+      "default": "#e6ece7",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-fcf9f2",
+      "default": "#fcf9f2",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-143238d9",
+      "default": "#143238d9",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-65736c",
+      "default": "#65736c",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-b8b9a980",
+      "default": "#b8b9a980",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-ece5d7",
+      "default": "#ece5d7",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-eef2f3",
+      "default": "#eef2f3",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-74959e14",
+      "default": "#74959e14",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-bbcbd155",
+      "default": "#bbcbd155",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-315965",
+      "default": "#315965",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-173840",
+      "default": "#173840",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-c3d1d7",
+      "default": "#c3d1d7",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-bed0d6",
+      "default": "#bed0d6",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-607d85",
+      "default": "#607d85",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-eaf1f3",
+      "default": "#eaf1f3",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-c5d5da",
+      "default": "#c5d5da",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-416573",
+      "default": "#416573",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-388894",
+      "default": "#388894",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-66808a",
+      "default": "#66808a",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-58727b",
+      "default": "#58727b",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-aec6ce",
+      "default": "#aec6ce",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-5a727b",
+      "default": "#5a727b",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-b8cbd2",
+      "default": "#b8cbd2",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-eef3f5",
+      "default": "#eef3f5",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-e6eef1",
+      "default": "#e6eef1",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-a3c9d0",
+      "default": "#a3c9d0",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-061d2ade",
+      "default": "#061d2ade",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-061d2a66",
+      "default": "#061d2a66",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-0e2a32ed",
+      "default": "#0e2a32ed",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-0d29288c",
+      "default": "#0d29288c",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-112d3140",
+      "default": "#112d3140",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-d1ded9",
+      "default": "#d1ded9",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-5e706e",
+      "default": "#5e706e",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-092329eb",
+      "default": "#092329eb",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-11292ca6",
+      "default": "#11292ca6",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-11292c08",
+      "default": "#11292c08",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-11292cbd",
+      "default": "#11292cbd",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-ffffff42",
+      "default": "#ffffff42",
+      "family": "white"
+    },
+    {
+      "name": "--fm-tone-e6ece5",
+      "default": "#e6ece5",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-e9eeeb",
+      "default": "#e9eeeb",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-fcfcfc",
+      "default": "#fcfcfc",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-474747",
+      "default": "#474747",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-000000",
+      "default": "#000000",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-11292cd9",
+      "default": "#11292cd9",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-708582",
+      "default": "#708582",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-e3e9e1",
+      "default": "#e3e9e1",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-507b6b",
+      "default": "#507b6b",
+      "family": "success"
+    },
+    {
+      "name": "--fm-tone-102d32ed",
+      "default": "#102d32ed",
+      "family": "ink"
+    },
+    {
+      "name": "--fm-tone-f0f1eb",
+      "default": "#f0f1eb",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-fafaf6",
+      "default": "#fafaf6",
+      "family": "paper"
+    },
+    {
+      "name": "--fm-tone-61716c",
+      "default": "#61716c",
+      "family": "muted"
+    },
+    {
+      "name": "--fm-tone-152c310a",
+      "default": "#152c310a",
+      "family": "ink"
+    }
+  ],
+  "type": [
+    {
+      "name": "--fm-font-12",
+      "value": "12px"
+    },
+    {
+      "name": "--fm-font-fluid-1",
+      "value": "clamp(36px, 4.2vw, 70px)"
+    },
+    {
+      "name": "--fm-font-14",
+      "value": "14px"
+    },
+    {
+      "name": "--fm-font-13",
+      "value": "13px"
+    },
+    {
+      "name": "--fm-font-11",
+      "value": "11px"
+    },
+    {
+      "name": "--fm-font-fluid-2",
+      "value": "clamp(56px, 6.4vw, 112px)"
+    },
+    {
+      "name": "--fm-font-15",
+      "value": "15px"
+    },
+    {
+      "name": "--fm-font-36",
+      "value": "36px"
+    },
+    {
+      "name": "--fm-font-19",
+      "value": "19px"
+    },
+    {
+      "name": "--fm-font-25",
+      "value": "25px"
+    },
+    {
+      "name": "--fm-font-48",
+      "value": "48px"
+    },
+    {
+      "name": "--fm-font-fluid-3",
+      "value": "clamp(120px, 23vw, 330px)"
+    },
+    {
+      "name": "--fm-font-54",
+      "value": "54px"
+    },
+    {
+      "name": "--fm-font-fluid-4",
+      "value": "clamp(35px, 3.5vw, 56px)"
+    },
+    {
+      "name": "--fm-font-20",
+      "value": "20px"
+    },
+    {
+      "name": "--fm-font-30",
+      "value": "30px"
+    },
+    {
+      "name": "--fm-font-fluid-5",
+      "value": "clamp(35px, 4vw, 62px)"
+    },
+    {
+      "name": "--fm-font-fluid-6",
+      "value": "clamp(70px, 10vw, 165px)"
+    },
+    {
+      "name": "--fm-font-44",
+      "value": "44px"
+    },
+    {
+      "name": "--fm-font-35",
+      "value": "35px"
+    },
+    {
+      "name": "--fm-font-37",
+      "value": "37px"
+    },
+    {
+      "name": "--fm-font-16",
+      "value": "16px"
+    },
+    {
+      "name": "--fm-font-24",
+      "value": "24px"
+    },
+    {
+      "name": "--fm-font-32",
+      "value": "32px"
+    },
+    {
+      "name": "--fm-font-26",
+      "value": "26px"
+    },
+    {
+      "name": "--fm-font-fluid-7",
+      "value": "clamp(46px, 9.3vw, 70px)"
+    },
+    {
+      "name": "--fm-font-28",
+      "value": "28px"
+    },
+    {
+      "name": "--fm-font-85",
+      "value": "85px"
+    },
+    {
+      "name": "--fm-font-fluid-8",
+      "value": "clamp(48px, 5.9vw, 100px)"
+    },
+    {
+      "name": "--fm-font-18",
+      "value": "18px"
+    },
+    {
+      "name": "--fm-font-fluid-9",
+      "value": "clamp(44px, min(6.4vw, 9svh), 78px)"
+    },
+    {
+      "name": "--fm-font-fluid-10",
+      "value": "clamp(38px, 3.8vw, 65px)"
+    },
+    {
+      "name": "--fm-font-fluid-11",
+      "value": "clamp(80px, 8.8vw, 155px)"
+    },
+    {
+      "name": "--fm-font-38",
+      "value": "38px"
+    },
+    {
+      "name": "--fm-font-fluid-12",
+      "value": "clamp(130px, 20vw, 320px)"
+    },
+    {
+      "name": "--fm-font-fluid-13",
+      "value": "clamp(38px, 4.5vw, 76px)"
+    },
+    {
+      "name": "--fm-font-fluid-14",
+      "value": "clamp(28px, 2.8vw, 44px)"
+    },
+    {
+      "name": "--fm-font-fluid-15",
+      "value": "clamp(50px, 5.5vw, 95px)"
+    },
+    {
+      "name": "--fm-font-fluid-16",
+      "value": "clamp(30px, 3.1vw, 52px)"
+    },
+    {
+      "name": "--fm-font-fluid-17",
+      "value": "clamp(72px, 9vw, 155px)"
+    },
+    {
+      "name": "--fm-font-fluid-18",
+      "value": "clamp(34px, 3.8vw, 60px)"
+    },
+    {
+      "name": "--fm-font-21",
+      "value": "21px"
+    },
+    {
+      "name": "--fm-font-fluid-19",
+      "value": "clamp(32px, 4vw, 60px)"
+    },
+    {
+      "name": "--fm-font-95",
+      "value": "95px"
+    },
+    {
+      "name": "--fm-font-fluid-20",
+      "value": "clamp(39px, 9vw, 62px)"
+    },
+    {
+      "name": "--fm-font-fluid-21",
+      "value": "clamp(85px, 23vw, 125px)"
+    },
+    {
+      "name": "--fm-font-140",
+      "value": "140px"
+    },
+    {
+      "name": "--fm-font-29",
+      "value": "29px"
+    },
+    {
+      "name": "--fm-font-fluid-22",
+      "value": "clamp(42px, 12vw, 58px)"
+    },
+    {
+      "name": "--fm-font-72",
+      "value": "72px"
+    },
+    {
+      "name": "--fm-font-17",
+      "value": "17px"
+    },
+    {
+      "name": "--fm-font-fluid-23",
+      "value": "clamp(21px, 2vw, 30px)"
+    },
+    {
+      "name": "--fm-font-fluid-24",
+      "value": "clamp(30px, 3vw, 45px)"
+    },
+    {
+      "name": "--fm-font-fluid-25",
+      "value": "clamp(46px, 5.4vw, 82px)"
+    },
+    {
+      "name": "--fm-font-fluid-26",
+      "value": "clamp(66px, 7vw, 115px)"
+    },
+    {
+      "name": "--fm-font-fluid-27",
+      "value": "clamp(25px, 2.3vw, 36px)"
+    },
+    {
+      "name": "--fm-font-fluid-28",
+      "value": "clamp(30px, 3vw, 44px)"
+    },
+    {
+      "name": "--fm-font-fluid-29",
+      "value": "clamp(40px, 4.8vw, 74px)"
+    },
+    {
+      "name": "--fm-font-fluid-30",
+      "value": "clamp(44px, 6vw, 96px)"
+    },
+    {
+      "name": "--fm-font-fluid-31",
+      "value": "clamp(42px, 11vw, 70px)"
+    },
+    {
+      "name": "--fm-font-fluid-32",
+      "value": "clamp(39px, 10vw, 58px)"
+    },
+    {
+      "name": "--fm-font-fluid-33",
+      "value": "clamp(58px, 18vw, 80px)"
+    },
+    {
+      "name": "--fm-font-50",
+      "value": "50px"
+    },
+    {
+      "name": "--fm-font-46",
+      "value": "46px"
+    },
+    {
+      "name": "--fm-font-fluid-34",
+      "value": "clamp(46px, 5.2vw, 88px)"
+    },
+    {
+      "name": "--fm-font-fluid-35",
+      "value": "clamp(17px, 1.45vw, 22px)"
+    },
+    {
+      "name": "--fm-font-62",
+      "value": "62px"
+    },
+    {
+      "name": "--fm-font-fluid-36",
+      "value": "clamp(54px, 7.8vw, 120px)"
+    },
+    {
+      "name": "--fm-font-fluid-37",
+      "value": "clamp(56px, 7vw, 110px)"
+    },
+    {
+      "name": "--fm-font-fluid-38",
+      "value": "clamp(38px, 4vw, 64px)"
+    },
+    {
+      "name": "--fm-font-fluid-39",
+      "value": "clamp(25px, 3vw, 45px)"
+    },
+    {
+      "name": "--fm-font-fluid-40",
+      "value": "clamp(30px, 3vw, 48px)"
+    },
+    {
+      "name": "--fm-font-fluid-41",
+      "value": "clamp(36px, 4vw, 60px)"
+    },
+    {
+      "name": "--fm-font-fluid-42",
+      "value": "clamp(43px, 8.9vw, 66px)"
+    },
+    {
+      "name": "--fm-font-42",
+      "value": "42px"
+    },
+    {
+      "name": "--fm-font-fluid-43",
+      "value": "clamp(38px, 4.5vw, 72px)"
+    },
+    {
+      "name": "--fm-font-fluid-44",
+      "value": "clamp(25px, 2.25vw, 36px)"
+    }
+  ],
+  "spacing": [
+    {
+      "name": "--fm-space-100",
+      "value": "calc(100px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-110",
+      "value": "calc(110px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-36",
+      "value": "calc(36px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-22",
+      "value": "calc(22px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-42",
+      "value": "calc(42px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-35",
+      "value": "calc(35px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-10",
+      "value": "calc(10px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-12",
+      "value": "calc(12px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-32",
+      "value": "calc(32px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-34",
+      "value": "calc(34px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-28",
+      "value": "calc(28px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-8",
+      "value": "calc(8px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-11",
+      "value": "calc(11px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-16",
+      "value": "calc(16px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-158",
+      "value": "calc(158px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-230",
+      "value": "calc(230px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-170",
+      "value": "calc(170px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-27",
+      "value": "calc(27px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-30",
+      "value": "calc(30px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-29",
+      "value": "calc(29px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-20",
+      "value": "calc(20px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-14",
+      "value": "calc(14px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-15",
+      "value": "calc(15px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-60",
+      "value": "calc(60px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-3",
+      "value": "calc(3px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-45",
+      "value": "calc(45px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-78",
+      "value": "calc(78px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-90",
+      "value": "calc(90px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-70",
+      "value": "calc(70px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-6",
+      "value": "calc(6px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-17",
+      "value": "calc(17px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-80",
+      "value": "calc(80px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-13",
+      "value": "calc(13px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-24",
+      "value": "calc(24px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-95",
+      "value": "calc(95px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-25",
+      "value": "calc(25px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-50",
+      "value": "calc(50px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-40",
+      "value": "calc(40px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-2",
+      "value": "calc(2px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-55",
+      "value": "calc(55px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-65",
+      "value": "calc(65px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-9",
+      "value": "calc(9px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-26",
+      "value": "calc(26px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-85",
+      "value": "calc(85px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-75",
+      "value": "calc(75px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-7",
+      "value": "calc(7px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-18",
+      "value": "calc(18px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-155",
+      "value": "calc(155px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-140",
+      "value": "calc(140px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-62",
+      "value": "calc(62px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-4",
+      "value": "calc(4px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-5",
+      "value": "calc(5px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-38",
+      "value": "calc(38px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-23",
+      "value": "calc(23px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-130",
+      "value": "calc(130px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-76",
+      "value": "calc(76px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-115",
+      "value": "calc(115px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-150",
+      "value": "calc(150px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-46",
+      "value": "calc(46px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-145",
+      "value": "calc(145px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-125",
+      "value": "calc(125px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-135",
+      "value": "calc(135px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-48",
+      "value": "calc(48px * var(--fm-density))"
+    },
+    {
+      "name": "--fm-space-52",
+      "value": "calc(52px * var(--fm-density))"
+    }
+  ]
+}

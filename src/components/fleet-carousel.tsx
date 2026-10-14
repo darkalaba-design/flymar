@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
+import { useSiteTheme } from "./theme-provider";
 import { useRef, useState } from "react";
-import { Arrow, Photo, Reveal } from "./visual";
+import { Arrow, Photo } from "./visual";
 import { fleet, fleetCopy, modelHref } from "@/lib/fleet";
 import type { Locale } from "@/lib/content";
 import { track } from "@/lib/analytics";
-import { positioning } from "@/lib/positioning";
 
 export function FleetCarousel({
   locale,
@@ -14,6 +14,7 @@ export function FleetCarousel({
   locale: Locale;
   onContact: (source: string) => void;
 }) {
+  const theme = useSiteTheme();
   const t = fleetCopy[locale];
   const rail = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -25,9 +26,11 @@ export function FleetCarousel({
         left:
           card.offsetLeft -
           (rail.current.children[0] as HTMLElement).offsetLeft,
-        behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
-          ? "instant"
-          : "smooth",
+        behavior:
+          theme.motion === 0 ||
+          matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? "instant"
+            : "smooth",
       });
     track("cta_click", { source: "fleet_change", model: fleet[next] });
   }
@@ -38,48 +41,6 @@ export function FleetCarousel({
       aria-roledescription={locale === "ru" ? "Карусель" : "Carousel"}
       aria-label={locale === "ru" ? "Модели FLYMAR" : "FLYMAR vessels"}
     >
-      <Reveal>
-        <p className="eyebrow muted">{t.label}</p>
-        <div className="section-heading-row">
-          <h2>{t.title}</h2>
-          <div className="fleet-heading-side">
-            <p className="section-intro">{t.intro}</p>
-            <div className="fleet-controls">
-              <span className="micro-label" aria-live="polite">
-                {String(active + 1).padStart(2, "0")} /{" "}
-                {String(fleet.length).padStart(2, "0")}
-              </span>
-            </div>
-          </div>
-        </div>
-      </Reveal>
-      <div className="collection-purposes">
-        {fleet.map((model) => (
-          <Link
-            className={`collection-purpose purpose-${model}`}
-            key={model}
-            href={modelHref(model, locale)}
-          >
-            <span className="micro-label">
-              {model.toUpperCase()} / {positioning[locale][model].category}
-            </span>
-            <strong>{positioning[locale][model].promise}</strong>
-            <span>{positioning[locale][model].audience}</span>
-            <Arrow diagonal />
-          </Link>
-        ))}
-      </div>
-      <div
-        className="fleet-tabs"
-        aria-label={locale === "ru" ? "Выбор модели" : "Choose a model"}
-      >
-        {fleet.map((model, i) => (
-          <button key={model} onClick={() => go(i)} aria-pressed={active === i}>
-            FLYMAR {model.toUpperCase()}
-            <span>0{i + 1}</span>
-          </button>
-        ))}
-      </div>
       <div className="fleet-carousel">
         <div
           id="fleet-rail"

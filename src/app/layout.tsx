@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
+import { connection } from "next/server";
+import { readTheme } from "@/lib/design/store";
+import { themeVariables } from "@/lib/design/theme";
+import { ThemeProvider } from "@/components/theme-provider";
+import "./foundations.css";
 import "./globals.css";
 import "./fleet.css";
 import "./positioning.css";
 import "./company.css";
+import "./design-system.css";
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://flymar.tech",
@@ -18,12 +25,20 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  await connection();
+  const { theme } = await readTheme();
   return (
-    <html lang="en" data-scroll-behavior="smooth">
-      <body>{children}</body>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      style={themeVariables(theme) as CSSProperties}
+    >
+      <body>
+        <ThemeProvider initial={theme}>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

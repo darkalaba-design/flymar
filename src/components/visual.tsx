@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
+import { useSiteTheme } from "./theme-provider";
 export function Arrow({
   diagonal = false,
   className = "",
@@ -36,13 +37,17 @@ export function Reveal({
   className?: string;
 }) {
   const reduced = useReducedMotion();
+  const theme = useSiteTheme();
   return (
     <motion.div
       className={className}
-      initial={reduced ? false : { opacity: 0, y: 32 }}
+      initial={reduced || theme.motion === 0 ? false : { opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.12 }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      transition={{
+        duration: reduced ? 0 : 0.8 * theme.motion,
+        ease: [0.22, 1, 0.36, 1],
+      }}
     >
       {children}
     </motion.div>
