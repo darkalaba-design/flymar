@@ -1,7 +1,7 @@
 import type { Locale } from "./content";
 
-export const fleet = ["f8", "f9", "f11", "f30"] as const;
-export type ModelId = "f8" | "f11";
+export const fleet = ["f8", "f11"] as const;
+export type ModelId = (typeof fleet)[number];
 export type FleetId = (typeof fleet)[number];
 export function modelHref(model: ModelId, locale: Locale) {
   return `${locale === "ru" ? "/ru" : ""}/models/${model}`;
@@ -11,100 +11,52 @@ export const fleetCopy = {
     label: "02 / THE FLYMAR COLLECTION",
     title: "Find your way\nabove the water.",
     intro:
-      "Different scales. The same ambition. Discover a vessel for your next chapter.",
+      "One technology platform. Two distinct purposes. Everyday freedom with F8. Commercial transit with F11.",
     previous: "Previous vessel",
     next: "Next vessel",
-    preview: "Visuals coming soon",
-    coming: "More details coming soon",
     enquire: "Get in touch",
     details: "Explore the model",
     f8: {
-      title: "A smarter everyday.",
+      title: "The Everyday Electric Hydrofoil",
       description:
-        "Electric hydrofoil. Purpose-built for effortless passenger journeys.",
+        "One vessel. Endless missions. An accessible, versatile electric platform for adventure, everyday journeys and working on the water.",
       stats: [
         ["10", "passengers"],
         ["22", "knots cruise"],
         ["40", "NM range"],
       ],
     },
-    f9: {
-      title: "A new possibility.",
-      description:
-        "A compact addition to the FLYMAR collection. Discover the first details.",
-      stats: [
-        ["9", "passengers"],
-        ["80", "km range"],
-      ],
-    },
     f11: {
-      title: "More room to move.",
+      title: "The Commercial Hydrofoil",
       description:
-        "A carbon-fibre hydrofoil catamaran. A new perspective for 30 passengers.",
-      stats: [
-        ["30", "passengers"],
-        ["27", "knots cruise"],
-        ["11", "metres long"],
-      ],
-    },
-    f30: {
-      title: "A wider horizon.",
-      description:
-        "A 30-passenger model. Further specifications and imagery will follow.",
-      stats: [
-        ["30", "passengers"],
-        ["—", "range to be confirmed"],
-      ],
+        "Designed to move people profitably. A commercial transit platform in development for cities, transport authorities and fleet operators.",
+      stats: [],
     },
   },
   ru: {
     label: "02 / МОДЕЛЬНЫЙ РЯД FLYMAR",
     title: "Ваш путь\nвыше волн.",
     intro:
-      "Разный масштаб. Единое стремление. Найдите судно для нового этапа вашего бизнеса.",
+      "Единая технологическая платформа. Две разные задачи. F8 — свобода каждый день. F11 — регулярный общественный транспорт.",
     previous: "Предыдущая модель",
     next: "Следующая модель",
-    preview: "Изображения скоро появятся",
-    coming: "Подробности скоро",
     enquire: "Связаться",
     details: "Открыть модель",
     f8: {
-      title: "Умнее каждый день.",
+      title: "Электрическое судно на каждый день",
       description:
-        "Электрическое судно на подводных крыльях для комфортных пассажирских маршрутов.",
+        "Одно судно. Множество задач. Универсальная электрическая платформа для приключений, повседневных поездок и работы на воде.",
       stats: [
         ["10", "пассажиров"],
         ["22", "узла, крейсерская"],
         ["40", "морских миль"],
       ],
     },
-    f9: {
-      title: "Новые возможности.",
-      description:
-        "Компактная модель в линейке FLYMAR. Знакомьтесь с первыми характеристиками.",
-      stats: [
-        ["9", "пассажиров"],
-        ["80", "км запаса хода"],
-      ],
-    },
     f11: {
-      title: "Больше места для движения.",
+      title: "Коммерческий транспорт на крыльях",
       description:
-        "Катамаран на подводных крыльях с углеволоконным корпусом. Новый взгляд для 30 пассажиров.",
-      stats: [
-        ["30", "пассажиров"],
-        ["27", "узлов, крейсерская"],
-        ["11", "метров длина"],
-      ],
-    },
-    f30: {
-      title: "Горизонт становится шире.",
-      description:
-        "Модель на 30 пассажиров. Остальные характеристики и изображения появятся позже.",
-      stats: [
-        ["30", "пассажиров"],
-        ["—", "запас хода уточняется"],
-      ],
+        "Создан для рентабельных перевозок. Коммерческая транспортная платформа в разработке — для городов, перевозчиков и операторов флота.",
+      stats: [],
     },
   },
 };
@@ -115,7 +67,7 @@ export const evolutionCopy = {
       {
         title: ["A new perspective.", "Above the water."],
         description:
-          "Meet the electric hydrofoil that moves your business forward. Quietly. Intelligently. Effortlessly.",
+          "Everyday freedom. Dedicated transit. Discover two distinct ways to move above the water with FLYMAR.",
       },
       {
         title: ["Experience the future", "on water today."],
@@ -145,12 +97,12 @@ export const evolutionCopy = {
     business: [
       {
         title: "Urban & Regional\nPassenger Transport",
-        tag: "01 / CONNECT THE CITY",
-        text: "Scale your passenger network with quiet, captain-optional hydrofoils engineered for low-cost, high-efficiency daily routes.",
+        tag: "F11 / BUILT TO MOVE CITIES",
+        text: "Build the business case for waterborne transit. F11 puts capacity, route planning and fleet operations at the centre of the conversation.",
       },
       {
         title: "Premium Tourism\n& Resort Mobility",
-        tag: "02 / ELEVATE THE ARRIVAL",
+        tag: "F8 / ONE VESSEL. ENDLESS MISSIONS.",
         text: "Offer your guests an exclusive, whisper-quiet flight over water that turns simple point-to-point transfers into a signature luxury experience.",
       },
     ],
@@ -160,7 +112,7 @@ export const evolutionCopy = {
       {
         title: ["Новый взгляд.", "Выше волн."],
         description:
-          "Электрическое судно на подводных крыльях, которое движет ваш бизнес вперёд. Тихо. Умно. Легко.",
+          "Свобода каждый день. Регулярные перевозки. Два разных пути выше волн вместе с FLYMAR.",
       },
       {
         title: ["Будущее на воде.", "Уже сегодня."],
@@ -190,12 +142,12 @@ export const evolutionCopy = {
     business: [
       {
         title: "Городские и региональные\nпассажирские перевозки",
-        tag: "01 / СОЕДИНЯТЬ ГОРОД",
-        text: "Масштабируйте пассажирскую сеть с тихими судами на подводных крыльях, способными работать без капитана. Для экономичных и эффективных ежедневных маршрутов.",
+        tag: "F11 / ТРАНСПОРТ ДЛЯ ГОРОДА",
+        text: "Начните с экономики водного транспорта. F11 ставит во главу угла вместимость, планирование маршрутов и эксплуатацию флота.",
       },
       {
         title: "Премиальный туризм\nи курортные трансферы",
-        tag: "02 / ВПЕЧАТЛЯТЬ С ПЕРВОЙ МИНУТЫ",
+        tag: "F8 / ОДНО СУДНО. МНОЖЕСТВО ЗАДАЧ.",
         text: "Предложите гостям эксклюзивный, почти бесшумный полёт над водой. Превратите обычный трансфер из точки в точку в незабываемое премиальное путешествие.",
       },
     ],
@@ -213,14 +165,14 @@ export const productCopy = {
     next: "Next photograph",
     previous: "Previous photograph",
     f8: {
-      eyebrow: "ELECTRIC HYDROFOIL",
-      title: "A smarter way\nto make the everyday.",
+      eyebrow: "THE EVERYDAY ELECTRIC HYDROFOIL",
+      title: "One vessel.\nEndless missions.",
       intro:
-        "Meet FLYMAR F8. Electric propulsion, intelligent control and a passenger-first layout. Built to make the water part of everyday life.",
+        "Your electric SUV of the water. A versatile hydrofoil platform for family weekends, island hopping, resort transfers and everyday work. Built to make fast electric boating accessible.",
       storyTitle: "Thoughtful in every detail.",
       story:
         "Front and rear entrances keep boarding simple. Dedicated luggage space and a comfortable interior leave room to enjoy the journey.",
-      engineeringTitle: "Two modes.\nOne effortless experience.",
+      engineeringTitle: "Electric boating.\nEveryday versatility.",
       engineering:
         "Move in displacement mode or rise above the water on hydrofoils. A direct-drive electric engine keeps maintenance low, while wheel and joystick controls put everything within reach.",
       specifications: [
@@ -237,38 +189,30 @@ export const productCopy = {
         "Dedicated luggage space",
         "Wheel & joystick controls",
       ],
-      photos: ["interior", "f8-cockpit", "f8-boarding", "f8-profile"],
+      photos: ["hero-open-water", "f8-boarding", "leisure", "f8-cockpit"],
       captions: [
-        "A quieter passenger experience",
+        "The freedom to explore",
+        "A new arrival, a new adventure",
+        "Built for every day on the water",
         "Designed around the skipper",
-        "Easy access on board",
-        "Hydrofoil configuration",
       ],
     },
     f11: {
-      eyebrow: "HYDROFOIL CATAMARAN",
-      title: "A bigger perspective.\nFor everyone on board.",
+      eyebrow: "THE COMMERCIAL HYDROFOIL",
+      title: "Built to\nmove cities.",
       intro:
-        "Meet FLYMAR F11. A hydrofoil catamaran with a carbon-fibre hull, designed to welcome 30 passengers aboard.",
-      storyTitle: "Space for thirty.\nRoom for a new experience.",
+        "The next commercial transit platform from FLYMAR. In development for operators, cities and transport authorities — with fleet deployment, passenger throughput and lifecycle economics at its core.",
+      storyTitle: "Passenger flow.\nOperational focus.",
       story:
-        "An open central aisle, panoramic glazing and rows of individual seats. Explore a cabin designed around shared journeys.",
-      engineeringTitle: "Lightweight material.\nA larger ambition.",
-      engineering:
-        "An 11-metre hull, a 4-metre beam and carbon-fibre construction. The F11 combines a hydrofoil catamaran layout with a cruise speed of 27 knots — 50 km/h.",
-      specifications: [
-        ["Length overall", "11 m"],
-        ["Beam overall", "4 m"],
-        ["Cruise speed", "27 knots / 50 km/h"],
-        ["Hull material", "Carbon fibre"],
-        ["Crew", "1–2 people"],
-        ["Passengers", "30"],
-      ],
-      note: "Range and propulsion specifications will be announced separately.",
-      features: ["30 passenger seats", "Carbon-fibre hull", "1–2 crew"],
+        "An early look at the F11 cabin concept. Boarding flow, turnaround and seat utilisation are central to the operating brief. The final configuration will be presented at launch.",
+      engineeringTitle: "A transit asset.\nDefined by engineering.",
+      engineering: "A dedicated commercial transit platform in development.",
+      specifications: [],
+      note: "Coming Soon. Technical specifications will be shared at launch.",
+      features: [],
       photos: ["f11-interior", "f11-plan", "f11-profile", "f11-views"],
       captions: [
-        "A cabin with a wider perspective",
+        "Passenger cabin concept",
         "Passenger layout, viewed from above",
         "The F11 in profile",
         "Exterior views",
@@ -285,14 +229,14 @@ export const productCopy = {
     next: "Следующая фотография",
     previous: "Предыдущая фотография",
     f8: {
-      eyebrow: "ЭЛЕКТРИЧЕСКОЕ СУДНО НА ПОДВОДНЫХ КРЫЛЬЯХ",
-      title: "Новый взгляд\nна привычные маршруты.",
+      eyebrow: "ЭЛЕКТРИЧЕСКОЕ СУДНО НА КАЖДЫЙ ДЕНЬ",
+      title: "Одно судно.\nМножество задач.",
       intro:
-        "Знакомьтесь: FLYMAR F8. Электрическая тяга, интеллектуальное управление и планировка для комфорта пассажиров. Водные маршруты становятся частью повседневной жизни.",
+        "Ваш электрический внедорожник на воде. Универсальная платформа для семейных выходных, островных путешествий, курортных трансферов и повседневной работы. Скоростной электрический ход становится доступнее.",
       storyTitle: "Продуман в каждой детали.",
       story:
         "Входы спереди и сзади упрощают посадку. Предусмотренное место для багажа и комфортный интерьер позволяют наслаждаться путешествием.",
-      engineeringTitle: "Два режима.\nОдно ощущение лёгкости.",
+      engineeringTitle: "Электрическая тяга.\nСвобода каждый день.",
       engineering:
         "Двигайтесь в водоизмещающем режиме или поднимайтесь над водой на подводных крыльях. Электродвигатель с прямым приводом требует минимум обслуживания. Руль и джойстик делают управление удобным.",
       specifications: [
@@ -309,42 +253,31 @@ export const productCopy = {
         "Место для багажа",
         "Руль и джойстик",
       ],
-      photos: ["interior", "f8-cockpit", "f8-boarding", "f8-profile"],
+      photos: ["hero-open-water", "f8-boarding", "leisure", "f8-cockpit"],
       captions: [
-        "Комфорт пассажиров",
+        "Свобода исследовать",
+        "Новое место — новое приключение",
+        "Для каждого дня на воде",
         "Всё для удобного управления",
-        "Удобная посадка на борт",
-        "Конфигурация на подводных крыльях",
       ],
     },
     f11: {
-      eyebrow: "КАТАМАРАН НА ПОДВОДНЫХ КРЫЛЬЯХ",
-      title: "Шире горизонт.\nДля каждого на борту.",
+      eyebrow: "КОММЕРЧЕСКИЙ ТРАНСПОРТ НА КРЫЛЬЯХ",
+      title: "Создан\nдля движения города.",
       intro:
-        "Знакомьтесь: FLYMAR F11. Катамаран на подводных крыльях с корпусом из углеродного волокна. Пространство для 30 пассажиров.",
-      storyTitle: "Тридцать пассажиров.\nНовые впечатления.",
+        "Новая коммерческая транспортная платформа FLYMAR. Разрабатывается для операторов, городов и перевозчиков — с акцентом на развёртывание флота, пассажиропоток и экономику жизненного цикла.",
+      storyTitle: "Пассажиропоток.\nВзгляд оператора.",
       story:
-        "Открытый центральный проход, панорамное остекление и ряды индивидуальных кресел. Рассмотрите салон для совместных путешествий.",
-      engineeringTitle: "Лёгкий материал.\nБольшой замысел.",
+        "Первый взгляд на концепцию салона F11. Потоки при посадке, время оборота и загрузка — в центре эксплуатационных задач. Итоговая конфигурация будет представлена к запуску.",
+      engineeringTitle: "Транспортный актив.\nИнженерная основа.",
       engineering:
-        "Длина 11 метров, ширина 4 метра и корпус из углеродного волокна. F11 сочетает компоновку катамарана на подводных крыльях и крейсерскую скорость 27 узлов — 50 км/ч.",
-      specifications: [
-        ["Длина габаритная", "11 м"],
-        ["Ширина габаритная", "4 м"],
-        ["Крейсерская скорость", "27 узлов / 50 км/ч"],
-        ["Материал корпуса", "Углеродное волокно"],
-        ["Экипаж", "1–2 человека"],
-        ["Пассажиров", "30"],
-      ],
-      note: "Данные о запасе хода и силовой установке будут опубликованы отдельно.",
-      features: [
-        "30 пассажирских мест",
-        "Углеволоконный корпус",
-        "Экипаж 1–2 человека",
-      ],
+        "Специализированная коммерческая транспортная платформа в разработке.",
+      specifications: [],
+      note: "Coming Soon. Технические характеристики будут представлены к запуску.",
+      features: [],
       photos: ["f11-interior", "f11-plan", "f11-profile", "f11-views"],
       captions: [
-        "Салон с новым взглядом",
+        "Концепция пассажирского салона",
         "Планировка пассажирского салона",
         "F11 в профиль",
         "Внешние ракурсы",

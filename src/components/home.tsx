@@ -5,10 +5,17 @@ import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { content, type Locale } from "@/lib/content";
-import { track } from "@/lib/analytics";
+import { track, trackingContext } from "@/lib/analytics";
 import { Arrow, Photo, Reveal } from "./visual";
 import { FleetCarousel } from "./fleet-carousel";
 import { VesselDetail } from "./vessel-detail";
+import { positioning } from "@/lib/positioning";
+import { CompanyPage } from "./company-page";
+import {
+  companyHref,
+  companyCopy,
+  type CompanyPage as CompanyPageName,
+} from "@/lib/company";
 import {
   evolutionCopy,
   productCopy,
@@ -17,20 +24,51 @@ import {
 } from "@/lib/fleet";
 
 type Modal = "contact" | "technology" | "specs" | "interior" | null;
-const sectionIds = ["vessel", "technology", "applications", "about"];
 const heroImages = ["hero", "hero-city", "hero-open-water"];
-export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
+export function Home({
+  locale,
+  model,
+  page,
+}: {
+  locale: Locale;
+  model?: ModelId;
+  page?: CompanyPageName;
+}) {
   const t = content[locale];
   const e = evolutionCopy[locale];
+  const identity = model ? positioning[locale][model] : null;
   const homePath = locale === "ru" ? "/ru" : "/";
-  const alternatePath = model
-    ? modelHref(model, locale === "en" ? "ru" : "en")
-    : locale === "en"
-      ? "/ru"
-      : "/";
+  const navigation = [
+    { label: t.nav[0], href: `${model || page ? homePath : ""}#vessel` },
+    {
+      label: companyCopy[locale].labels.technology,
+      href: companyHref("technology", locale),
+      page: "technology",
+    },
+    { label: t.nav[2], href: `${model || page ? homePath : ""}#applications` },
+    {
+      label: companyCopy[locale].labels.about,
+      href: companyHref("about", locale),
+      page: "about",
+    },
+    {
+      label: companyCopy[locale].labels.contacts,
+      href: companyHref("contacts", locale),
+      page: "contacts",
+    },
+  ];
+  const alternatePath = page
+    ? companyHref(page, locale === "en" ? "ru" : "en")
+    : model
+      ? modelHref(model, locale === "en" ? "ru" : "en")
+      : locale === "en"
+        ? "/ru"
+        : "/";
   const reduced = useReducedMotion();
   const [slide, setSlide] = useState(0);
   const [modal, setModal] = useState<Modal>(null);
+  const [previewSubmission, setPreviewSubmission] = useState(false);
+  const enquiryId = useRef<string | null>(null);
   const [menu, setMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -64,7 +102,7 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
       window.removeEventListener("scroll", scroll);
       observer.disconnect();
     };
-  }, [locale]);
+  }, [locale, model, page]);
   useEffect(() => {
     if (modal) {
       dialogRef.current?.showModal();
@@ -90,6 +128,8 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
   function open(which: Exclude<Modal, null>, source: string) {
     returnFocus.current = document.activeElement as HTMLElement;
     setFormState("idle");
+    setPreviewSubmission(false);
+    enquiryId.current = null;
     formStarted.current = false;
     setMenu(false);
     setModal(which);
@@ -104,6 +144,8 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
     event.preventDefault();
     if (formState === "sending") return;
     const form = new FormData(event.currentTarget);
+    const attribution = trackingContext();
+    enquiryId.current ??= crypto.randomUUID();
     setFormState("sending");
     track("form_submit", { locale });
     try {
@@ -118,6 +160,9 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
           website: form.get("website"),
           consent: form.get("consent") === "on",
           locale,
+          requestId: enquiryId.current,
+          sessionId: attribution?.sessionId,
+          attribution: attribution?.attribution,
         }),
         signal: AbortSignal.timeout(15000),
       });
@@ -129,6 +174,7 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
         track("form_error", { reason: result.error ?? "server_error" });
         return;
       }
+      setPreviewSubmission(result.mode === "preview");
       setFormState("success");
       track("form_success", { locale });
     } catch {
@@ -160,7 +206,7 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
         {locale === "ru" ? "К содержимому" : "Skip to content"}
       </a>
       <header
-        className={`header ${scrolled || menu || model ? "header-solid" : ""}`}
+        className={`header ${scrolled || menu || model || (page && page !== "technology") ? "header-solid" : ""} ${model === "f11" ? "header-engineering" : ""}`}
       >
         <Link
           href={locale === "ru" ? "/ru" : "/"}
@@ -181,10 +227,14 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
             locale === "ru" ? "Основная навигация" : "Main navigation"
           }
         >
-          {t.nav.map((label, i) => (
-            <a key={label} href={`${model ? homePath : ""}#${sectionIds[i]}`}>
-              {label}
-            </a>
+          {navigation.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              aria-current={page && page === item.page ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
           ))}
         </nav>
         <div className="header-actions">
@@ -197,7 +247,21 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
             }
           >
             {locale === "en" ? "EN" : "RU"}
-            <span>⌄</span>
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="m3 4.5 3 3 3-3"
+                stroke="currentColor"
+                strokeWidth="1.25"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </Link>
           <button
             className="header-cta"
@@ -227,16 +291,17 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
           >
-            {t.nav.map((label, i) => (
-              <a
-                key={label}
-                href={`${model ? homePath : ""}#${sectionIds[i]}`}
+            {navigation.map((item, i) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                aria-current={page && page === item.page ? "page" : undefined}
                 onClick={() => setMenu(false)}
               >
                 <span>0{i + 1}</span>
-                {label}
+                {item.label}
                 <Arrow diagonal />
-              </a>
+              </Link>
             ))}
             <button
               className="button button-light"
@@ -250,7 +315,13 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
       </AnimatePresence>
 
       <main id="main">
-        {model ? (
+        {page ? (
+          <CompanyPage
+            page={page}
+            locale={locale}
+            onContact={() => open("contact", `${page}-contact`)}
+          />
+        ) : model ? (
           <VesselDetail
             key={model}
             model={model}
@@ -375,13 +446,13 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
                     <p>{e.range}</p>
                   </div>
                 </div>
-                <button
+                <Link
                   className="text-link"
-                  onClick={() => open("technology", "autonomy")}
+                  href={companyHref("technology", locale)}
                 >
                   {t.techLink}
                   <Arrow diagonal />
-                </button>
+                </Link>
                 <p className="spec-note">{e.autonomyNote}</p>
               </Reveal>
               <div className="autonomy-visual">
@@ -428,13 +499,13 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
                     </div>
                   ))}
                 </div>
-                <button
+                <Link
                   className="button button-dark"
-                  onClick={() => open("technology", "technology")}
+                  href={companyHref("technology", locale)}
                 >
                   {t.techLink}
                   <Arrow diagonal />
-                </button>
+                </Link>
               </Reveal>
             </section>
 
@@ -452,6 +523,10 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
                 <p className="eyebrow">{t.aboutLabel}</p>
                 <h2>{t.aboutHeading}</h2>
                 <p>{t.aboutText}</p>
+                <Link className="text-link" href={companyHref("about", locale)}>
+                  {locale === "ru" ? "Больше о компании" : "Meet FLYMAR"}
+                  <Arrow diagonal />
+                </Link>
               </Reveal>
               <span className="about-note micro-label">
                 LESS NOISE. MORE HORIZON.
@@ -472,22 +547,20 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
               <div className="application-grid">
                 {e.business.map((item, i) => (
                   <Reveal key={item.tag} className="application">
-                    <button
-                      className="application-image"
-                      onClick={() =>
-                        open("contact", i === 0 ? "urban" : "tourism")
-                      }
-                      aria-label={`${item.title} — ${t.discuss}`}
+                    <Link
+                      className={`application-image ${i === 0 ? "application-transit" : ""}`}
+                      href={modelHref(i === 0 ? "f11" : "f8", locale)}
+                      aria-label={`${item.title} — FLYMAR ${i === 0 ? "F11" : "F8"}`}
                     >
                       <Photo
-                        src={i === 0 ? "urban" : "f8-boarding"}
+                        src={i === 0 ? "f11-profile" : "f8-boarding"}
                         alt={item.title}
                       />
                       <span className="application-index">0{i + 1}</span>
                       <span className="circle-button">
                         <Arrow diagonal />
                       </span>
-                    </button>
+                    </Link>
                     <p className="micro-label muted">{item.tag}</p>
                     <h3>{item.title}</h3>
                     <p className="application-description">{item.text}</p>
@@ -506,28 +579,35 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
             </section>
           </>
         )}
-        <section id="contact" className="contact-section section-pad">
-          <Reveal>
-            <p className="eyebrow muted">{t.ctaLabel}</p>
-            <div className="contact-row">
-              <h2>
-                {t.ctaHeading[0]}
-                <br />
-                <span>{t.ctaHeading[1]}</span>
-              </h2>
-              <div className="contact-side">
-                <p>{t.ctaText}</p>
-                <button
-                  className="button button-light"
-                  onClick={() => open("contact", "footer-cta")}
-                >
-                  {t.cta}
-                  <Arrow diagonal />
-                </button>
+        {page !== "contacts" && (
+          <section
+            id="contact"
+            className={`contact-section section-pad ${model === "f11" ? "contact-transit" : ""}`}
+          >
+            <Reveal>
+              <p className="eyebrow muted">
+                {identity?.category ?? t.ctaLabel}
+              </p>
+              <div className="contact-row">
+                <h2>
+                  {identity?.cta[0] ?? t.ctaHeading[0]}
+                  <br />
+                  <span>{identity?.cta[1] ?? t.ctaHeading[1]}</span>
+                </h2>
+                <div className="contact-side">
+                  <p>{identity?.ctaText ?? t.ctaText}</p>
+                  <button
+                    className="button button-light"
+                    onClick={() => open("contact", "footer-cta")}
+                  >
+                    {identity?.contact ?? t.cta}
+                    <Arrow diagonal />
+                  </button>
+                </div>
               </div>
-            </div>
-          </Reveal>
-        </section>
+            </Reveal>
+          </section>
+        )}
       </main>
 
       <footer className="footer">
@@ -545,12 +625,29 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
             <Arrow className="-rotate-90" />
           </a>
         </div>
+        <nav
+          className="footer-pages"
+          aria-label={locale === "ru" ? "Страницы сайта" : "Site pages"}
+        >
+          {(["about", "technology", "contacts"] as const).map((id) => (
+            <Link key={id} href={companyHref(id, locale)}>
+              {companyCopy[locale].labels[id]}
+            </Link>
+          ))}
+          <a href="mailto:hello@flymar.tech">hello@flymar.tech</a>
+        </nav>
         <div className="footer-bottom">
           <span>{t.rights}</span>
           <span>ELECTRIC HYDROFOIL TECHNOLOGY</span>
           <div>
             <Link
-              href={model ? modelHref(model, "en") : "/"}
+              href={
+                page
+                  ? companyHref(page, "en")
+                  : model
+                    ? modelHref(model, "en")
+                    : "/"
+              }
               aria-current={locale === "en" ? "page" : undefined}
               scroll={false}
             >
@@ -558,7 +655,13 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
             </Link>
             <span>/</span>
             <Link
-              href={model ? modelHref(model, "ru") : "/ru"}
+              href={
+                page
+                  ? companyHref(page, "ru")
+                  : model
+                    ? modelHref(model, "ru")
+                    : "/ru"
+              }
               aria-current={locale === "ru" ? "page" : undefined}
               scroll={false}
             >
@@ -601,21 +704,34 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
               </button>
               {modal === "contact" ? (
                 <div className="contact-modal-grid">
-                  <div className="contact-modal-photo">
-                    <Photo src="hero-city" alt="FLYMAR" />
+                  <div
+                    className={`contact-modal-photo ${model === "f11" ? "contact-modal-transit" : ""}`}
+                  >
+                    <Photo
+                      src={model === "f11" ? "f11-profile" : "hero-city"}
+                      alt={model ? `FLYMAR ${model.toUpperCase()}` : "FLYMAR"}
+                    />
                     <div>
                       <p className="eyebrow">FLYMAR</p>
-                      <p>{t.footerTag}</p>
+                      <p>{identity?.promise ?? t.footerTag}</p>
                     </div>
                   </div>
                   <div className="modal-copy">
                     <p className="eyebrow muted">LET’S TALK</p>
                     <h2 id="dialog-title">
-                      {formState === "success" ? t.successTitle : t.formTitle}
+                      {formState === "success"
+                        ? t.successTitle
+                        : (identity?.contact ?? t.formTitle)}
                     </h2>
                     {formState === "success" ? (
                       <div role="status">
-                        <p>{t.successText}</p>
+                        <p>
+                          {previewSubmission
+                            ? locale === "ru"
+                              ? "Тестовая заявка сохранена во временной админке. Данные будут сброшены при перезапуске сервера."
+                              : "Your test enquiry is saved in the preview admin. This temporary data resets when the server restarts."
+                            : t.successText}
+                        </p>
                         <button
                           className="button button-dark mt-8"
                           onClick={() => setModal(null)}
@@ -626,7 +742,9 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
                       </div>
                     ) : (
                       <>
-                        <p className="modal-intro">{t.formIntro}</p>
+                        <p className="modal-intro">
+                          {identity?.ctaText ?? t.formIntro}
+                        </p>
                         <form
                           onSubmit={submit}
                           onFocus={() => {
@@ -780,7 +898,9 @@ export function Home({ locale, model }: { locale: Locale; model?: ModelId }) {
                     <p className="eyebrow muted">
                       INSIDE THE {(model || "f8").toUpperCase()}
                     </p>
-                    <h2 id="dialog-title">{t.interiorTitle}</h2>
+                    <h2 id="dialog-title">
+                      {identity?.inside ?? t.interiorTitle}
+                    </h2>
                     <p>
                       {model
                         ? productCopy[locale][model].story

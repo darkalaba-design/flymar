@@ -3,16 +3,16 @@ export const content = {
   en: {
     nav: ["Our vessels", "Technology", "Applications", "About"],
     contact: "Get in touch",
-    explore: "Explore the F8",
+    explore: "Explore the collection",
     eyebrow: "ELECTRIC. INTELLIGENT. ELEVATED.",
     hero: ["A new perspective.", "Above the water."],
     intro:
       "Meet the electric hydrofoil that moves your business forward. Quietly. Intelligently. Effortlessly.",
     discover: "Discover a different way to move",
     heroCaptions: [
-      "A new horizon for urban mobility",
+      "One technology. Two distinct purposes.",
       "Less resistance. More possibility.",
-      "Designed for the cities of tomorrow",
+      "Adventure. Transport. Freedom.",
     ],
     manifestoLabel: "01 / A BETTER WAY FORWARD",
     manifesto: ["More than a boat.", "A smarter way to move."],
@@ -94,9 +94,9 @@ export const content = {
     formIntro:
       "Tell us a little about your plans. Let’s find the right way forward.",
     name: "Your name",
-    email: "Work email",
+    email: "Email",
     company: "Company",
-    message: "Your route or project",
+    message: "Your plans or project",
     optional: "optional",
     consent:
       "I agree to the processing of the details I provide to respond to this enquiry.",
@@ -138,16 +138,16 @@ export const content = {
   ru: {
     nav: ["Наши суда", "Технологии", "Применение", "О компании"],
     contact: "Связаться",
-    explore: "Открыть F8",
+    explore: "Выбрать свою модель",
     eyebrow: "ЭЛЕКТРИЧЕСТВО. ИНТЕЛЛЕКТ. СВОБОДА.",
     hero: ["Новый взгляд.", "Выше волн."],
     intro:
       "Электрическое судно на подводных крыльях, которое движет ваш бизнес вперёд. Тихо. Умно. Легко.",
     discover: "Откройте новый способ двигаться",
     heroCaptions: [
-      "Новый горизонт городской мобильности",
+      "Одна технология. Две разные задачи.",
       "Меньше сопротивления. Больше возможностей.",
-      "Для городов завтрашнего дня",
+      "Приключения. Поездки. Свобода.",
     ],
     manifestoLabel: "01 / НОВОЕ НАПРАВЛЕНИЕ",
     manifesto: ["Больше, чем судно.", "Умнее каждый маршрут."],
@@ -224,9 +224,9 @@ export const content = {
     formTitle: "Один разговор.\nНовые возможности.",
     formIntro: "Расскажите о ваших планах. Вместе найдём лучшее решение.",
     name: "Ваше имя",
-    email: "Рабочий email",
+    email: "Email",
     company: "Компания",
-    message: "Ваш маршрут или проект",
+    message: "Ваши планы или проект",
     optional: "необязательно",
     consent:
       "Я согласен на обработку указанных данных для ответа на мой запрос.",

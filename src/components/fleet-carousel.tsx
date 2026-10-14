@@ -2,9 +2,10 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { Arrow, Photo, Reveal } from "./visual";
-import { fleet, fleetCopy, modelHref, type ModelId } from "@/lib/fleet";
+import { fleet, fleetCopy, modelHref } from "@/lib/fleet";
 import type { Locale } from "@/lib/content";
 import { track } from "@/lib/analytics";
+import { positioning } from "@/lib/positioning";
 
 export function FleetCarousel({
   locale,
@@ -45,12 +46,29 @@ export function FleetCarousel({
             <p className="section-intro">{t.intro}</p>
             <div className="fleet-controls">
               <span className="micro-label" aria-live="polite">
-                0{active + 1} / 04
+                {String(active + 1).padStart(2, "0")} /{" "}
+                {String(fleet.length).padStart(2, "0")}
               </span>
             </div>
           </div>
         </div>
       </Reveal>
+      <div className="collection-purposes">
+        {fleet.map((model) => (
+          <Link
+            className={`collection-purpose purpose-${model}`}
+            key={model}
+            href={modelHref(model, locale)}
+          >
+            <span className="micro-label">
+              {model.toUpperCase()} / {positioning[locale][model].category}
+            </span>
+            <strong>{positioning[locale][model].promise}</strong>
+            <span>{positioning[locale][model].audience}</span>
+            <Arrow diagonal />
+          </Link>
+        ))}
+      </div>
       <div
         className="fleet-tabs"
         aria-label={locale === "ru" ? "Выбор модели" : "Choose a model"}
@@ -92,30 +110,17 @@ export function FleetCarousel({
         >
           {fleet.map((id, index) => {
             const model = t[id];
-            const detailed = id === "f8" || id === "f11";
             return (
               <article
                 className={`fleet-card fleet-${id}`}
                 key={id}
                 aria-label={`FLYMAR ${id.toUpperCase()}`}
               >
-                <div
-                  className={`fleet-image ${!detailed ? "fleet-placeholder" : ""}`}
-                >
-                  {detailed ? (
-                    <Photo
-                      src={id === "f8" ? "vessel" : "f11-profile"}
-                      alt={`FLYMAR ${id.toUpperCase()}`}
-                    />
-                  ) : (
-                    <>
-                      <span className="placeholder-orbit" aria-hidden="true" />
-                      <span className="placeholder-model" aria-hidden="true">
-                        {id.toUpperCase()}
-                      </span>
-                      <span className="placeholder-caption">{t.preview}</span>
-                    </>
-                  )}
+                <div className="fleet-image">
+                  <Photo
+                    src={id === "f8" ? "leisure" : "f11-profile"}
+                    alt={`FLYMAR ${id.toUpperCase()}`}
+                  />
                   <span className="fleet-card-index">
                     0{index + 1} / FLYMAR COLLECTION
                   </span>
@@ -128,14 +133,28 @@ export function FleetCarousel({
                     <span className="micro-label">{model.title}</span>
                   </div>
                   <p>{model.description}</p>
-                  <div className="fleet-stats">
-                    {model.stats.map(([value, label]) => (
-                      <div key={label}>
-                        <strong>{value}</strong>
-                        <span>{label}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {id === "f11" ? (
+                    <div className="fleet-launch">
+                      <span className="product-launch-status">
+                        <span />
+                        Coming Soon
+                      </span>
+                      <p>
+                        {locale === "ru"
+                          ? "В разработке. Открыт диалог с операторами и транспортными партнёрами."
+                          : "In development. Open to conversations with operators and transit partners."}
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="fleet-stats">
+                      {model.stats.map(([value, label]) => (
+                        <div key={label}>
+                          <strong>{value}</strong>
+                          <span>{label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <div className="fleet-links">
                     <button
                       className="button button-dark"
@@ -144,17 +163,10 @@ export function FleetCarousel({
                       {t.enquire}
                       <Arrow diagonal />
                     </button>
-                    {detailed ? (
-                      <Link
-                        href={modelHref(id as ModelId, locale)}
-                        className="text-link"
-                      >
-                        {t.details}
-                        <Arrow diagonal />
-                      </Link>
-                    ) : (
-                      <span className="coming-soon">{t.coming}</span>
-                    )}
+                    <Link href={modelHref(id, locale)} className="text-link">
+                      {t.details}
+                      <Arrow diagonal />
+                    </Link>
                   </div>
                 </div>
               </article>

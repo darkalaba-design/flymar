@@ -76,7 +76,7 @@ img {
 }
 .eyebrow,
 .micro-label {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.14em;
   line-height: 1.5;
@@ -105,7 +105,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 42px;
-  font-size: 12px;
+  font-size: 14px;
   transition:
     background 0.25s,
     transform 0.25s;
@@ -135,7 +135,7 @@ h3 {
   gap: 35px;
   padding: 10px 0;
   border-bottom: 1px solid currentColor;
-  font-size: 12px;
+  font-size: 14px;
   background: none;
 }
 .text-link svg,
@@ -205,14 +205,14 @@ h3 {
   flex-shrink: 0;
 }
 .brand img {
-  width: 155px;
+  width: 180px;
   height: auto;
   filter: brightness(0) invert(1);
 }
 .desktop-nav {
   display: flex;
   gap: 34px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .desktop-nav a {
   position: relative;
@@ -237,10 +237,16 @@ h3 {
   align-items: center;
 }
 .locale {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   display: flex;
+  align-items: center;
+  line-height: 1;
   gap: 8px;
+}
+.locale svg {
+  display: block;
+  flex-shrink: 0;
 }
 .header-cta {
   color: inherit;
@@ -250,7 +256,7 @@ h3 {
   display: flex;
   gap: 28px;
   align-items: center;
-  font-size: 11px;
+  font-size: 13px;
   border-radius: 2px;
 }
 .menu-toggle {
@@ -297,7 +303,7 @@ h3 {
   align-items: center;
   gap: 10px;
   margin-bottom: 27px;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.2em;
 }
 .status-dot {
@@ -322,7 +328,7 @@ h1 span {
 .hero-intro {
   max-width: 300px;
   margin: 30px 0 29px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.75;
   color: #f0f0e9;
 }
@@ -343,7 +349,7 @@ h1 span {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .scroll-icon {
   width: 24px;
@@ -359,7 +365,7 @@ h1 span {
   gap: 28px;
 }
 .slide-caption {
-  font-size: 10px;
+  font-size: 12px;
   opacity: 0.8;
 }
 .slide-controls {
@@ -368,7 +374,7 @@ h1 span {
   gap: 15px;
 }
 .slide-number {
-  font-size: 10px;
+  font-size: 12px;
   font-variant-numeric: tabular-nums;
 }
 .slide-number i {
@@ -382,7 +388,7 @@ h1 span {
   top: 50%;
   writing-mode: vertical-rl;
   letter-spacing: 0.2em;
-  font-size: 8px;
+  font-size: 11px;
   opacity: 0.7;
 }
 .section-heading-row {
@@ -393,7 +399,7 @@ h1 span {
 }
 .section-intro {
   max-width: 330px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.85;
   color: #62716d;
   padding-bottom: 3px;
@@ -416,7 +422,7 @@ h1 span {
   margin-bottom: 35px;
 }
 .benefit-number {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--muted);
   align-self: flex-start;
 }
@@ -432,10 +438,10 @@ h1 span {
   font-weight: 300;
 }
 .benefit-percent small {
-  font-size: 17px;
+  font-size: 19px;
 }
 .benefit .micro-label {
-  font-size: 8px;
+  font-size: 11px;
   color: var(--muted);
   margin-bottom: 12px;
 }
@@ -444,7 +450,7 @@ h1 span {
   margin-bottom: 16px;
 }
 .benefit > p:last-child {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
   color: #62716d;
   max-width: 325px;
@@ -477,13 +483,13 @@ h1 span {
   display: inline-block;
   border: 1px solid #a3afa6;
   border-radius: 2px;
-  font-size: 7px;
+  font-size: 11px;
   letter-spacing: 0.07em;
   padding: 6px 8px;
   margin-left: 10px;
 }
 .vessel-heading > p {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.3;
   letter-spacing: -0.025em;
   white-space: pre-line;
@@ -531,7 +537,7 @@ h1 span {
   justify-content: space-between;
 }
 .vessel-stage-bottom .micro-label {
-  font-size: 8px;
+  font-size: 11px;
 }
 .round-link {
   background: transparent;
@@ -539,13 +545,13 @@ h1 span {
   gap: 17px;
   align-items: center;
   color: inherit;
-  font-size: 11px;
+  font-size: 13px;
 }
 .vessel-coordinate {
   position: absolute;
   top: 28px;
   left: 32px;
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   z-index: 2;
   opacity: 0.65;
@@ -557,7 +563,7 @@ h1 span {
   margin-top: 35px;
 }
 .vessel-description {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
   max-width: 380px;
   color: #596c64;
@@ -574,17 +580,17 @@ h1 span {
   line-height: 1.3;
 }
 .stat-value > span {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0;
   margin-left: 6px;
   white-space: nowrap;
 }
 .stat-label {
-  font-size: 10px;
+  font-size: 12px;
   color: #68796f;
 }
 .spec-note {
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.6;
   color: #748078;
   margin-top: 24px;
@@ -618,7 +624,7 @@ h1 span {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.1em;
 }
 .tech-photo-label > span:last-child {
@@ -632,7 +638,7 @@ h1 span {
   font-size: clamp(35px, 3.5vw, 56px);
 }
 .technology-copy > p:not(.eyebrow) {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
   color: #67736d;
   margin-top: 25px;
@@ -646,15 +652,15 @@ h1 span {
   gap: 22px;
   border-bottom: 1px solid var(--line);
   padding: 17px 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 .tech-list > div > span:first-child {
   color: #8b968f;
-  font-size: 9px;
+  font-size: 11px;
 }
 .tech-list .plus {
   margin-left: auto;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
 }
 .applications {
@@ -693,7 +699,7 @@ h1 span {
   position: absolute;
   top: 22px;
   left: 24px;
-  font-size: 11px;
+  font-size: 13px;
 }
 .application-image .circle-button {
   position: absolute;
@@ -704,14 +710,14 @@ h1 span {
 }
 .application > .micro-label {
   margin: 25px 0 12px;
-  font-size: 8px;
+  font-size: 11px;
 }
 .application h3 {
   font-size: 30px;
   line-height: 1.2;
 }
 .application-description {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
   color: #6f7c73;
   margin: 16px 0;
@@ -741,7 +747,7 @@ h1 span {
 }
 .about-copy > p:last-child {
   max-width: 430px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.9;
   margin-top: 28px;
   color: #e0e6e1;
@@ -750,7 +756,7 @@ h1 span {
   position: absolute;
   bottom: 35px;
   right: var(--pad);
-  font-size: 9px;
+  font-size: 11px;
 }
 .contact-section {
   background: #142f33;
@@ -780,7 +786,7 @@ h1 span {
   padding-bottom: 8px;
 }
 .contact-side p {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
   margin-bottom: 32px;
   color: #bdcdc7;
@@ -799,15 +805,15 @@ h1 span {
   gap: 30px;
 }
 .footer-main > span {
-  font-size: 12px;
+  font-size: 14px;
   color: #b6c8c0;
 }
 .footer-main .brand img {
-  width: 150px;
+  width: 174px;
 }
 .footer-main .text-link {
   border: 0;
-  font-size: 10px;
+  font-size: 12px;
 }
 .footer-bottom {
   border-top: 1px solid #ffffff20;
@@ -815,7 +821,7 @@ h1 span {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-size: 8px;
+  font-size: 11px;
   color: #90aaa2;
 }
 .footer-bottom > span:nth-child(2) {
@@ -876,7 +882,7 @@ h1 span {
 }
 .modal-intro {
   margin: 20px 0 30px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.7;
   color: #6b7a72;
   max-width: 500px;
@@ -919,7 +925,7 @@ h1 span {
 }
 form label {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 22px;
 }
 form input:not([type="checkbox"]),
@@ -933,7 +939,7 @@ form textarea {
   padding: 9px 0;
   color: var(--ink);
   font: inherit;
-  font-size: 14px;
+  font-size: 16px;
   resize: vertical;
 }
 .form-row {
@@ -944,13 +950,13 @@ form textarea {
 .optional {
   float: right;
   color: #8a948e;
-  font-size: 9px;
+  font-size: 11px;
 }
 form .consent {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.6;
   color: #6f7d74;
 }
@@ -973,7 +979,7 @@ form .consent {
   background: #e9dfd2;
   padding: 12px;
   color: #734a30;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.6;
   margin: 12px 0;
 }
@@ -999,7 +1005,7 @@ form .consent {
 }
 .tech-modal-grid p {
   color: #6f7d74;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.75;
 }
 .spec-modal-image {
@@ -1019,7 +1025,7 @@ form .consent {
 .spec-features li {
   border-bottom: 1px solid var(--line);
   padding: 12px 0;
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
   gap: 12px;
 }
@@ -1031,7 +1037,7 @@ form .consent {
   height: 500px;
 }
 .interior-modal .modal-copy > p:last-child {
-  font-size: 14px;
+  font-size: 16px;
   color: #6f7d74;
   margin-top: 20px;
   max-width: 540px;
@@ -1085,7 +1091,7 @@ form .consent {
     gap: 16px;
   }
   .brand img {
-    width: 132px;
+    width: 150px;
   }
   .desktop-nav,
   .header-cta {
@@ -1134,7 +1140,7 @@ form .consent {
     border-bottom: 1px solid #ffffff22;
   }
   .mobile-nav > a > span {
-    font-size: 10px;
+    font-size: 12px;
     color: #99b2a8;
   }
   .mobile-nav > a > svg {
@@ -1167,12 +1173,12 @@ form .consent {
     letter-spacing: -0.055em;
   }
   .hero-eyebrow {
-    font-size: 7px;
+    font-size: 11px;
     letter-spacing: 0.13em;
     margin-bottom: 25px;
   }
   .hero-intro {
-    font-size: 12px;
+    font-size: 14px;
     max-width: 260px;
     margin-top: 26px;
   }
@@ -1186,7 +1192,7 @@ form .consent {
   }
   .scroll-cue {
     max-width: 160px;
-    font-size: 8px;
+    font-size: 11px;
     gap: 9px;
   }
   .scroll-icon {
@@ -1202,7 +1208,7 @@ form .consent {
     height: 34px;
   }
   .slide-number {
-    font-size: 9px;
+    font-size: 11px;
   }
   .slide-number i {
     margin: 0 7px;
@@ -1212,7 +1218,7 @@ form .consent {
     padding-bottom: 70px;
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: 11px;
     margin-bottom: 28px;
   }
   h2 {
@@ -1224,7 +1230,7 @@ form .consent {
   .section-intro {
     margin-top: 25px;
     max-width: 400px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .benefits {
     grid-template-columns: 1fr;
@@ -1250,7 +1256,7 @@ form .consent {
     margin-bottom: 12px;
   }
   .benefit .micro-label {
-    font-size: 7px;
+    font-size: 11px;
   }
   .benefit > p:last-child {
     max-width: 100%;
@@ -1264,11 +1270,11 @@ form .consent {
     flex-wrap: wrap;
   }
   .electric-badge {
-    font-size: 6px;
+    font-size: 11px;
     margin-left: 4px;
   }
   .vessel-heading > p {
-    font-size: 13px;
+    font-size: 15px;
     margin-top: 20px;
     white-space: normal;
   }
@@ -1295,14 +1301,14 @@ form .consent {
   .vessel-coordinate {
     left: 24px;
     top: 24px;
-    font-size: 7px;
+    font-size: 11px;
   }
   .vessel-bottom {
     grid-template-columns: 1fr;
     gap: 30px;
   }
   .vessel-description {
-    font-size: 12px;
+    font-size: 14px;
   }
   .spec-stats {
     gap: 14px;
@@ -1311,14 +1317,14 @@ form .consent {
     font-size: 44px;
   }
   .stat-value > span {
-    font-size: 9px;
+    font-size: 11px;
     margin-left: 5px;
   }
   .stat-label {
-    font-size: 9px;
+    font-size: 11px;
   }
   .spec-note {
-    font-size: 8px;
+    font-size: 11px;
   }
   .technology {
     grid-template-columns: 1fr;
@@ -1362,7 +1368,7 @@ form .consent {
     font-size: 36px;
   }
   .about-copy > p:last-child {
-    font-size: 12px;
+    font-size: 14px;
   }
   .contact-row {
     display: block;
@@ -1376,7 +1382,7 @@ form .consent {
   }
   .contact-side > p {
     max-width: 340px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .footer-main {
     flex-wrap: wrap;
@@ -1386,14 +1392,14 @@ form .consent {
   .footer-main > span {
     order: 3;
     flex-basis: 100%;
-    font-size: 11px;
+    font-size: 13px;
   }
   .footer-main .brand img {
-    width: 130px;
+    width: 150px;
   }
   .footer-bottom {
     flex-wrap: wrap;
-    font-size: 8px;
+    font-size: 11px;
     gap: 17px;
   }
   .footer-bottom > span:nth-child(2) {

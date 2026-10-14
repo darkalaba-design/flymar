@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `FLYMAR ${model.toUpperCase()}`,
       description: productCopy.ru[model].intro,
-      images: [`/media/${model === "f8" ? "hero" : "f11-hero"}.webp`],
+      images: [`/media/${model === "f8" ? "f8-boarding" : "f11-profile"}.webp`],
     },
   };
 }

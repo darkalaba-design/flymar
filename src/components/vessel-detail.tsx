@@ -6,6 +6,8 @@ import { Arrow, Photo, Reveal } from "./visual";
 import { productCopy, fleetCopy, modelHref, type ModelId } from "@/lib/fleet";
 import type { Locale } from "@/lib/content";
 import { track } from "@/lib/analytics";
+import { positioning } from "@/lib/positioning";
+import { EverydayMissions, TransitOperations } from "./product-purpose";
 
 export function VesselDetail({
   model,
@@ -24,12 +26,13 @@ export function VesselDetail({
   const [frame, setFrame] = useState(0);
   const reduced = useReducedMotion();
   const other = model === "f8" ? "f11" : "f8";
+  const identity = positioning[locale][model];
   function change(index: number) {
     setFrame((index + p.photos.length) % p.photos.length);
     track("cta_click", { source: "product_gallery", model });
   }
   return (
-    <>
+    <div className={`vessel-page vessel-page-${model}`}>
       <section id="top" className={`product-hero product-${model}`}>
         <div className="product-hero-copy">
           <Link
@@ -39,6 +42,12 @@ export function VesselDetail({
             <Arrow className="rotate-180" />
             {t.back}
           </Link>
+          {model === "f11" && (
+            <div className="product-launch-status">
+              <span />
+              Coming Soon
+            </div>
+          )}
           <p className="eyebrow muted">{p.eyebrow}</p>
           <div className="product-model-name">
             FLYMAR <span>{model.toUpperCase()}</span>
@@ -46,36 +55,89 @@ export function VesselDetail({
           <h1>{p.title}</h1>
           <p className="product-intro">{p.intro}</p>
           <button className="button button-dark" onClick={onContact}>
-            {t.contact}
+            {identity.contact}
             <Arrow diagonal />
           </button>
         </div>
         <div className="product-hero-image">
           <Photo
-            src={model === "f8" ? "hero" : "f11-hero"}
+            src={model === "f8" ? "f8-boarding" : "f11-profile"}
             alt={`FLYMAR ${model.toUpperCase()}`}
             priority
           />
           <div className="product-image-caption">
             <span>FLYMAR {model.toUpperCase()}</span>
-            <a href="#specifications">
-              {t.specs}
+            <a href={model === "f8" ? "#specifications" : "#operations"}>
+              {model === "f8"
+                ? t.specs
+                : locale === "ru"
+                  ? "Для операторов"
+                  : "Operator brief"}
               <Arrow className="rotate-90" />
             </a>
           </div>
         </div>
       </section>
-      <section className="product-numbers" aria-label={t.specs}>
-        {summary.stats.map(([value, label]) => (
-          <div key={label}>
-            <span>{label}</span>
-            <strong>{value}</strong>
-          </div>
-        ))}
-      </section>
+      <nav
+        className="product-section-nav"
+        aria-label={locale === "ru" ? "Разделы модели" : "Model sections"}
+      >
+        <span>FLYMAR {model.toUpperCase()}</span>
+        {model === "f8" ? (
+          <>
+            <a href="#missions">
+              {locale === "ru"
+                ? "Возможности и владение"
+                : "Explore & ownership"}
+            </a>
+            <a href="#interior">{identity.inside}</a>
+          </>
+        ) : (
+          <>
+            <a href="#operations">
+              {locale === "ru" ? "Маршруты и флот" : "Routes & fleet"}
+            </a>
+            <a href="#economics">
+              {locale === "ru" ? "Экономика" : "Operating economics"}
+            </a>
+            <a href="#interior">{locale === "ru" ? "Концепция" : "Concept"}</a>
+          </>
+        )}
+        {model === "f8" && <a href="#specifications">{t.specs}</a>}
+      </nav>
+      {model === "f8" ? (
+        <section className="product-numbers" aria-label={t.specs}>
+          {summary.stats.map(([value, label]) => (
+            <div key={label}>
+              <span>{label}</span>
+              <strong>{value}</strong>
+            </div>
+          ))}
+        </section>
+      ) : (
+        <div className="transit-launch-strip">
+          <strong>Coming Soon</strong>
+          <p>
+            {locale === "ru"
+              ? "F11 в разработке. Сейчас — диалог с операторами и транспортными партнёрами. Технические характеристики будут представлены к запуску."
+              : "F11 is in development. We’re opening the conversation with operators and transit partners. Technical specifications will be shared at launch."}
+          </p>
+          <button className="text-link" onClick={onContact}>
+            {locale === "ru" ? "Обсудить проект" : "Discuss a project"}
+            <Arrow diagonal />
+          </button>
+        </div>
+      )}
+      {model === "f8" ? (
+        <EverydayMissions locale={locale} onContact={onContact} />
+      ) : (
+        <TransitOperations locale={locale} onContact={onContact} />
+      )}
       <section id="interior" className="product-story section-pad">
         <Reveal>
-          <p className="eyebrow muted">01 / {t.inside.toUpperCase()}</p>
+          <p className="eyebrow muted">
+            {model === "f8" ? "02" : "03"} / {identity.inside.toUpperCase()}
+          </p>
           <div className="section-heading-row">
             <h2>{p.storyTitle}</h2>
             <p className="section-intro">{p.story}</p>
@@ -84,62 +146,62 @@ export function VesselDetail({
         <Reveal className="product-interior">
           <Photo
             src={model === "f8" ? "interior" : "f11-interior"}
-            alt={p.captions[0]}
+            alt={identity.inside}
           />
           <button className="button button-light" onClick={onInterior}>
-            {t.view}
+            {identity.view}
             <Arrow diagonal />
           </button>
         </Reveal>
-        <div className="product-features">
-          {p.features.map((feature, i) => (
-            <div key={feature}>
-              <span>0{i + 1}</span>
-              <h3>{feature}</h3>
-              <Arrow diagonal />
-            </div>
-          ))}
-        </div>
-      </section>
-      <section id="specifications" className="product-engineering section-pad">
-        <Reveal className="engineering-copy">
-          <p className="eyebrow muted">02 / {t.specs.toUpperCase()}</p>
-          <h2>{p.engineeringTitle}</h2>
-          <p>{p.engineering}</p>
-          <div className="engineering-image">
-            <Photo
-              src={model === "f8" ? "motor" : "f11-plan"}
-              alt={
-                model === "f8"
-                  ? "FLYMAR electric direct drive"
-                  : "FLYMAR F11 passenger layout"
-              }
-            />
-          </div>
-        </Reveal>
-        <Reveal className="product-specification-list">
-          <dl>
-            {p.specifications.map(([label, value]) => (
-              <div key={label}>
-                <dt>{label}</dt>
-                <dd>{value}</dd>
+        {model === "f8" && (
+          <div className="product-features">
+            {p.features.map((feature, i) => (
+              <div key={feature}>
+                <span>0{i + 1}</span>
+                <h3>{feature}</h3>
+                <Arrow diagonal />
               </div>
             ))}
-          </dl>
-          <p className="spec-note">{p.note}</p>
-          <button className="text-link" onClick={onContact}>
-            {t.contact}
-            <Arrow diagonal />
-          </button>
-        </Reveal>
+          </div>
+        )}
       </section>
+      {model === "f8" && (
+        <section
+          id="specifications"
+          className="product-engineering section-pad"
+        >
+          <Reveal className="engineering-copy">
+            <p className="eyebrow muted">03 / {t.specs.toUpperCase()}</p>
+            <h2>{p.engineeringTitle}</h2>
+            <p>{p.engineering}</p>
+            <div className="engineering-image">
+              <Photo src="motor" alt="FLYMAR electric direct drive" />
+            </div>
+          </Reveal>
+          <Reveal className="product-specification-list">
+            <dl>
+              {p.specifications.map(([label, value]) => (
+                <div key={label}>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="spec-note">{p.note}</p>
+            <button className="text-link" onClick={onContact}>
+              {identity.contact}
+              <Arrow diagonal />
+            </button>
+          </Reveal>
+        </section>
+      )}
       <section
         className="product-gallery section-pad"
         aria-roledescription={locale === "ru" ? "Карусель" : "Carousel"}
-        aria-label={t.gallery}
+        aria-label={identity.gallery}
       >
         <div className="product-gallery-heading">
-          <h2>{t.gallery}</h2>
+          <h2>{identity.gallery}</h2>
           <div className="fleet-controls">
             <span className="micro-label">0{frame + 1} / 04</span>
             <button
@@ -187,18 +249,26 @@ export function VesselDetail({
           </div>
         </div>
       </section>
-      <section className="product-next section-pad">
-        <div>
-          <p className="eyebrow muted">
-            {locale === "ru" ? "ПРОДОЛЖИТЬ ЗНАКОМСТВО" : "CONTINUE EXPLORING"}
-          </p>
-          <h2>FLYMAR {other.toUpperCase()}</h2>
-        </div>
-        <Link href={modelHref(other, locale)} className="button button-dark">
-          {fleetCopy[locale].details}
-          <Arrow diagonal />
-        </Link>
-      </section>
-    </>
+      {model === "f8" && (
+        <section className="product-next section-pad">
+          <div>
+            <p className="eyebrow muted">
+              {locale === "ru" ? "ПРОДОЛЖИТЬ ЗНАКОМСТВО" : "CONTINUE EXPLORING"}
+            </p>
+            <h2>
+              FLYMAR {other.toUpperCase()}{" "}
+              <span className="product-next-status">Coming Soon</span>
+            </h2>
+            <p className="product-other-purpose">
+              {positioning[locale][other].promise}
+            </p>
+          </div>
+          <Link href={modelHref(other, locale)} className="button button-dark">
+            {fleetCopy[locale].details}
+            <Arrow diagonal />
+          </Link>
+        </section>
+      )}
+    </div>
   );
 }

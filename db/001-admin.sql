@@ -1,0 +1,11 @@
+BEGIN;
+CREATE TABLE IF NOT EXISTS flymar_events (id uuid PRIMARY KEY, at bigint NOT NULL, data jsonb NOT NULL);
+CREATE INDEX IF NOT EXISTS flymar_events_at ON flymar_events (at);
+CREATE TABLE IF NOT EXISTS flymar_leads (id uuid PRIMARY KEY, at bigint NOT NULL, data jsonb NOT NULL);
+CREATE INDEX IF NOT EXISTS flymar_leads_at ON flymar_leads (at);
+CREATE TABLE IF NOT EXISTS flymar_settings (id text PRIMARY KEY, data jsonb NOT NULL);
+CREATE TABLE IF NOT EXISTS flymar_sessions (hash text PRIMARY KEY, expires bigint NOT NULL, data jsonb NOT NULL);
+CREATE INDEX IF NOT EXISTS flymar_sessions_expires ON flymar_sessions (expires);
+CREATE TABLE IF NOT EXISTS flymar_rates (key text PRIMARY KEY, count integer NOT NULL, until bigint NOT NULL);
+CREATE INDEX IF NOT EXISTS flymar_rates_until ON flymar_rates (until);
+COMMIT;
