@@ -1,6 +1,9 @@
 /* Shared foundations. Palette, type and spacing aliases resolve from the live UI Kit controls. */
 :root,
 [data-flymar-theme] {
+  --fm-ui-surface: color-mix(in srgb, var(--fm-ink) 3%, var(--fm-paper));
+  --fm-ui-line: rgb(from var(--fm-ink) r g b / var(--fm-border-opacity));
+  --fm-ui-on-dark-muted: color-mix(in srgb, var(--fm-white) 70%, var(--fm-ink));
   --fm-input-background: color-mix(in srgb, var(--fm-ink) 6%, var(--fm-paper));
   --fm-input-padding-x: var(--fm-space-20);
   --fm-input-padding-y: var(--fm-space-14);

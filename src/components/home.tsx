@@ -49,7 +49,6 @@ export function Home({
       href: companyHref("technology", locale),
       page: "technology",
     },
-    { label: t.nav[2], href: `${model || page ? homePath : ""}#applications` },
     {
       label: companyCopy[locale].labels.about,
       href: companyHref("about", locale),

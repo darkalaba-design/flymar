@@ -141,7 +141,11 @@ export function UiKit({
   const matches = (text: string) =>
     text.toLowerCase().includes(query.toLowerCase());
   return (
-    <div className={s.shell}>
+    <div
+      className={s.shell}
+      data-flymar-theme
+      style={themeVariables(theme) as CSSProperties}
+    >
       <aside className={s.sidebar}>
         <a className={s.brand} href="/">
           FLYMAR <span>DESIGN SYSTEM / 01</span>
