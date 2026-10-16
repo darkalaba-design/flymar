@@ -177,7 +177,7 @@ export function VesselDetail({
             <h2>{p.engineeringTitle}</h2>
             <p>{p.engineering}</p>
             <div className="engineering-image">
-              <Photo src="motor" alt="FLYMAR electric direct drive" />
+              <Photo src="wings-f8" alt={locale === "ru" ? "FLYMAR F8 на подводных крыльях и в водоизмещающем режиме" : "FLYMAR F8 in foiling and displacement modes"} />
             </div>
           </Reveal>
           <Reveal className="product-specification-list">
