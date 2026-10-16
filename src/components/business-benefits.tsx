@@ -4,7 +4,7 @@ import { Arrow, Reveal } from "./visual";
 import styles from "./business-benefits.module.css";
 
 type Icon =
-  "monitor" | "telemetry" | "service" | "electricity" | "foil" | "savings";
+  "monitor" | "telemetry" | "service" | "electricity" | "foil" | "savings" | "safety";
 
 const iconFiles: Record<Icon, string> = {
   monitor: "a1",
@@ -13,6 +13,7 @@ const iconFiles: Record<Icon, string> = {
   electricity: "b1",
   foil: "b2",
   savings: "b3",
+  safety: "safety",
 };
 
 export function BenefitIcon({ name }: { name: Icon }) {
@@ -55,7 +56,7 @@ const copy = {
     ],
     savings: [
       {
-        icon: "electricity",
+        icon: "savings",
         title: "Electricity Costs Less Than Diesel",
         text: "Charging with electricity typically costs significantly less than refueling with marine diesel while delivering plenty of range, particularly when paired with high-efficiency hydrofoils.",
       },
@@ -65,9 +66,9 @@ const copy = {
         text: "With fewer moving parts, no diesel engine, and no complex marine transmission or exhaust systems, our fully electric hydrofoils need far less maintenance than a traditional diesel boat.",
       },
       {
-        icon: "savings",
-        title: "Incentives Add Savings",
-        text: "Depending on where you operate your passenger fleet, you may be eligible for local green maritime subsidies and incentives. Leasing and financing options are also available.",
+        icon: "safety",
+        title: "Uncompromising Safety",
+        text: "Safety is ensured by intelligent autonomy, utilizing 360° computer vision and high-precision GPS tracking to navigate and prevent hazards automatically. Ergonomic seating with integrated seatbelts and a full suite of certified maritime safety gear included.",
       },
     ],
   },
@@ -96,7 +97,7 @@ const copy = {
     ],
     savings: [
       {
-        icon: "electricity",
+        icon: "savings",
         title: "Электричество дешевле дизеля",
         text: "Зарядка электричеством обычно обходится значительно дешевле заправки судовым дизелем и обеспечивает большой запас хода — особенно в сочетании с высокоэффективными подводными крыльями.",
       },
@@ -106,9 +107,9 @@ const copy = {
         text: "Меньше движущихся частей, отсутствие дизельного двигателя, сложной судовой трансмиссии и выхлопной системы — нашим полностью электрическим судам на подводных крыльях требуется гораздо меньше обслуживания, чем традиционным дизельным.",
       },
       {
-        icon: "savings",
-        title: "Дополнительная экономия с программами поддержки",
-        text: "В зависимости от региона работы вашего пассажирского флота вам могут быть доступны местные субсидии и программы поддержки экологичного водного транспорта. Также доступны лизинг и финансирование.",
+        icon: "safety",
+        title: "Безопасность без компромиссов",
+        text: "Интеллектуальная автономность обеспечивает безопасность: круговое компьютерное зрение 360° и высокоточное GPS-позиционирование помогают автоматически прокладывать курс и предотвращать опасные ситуации. В комплектацию входят эргономичные кресла со встроенными ремнями безопасности и полный набор сертифицированного судового спасательного оборудования.",
       },
     ],
   },

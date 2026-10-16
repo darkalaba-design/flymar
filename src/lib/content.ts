@@ -78,7 +78,7 @@ export const content = {
     aboutHeading: "The future of water mobility\nshould feel effortless.",
     aboutText:
       "We see waterways as an opportunity to move differently. FLYMAR brings intelligent systems and electric hydrofoil technology together — with the operator and passenger at the heart of every decision.",
-    ctaLabel: "YOUR NEXT CHAPTER STARTS HERE",
+    ctaLabel: "THE NEXT CHAPTER OF YOUR BUSINESS STARTS HERE",
     ctaHeading: ["Let’s move", "forward."],
     ctaText:
       "A route in mind? A new possibility on the horizon? Let’s explore what FLYMAR can do for you.",
@@ -209,7 +209,7 @@ export const content = {
     aboutHeading: "Будущее водного транспорта —\nв ощущении лёгкости.",
     aboutText:
       "Водные пути дают нам возможность двигаться по-новому. FLYMAR объединяет интеллектуальные системы и электрические суда на подводных крыльях. В центре каждого решения — оператор и пассажир.",
-    ctaLabel: "НОВАЯ ГЛАВА НАЧИНАЕТСЯ ЗДЕСЬ",
+    ctaLabel: "НОВАЯ ГЛАВА ВАШЕГО БИЗНЕСА НАЧИНАЕТСЯ ЗДЕСЬ",
     ctaHeading: ["Двигаться", "вперёд."],
     ctaText:
       "Планируете маршрут? Видите новые возможности? Давайте обсудим, что FLYMAR может сделать для вас.",

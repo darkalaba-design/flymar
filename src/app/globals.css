@@ -680,7 +680,7 @@ h1 span {
   margin-top: var(--fm-space-50);
 }
 .application:nth-child(2) {
-  margin-top: var(--fm-space-100);
+  margin-top: 0;
 }
 .application-image {
   display: block;

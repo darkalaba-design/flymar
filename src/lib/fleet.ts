@@ -21,7 +21,7 @@ export const fleetCopy = {
       description:
         "One vessel. Endless missions. An accessible, versatile electric platform for adventure, everyday journeys and working on the water.",
       stats: [
-        ["10", "passengers"],
+        ["10", "passengers capacity"],
         ["22", "knots cruise"],
         ["40", "NM range"],
       ],
@@ -66,7 +66,7 @@ export const evolutionCopy = {
     hero: [
       {
         title: ["Experience the future", "on water today."],
-        description: "Faster, quieter, and effortlessly stable.",
+        description: "Faster, quieter, and effortlessly stable water mobility.",
       },
       {
         title: ["A new perspective.", "Above the water."],
@@ -83,7 +83,8 @@ export const evolutionCopy = {
     autonomyTitle: "Autonomy First:\nfull autopilot for\nmaximum efficiency.",
     autonomyText:
       "Full autopilot for maximum efficiency. Hydrofoils for top speed and the comfort of your passengers.",
-    upTo: "UP TO",
+    upTo: "SPEED UP TO",
+    rangeLabel: "RANGE",
     knots: "knots",
     speed: "Speed that moves you forward",
     km: "km",
@@ -111,7 +112,7 @@ export const evolutionCopy = {
     hero: [
       {
         title: ["Будущее на воде.", "Уже сегодня."],
-        description: "Быстрее, тише и с исключительной устойчивостью.",
+        description: "Передвижение по воде — быстрее, тише и с исключительной устойчивостью.",
       },
       {
         title: ["Новый взгляд.", "Выше волн."],
@@ -129,7 +130,8 @@ export const evolutionCopy = {
       "Автономность прежде всего:\nполный автопилот для\nмаксимальной эффективности.",
     autonomyText:
       "Полный автопилот для максимальной эффективности. Подводные крылья для высокой скорости и комфорта ваших пассажиров.",
-    upTo: "ДО",
+    upTo: "СКОРОСТЬ ДО",
+    rangeLabel: "ЗАПАС ХОДА",
     knots: "узлов",
     speed: "Скорость, которая движет вперёд",
     km: "км",

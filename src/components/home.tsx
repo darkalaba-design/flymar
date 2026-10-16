@@ -440,6 +440,7 @@ export function Home({
                     </strong>
                   </div>
                   <div>
+                    <span className="micro-label">{e.rangeLabel}</span>
                     <strong>
                       70<small>{e.km}</small>
                     </strong>
@@ -487,7 +488,7 @@ export function Home({
                     <div key={tag}>
                       <span>0{i + 1}</span>
                       {tag}
-                      <span className="plus">+</span>
+
                     </div>
                   ))}
                 </div>
@@ -501,25 +502,7 @@ export function Home({
               </Reveal>
             </section>
 
-            <section id="about" className="about">
-              <Photo
-                src="hero-open-water"
-                alt={locale === "ru" ? "Судно FLYMAR в открытой воде" : "FLYMAR on the open water"}
-              />
-              <div className="about-shade" />
-              <Reveal className="about-copy">
-                <p className="eyebrow">{t.aboutLabel}</p>
-                <h2>{t.aboutHeading}</h2>
-                <p>{t.aboutText}</p>
-                <Link className="text-link" href={companyHref("about", locale)}>
-                  {locale === "ru" ? "Больше о компании" : "Meet FLYMAR"}
-                  <Arrow diagonal />
-                </Link>
-              </Reveal>
-              <span className="about-note micro-label">
-                LESS NOISE. MORE HORIZON.
-              </span>
-            </section>
+
 
             <BusinessBenefits locale={locale} variant="savings" />
 
@@ -577,6 +560,27 @@ export function Home({
               onContact={() => open("contact", "fleet-management")}
             />
           </>
+        )}
+        {page === "contacts" && (
+            <section id="about" className="about">
+              <Photo
+                src="hero-open-water"
+                alt={locale === "ru" ? "Судно FLYMAR в открытой воде" : "FLYMAR on the open water"}
+              />
+              <div className="about-shade" />
+              <Reveal className="about-copy">
+                <p className="eyebrow">{t.aboutLabel}</p>
+                <h2>{t.aboutHeading}</h2>
+                <p>{t.aboutText}</p>
+                <Link className="text-link" href={companyHref("about", locale)}>
+                  {locale === "ru" ? "Больше о компании" : "Meet FLYMAR"}
+                  <Arrow diagonal />
+                </Link>
+              </Reveal>
+              <span className="about-note micro-label">
+                LESS NOISE. MORE HORIZON.
+              </span>
+            </section>
         )}
         {page !== "contacts" && (
           <section
