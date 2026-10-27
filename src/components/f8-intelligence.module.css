@@ -33,10 +33,16 @@
   font-weight: 400;
   line-height: var(--fm-leading-1p5);
 }
+.item p {
+  margin-top: var(--fm-space-16);
+  font-size: var(--fm-font-16);
+  line-height: var(--fm-leading-1p75);
+  color: var(--fm-tone-61716c);
+}
 @media (max-width: 960px) {
   .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--fm-space-24); }
+  .grid { grid-template-columns: 1fr; gap: var(--fm-space-24); }
   .icon { width: 56px; height: 56px; }
 }

@@ -169,7 +169,7 @@ export const productCopy = {
     previous: "Previous photograph",
     f8: {
       eyebrow: "Electric Hydrofoil Shuttle",
-      title: "One vessel.\nEndless missions.",
+      title: "Electric Hydrofoil Shuttle",
       intro:
         "The Flymar F8 is an all-electric, 10-passenger hydrofoil shuttle engineered for high-frequency urban transit and luxury resort connectivity.",
       storyTitle: "Designed for maximum comfort, safety and efficiency",
@@ -233,7 +233,7 @@ export const productCopy = {
     previous: "Предыдущая фотография",
     f8: {
       eyebrow: "Электрический шаттл на подводных крыльях",
-      title: "Одно судно.\nМножество задач.",
+      title: "Электрический шаттл\nна подводных крыльях",
       intro:
         "Flymar F8 — полностью электрический шаттл на подводных крыльях для 10 пассажиров, созданный для частых городских рейсов и сообщения с премиальными курортами.",
       storyTitle: "Создан для максимального комфорта, безопасности и эффективности",

@@ -129,16 +129,25 @@ export function VesselDetail({
             <p className="section-intro">{p.story}</p>
           </div>
         </Reveal>
-        <Reveal className="product-interior">
+        {model === "f8" ? (
+          <div className="product-interior-pair">
+            <Reveal className="product-interior-view">
+              <Photo src="f8-inside-open" alt={locale === "ru" ? "Планировка салона FLYMAR F8" : "FLYMAR F8 interior layout"} />
+            </Reveal>
+            <Reveal className="product-interior-view">
+              <Photo src="f8-outside-closed" alt={locale === "ru" ? "Внешний вид FLYMAR F8" : "FLYMAR F8 exterior"} />
+            </Reveal>
+          </div>
+        ) : <Reveal className="product-interior">
           <Photo
-            src={model === "f8" ? "f8-comfort" : "f11-interior"}
+            src="f11-interior"
             alt={identity.inside}
           />
           {model === "f11" && <button className="button button-light" onClick={onInterior}>
             {identity.view}
             <Arrow diagonal />
           </button>}
-        </Reveal>
+        </Reveal>}
         {model === "f8" && (
           <div className="product-features">
             {p.features.map((feature, i) => (

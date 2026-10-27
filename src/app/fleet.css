@@ -505,6 +505,27 @@
   margin-top: var(--fm-space-45);
   overflow: hidden;
 }
+.product-interior-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--fm-space-24);
+  margin-top: var(--fm-space-45);
+}
+.product-interior-view {
+  position: relative;
+  aspect-ratio: 1.3;
+  overflow: hidden;
+  border-radius: var(--fm-image-radius);
+}
+.product-interior-view img {
+  object-fit: contain;
+}
+@media (max-width: 760px) {
+  .product-interior-pair {
+    grid-template-columns: 1fr;
+    margin-top: var(--fm-space-30);
+  }
+}
 .product-interior .button {
   position: absolute;
   right: 35px;
