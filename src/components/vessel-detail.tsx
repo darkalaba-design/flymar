@@ -10,6 +10,7 @@ import { track } from "@/lib/analytics";
 import { positioning } from "@/lib/positioning";
 import { TransitOperations } from "./product-purpose";
 import { F8Business } from "./f8-business";
+import { F8Intelligence } from "./f8-intelligence";
 
 export function VesselDetail({
   model,
@@ -64,39 +65,26 @@ export function VesselDetail({
         </div>
         <div className="product-hero-image">
           <Photo
-            src={model === "f8" ? "f8-boarding" : "f11-profile"}
+            src={model === "f8" ? "f8-main" : "f11-profile"}
             alt={`FLYMAR ${model.toUpperCase()}`}
             priority
           />
-          <div className="product-image-caption">
+          {model === "f11" && <div className="product-image-caption">
             <span>FLYMAR {model.toUpperCase()}</span>
-            <a href={model === "f8" ? "#specifications" : "#operations"}>
-              {model === "f8"
-                ? t.specs
-                : locale === "ru"
+            <a href="#operations">
+              {locale === "ru"
                   ? "Для операторов"
                   : "Operator brief"}
               <Arrow className="rotate-90" />
             </a>
-          </div>
+          </div>}
         </div>
       </section>
-      <nav
+      {model === "f11" && <nav
         className="product-section-nav"
         aria-label={locale === "ru" ? "Разделы модели" : "Model sections"}
       >
         <span>FLYMAR {model.toUpperCase()}</span>
-        {model === "f8" ? (
-          <>
-            <a href="#missions">
-              {locale === "ru"
-                ? "Для бизнеса"
-                : "For business"}
-            </a>
-            <a href="#interior">{identity.inside}</a>
-          </>
-        ) : (
-          <>
             <a href="#operations">
               {locale === "ru" ? "Маршруты и флот" : "Routes & fleet"}
             </a>
@@ -104,10 +92,7 @@ export function VesselDetail({
               {locale === "ru" ? "Экономика" : "Operating economics"}
             </a>
             <a href="#interior">{locale === "ru" ? "Концепция" : "Concept"}</a>
-          </>
-        )}
-        {model === "f8" && <a href="#specifications">{t.specs}</a>}
-      </nav>
+      </nav>}
       {model === "f8" ? (
         <section className="product-numbers" aria-label={t.specs}>
           {summary.stats.map(([value, label]) => (
@@ -149,10 +134,10 @@ export function VesselDetail({
             src={model === "f8" ? "f8-comfort" : "f11-interior"}
             alt={identity.inside}
           />
-          <button className="button button-light" onClick={onInterior}>
+          {model === "f11" && <button className="button button-light" onClick={onInterior}>
             {identity.view}
             <Arrow diagonal />
-          </button>
+          </button>}
         </Reveal>
         {model === "f8" && (
           <div className="product-features">
@@ -160,24 +145,23 @@ export function VesselDetail({
               <div key={feature}>
                 <span>0{i + 1}</span>
                 <h3>{feature}</h3>
-                <Arrow diagonal />
               </div>
             ))}
           </div>
         )}
       </section>
       {model === "f8" && <F8Business locale={locale} />}
+      {model === "f8" && <F8Intelligence locale={locale} />}
       {model === "f8" && (
         <section
           id="specifications"
           className="product-engineering section-pad"
         >
           <Reveal className="engineering-copy">
-            <p className="eyebrow muted">04 / {t.specs.toUpperCase()}</p>
+            <p className="eyebrow muted">05 / {t.specs.toUpperCase()}</p>
             <h2>{p.engineeringTitle}</h2>
-            <p>{p.engineering}</p>
             <div className="engineering-image">
-              <Photo src="wings-f8" alt={locale === "ru" ? "FLYMAR F8 на подводных крыльях и в водоизмещающем режиме" : "FLYMAR F8 in foiling and displacement modes"} />
+              <Photo src="f8-performance" alt="FLYMAR F8" />
             </div>
           </Reveal>
           <Reveal className="product-specification-list">

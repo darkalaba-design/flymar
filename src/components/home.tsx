@@ -26,7 +26,7 @@ import {
 } from "@/lib/fleet";
 
 type Modal = "contact" | "technology" | "specs" | "interior" | null;
-const heroImages = ["hero", "hero-opex", "hero-safety"];
+const heroImages = ["hero-dubai", "hero-opex-v2", "hero-safety"];
 export function Home({
   locale,
   model,
@@ -393,14 +393,7 @@ export function Home({
                 </motion.div>
               </div>
               <div className="hero-bottom">
-                <a href="#vision" className="scroll-cue">
-                  <span className="scroll-icon">↓</span>
-                  {t.discover}
-                </a>
                 <div className="hero-pagination">
-                  <span className="slide-caption" aria-live="polite">
-                    {t.heroCaptions[slide]}
-                  </span>
                   <div className="slide-controls">
                     <button
                       className="circle-button"
@@ -467,17 +460,13 @@ export function Home({
             <section id="technology" className="technology">
               <div className="technology-photo">
                 <Photo
-                  src="intelligence"
+                  src="intelligence-navigation"
                   alt={
                     locale === "ru"
                       ? "Собственная электроника FLYMAR"
                       : "FLYMAR intelligent navigation hardware"
                   }
                 />
-                <div className="tech-photo-label">
-                  <span className="status-dot" /> FLYMAR INTELLIGENCE{" "}
-                  <span>01 — 03</span>
-                </div>
               </div>
               <Reveal className="technology-copy">
                 <p className="eyebrow muted">{t.techLabel}</p>
@@ -534,7 +523,6 @@ export function Home({
                         }
                         alt={item.title}
                       />
-                      <span className="application-index">0{i + 1}</span>
                       <span className="circle-button">
                         <Arrow diagonal />
                       </span>

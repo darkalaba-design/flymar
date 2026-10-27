@@ -168,14 +168,14 @@ export const productCopy = {
     next: "Next photograph",
     previous: "Previous photograph",
     f8: {
-      eyebrow: "THE EVERYDAY ELECTRIC HYDROFOIL",
+      eyebrow: "Electric Hydrofoil Shuttle",
       title: "One vessel.\nEndless missions.",
       intro:
         "The Flymar F8 is an all-electric, 10-passenger hydrofoil shuttle engineered for high-frequency urban transit and luxury resort connectivity.",
-      storyTitle: "Thoughtful in every detail.",
+      storyTitle: "Designed for maximum comfort, safety and efficiency",
       story:
         "Front and rear entrances keep boarding simple. Dedicated luggage space and a comfortable interior leave room to enjoy the journey.",
-      engineeringTitle: "Electric boating.\nEveryday versatility.",
+      engineeringTitle: "Performance & Specifications",
       engineering:
         "Move in displacement mode or rise above the water on hydrofoils. A direct-drive electric engine keeps maintenance low, while wheel and joystick controls put everything within reach.",
       specifications: [
@@ -189,8 +189,8 @@ export const productCopy = {
       note: "Range depends on load and operating conditions.",
       features: [
         "Front & rear access",
-        "Dedicated luggage space",
-        "Wheel & joystick controls",
+        "Flexible outlay customized to your needs",
+        "AC for maximum comfort of passengers even in hotter regions",
       ],
       photos: ["hero-open-water", "f8-boarding", "leisure", "f8-cockpit"],
       captions: [
@@ -232,14 +232,14 @@ export const productCopy = {
     next: "Следующая фотография",
     previous: "Предыдущая фотография",
     f8: {
-      eyebrow: "ЭЛЕКТРИЧЕСКОЕ СУДНО НА КАЖДЫЙ ДЕНЬ",
+      eyebrow: "Электрический шаттл на подводных крыльях",
       title: "Одно судно.\nМножество задач.",
       intro:
         "Flymar F8 — полностью электрический шаттл на подводных крыльях для 10 пассажиров, созданный для частых городских рейсов и сообщения с премиальными курортами.",
-      storyTitle: "Продуман в каждой детали.",
+      storyTitle: "Создан для максимального комфорта, безопасности и эффективности",
       story:
         "Входы спереди и сзади упрощают посадку. Предусмотренное место для багажа и комфортный интерьер позволяют наслаждаться путешествием.",
-      engineeringTitle: "Электрическая тяга.\nСвобода каждый день.",
+      engineeringTitle: "Возможности и характеристики",
       engineering:
         "Двигайтесь в водоизмещающем режиме или поднимайтесь над водой на подводных крыльях. Электродвигатель с прямым приводом требует минимум обслуживания. Руль и джойстик делают управление удобным.",
       specifications: [
@@ -253,8 +253,8 @@ export const productCopy = {
       note: "Запас хода зависит от загрузки и условий эксплуатации.",
       features: [
         "Два входа: спереди и сзади",
-        "Место для багажа",
-        "Руль и джойстик",
+        "Гибкая планировка под ваши задачи",
+        "Кондиционер для максимального комфорта пассажиров даже в жарких регионах",
       ],
       photos: ["hero-open-water", "f8-boarding", "leisure", "f8-cockpit"],
       captions: [
