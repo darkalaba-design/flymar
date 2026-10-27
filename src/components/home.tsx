@@ -460,7 +460,7 @@ export function Home({
             <section id="technology" className="technology">
               <div className="technology-photo">
                 <Photo
-                  src="intelligence-navigation"
+                  src="intelligence-navigation-v2"
                   alt={
                     locale === "ru"
                       ? "Собственная электроника FLYMAR"

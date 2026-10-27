@@ -65,7 +65,7 @@ export function VesselDetail({
         </div>
         <div className="product-hero-image">
           <Photo
-            src={model === "f8" ? "f8-main" : "f11-profile"}
+            src={model === "f8" ? "f8-main-extended" : "f11-profile"}
             alt={`FLYMAR ${model.toUpperCase()}`}
             priority
           />

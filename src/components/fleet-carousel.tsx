@@ -91,7 +91,6 @@ export function FleetCarousel({
                     <h3>
                       FLYMAR <span>{id.toUpperCase()}</span>
                     </h3>
-                    <span className="micro-label">{model.title}</span>
                   </div>
                   <p>{model.description}</p>
                   {id === "f11" ? (

@@ -48,14 +48,14 @@ export const content = {
     gallery: "Explore the interior",
     vesselNote: "Range depends on load and operating conditions.",
     techLabel: "03 / AUTONOMY FIRST",
-    techHeading: "Intelligence comes\nas standard.",
+    techHeading: "Connected by design",
     techBody:
       "Built to think ahead. Our integrated technology brings navigation, electric propulsion and vessel control into one connected experience.",
     techLink: "Inside the technology",
     techTags: [
       "Intelligent navigation",
-      "Direct electric drive",
-      "Connected by design",
+      "Computer Vision Perception",
+      "Active Foil Stabilization",
     ],
     applicationsLabel: "05 / MADE FOR YOUR WORLD",
     applicationsHeading: "New routes.\nBetter experiences.",
@@ -183,11 +183,11 @@ export const content = {
     gallery: "Заглянуть в салон",
     vesselNote: "Запас хода зависит от загрузки и условий эксплуатации.",
     techLabel: "03 / AUTONOMY FIRST",
-    techHeading: "Интеллект —\nв базовой комплектации.",
+    techHeading: "Единая система по замыслу",
     techBody:
       "На шаг впереди. Интегрированные технологии объединяют навигацию, электрическую тягу и управление судном в единую систему.",
     techLink: "Как это устроено",
-    techTags: ["Умная навигация", "Прямой электропривод", "Всегда на связи"],
+    techTags: ["Умная навигация", "Компьютерное зрение", "Активная стабилизация подводных крыльев"],
     applicationsLabel: "05 / СОЗДАН ДЛЯ ВАШИХ ЗАДАЧ",
     applicationsHeading: "Новые маршруты.\nНовые впечатления.",
     applicationsIntro:

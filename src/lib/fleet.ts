@@ -19,7 +19,7 @@ export const fleetCopy = {
     f8: {
       title: "The Everyday Electric Hydrofoil",
       description:
-        "One vessel. Endless missions. An accessible, versatile electric platform for adventure, everyday journeys and working on the water.",
+        "All-electric, 10-passenger hydrofoil shuttle engineered for high-frequency urban transit and luxury resort connectivity.",
       stats: [
         ["10", "passengers capacity"],
         ["22", "knots cruise"],
@@ -45,7 +45,7 @@ export const fleetCopy = {
     f8: {
       title: "Электрическое судно на каждый день",
       description:
-        "Одно судно. Множество задач. Универсальная электрическая платформа для приключений, повседневных поездок и работы на воде.",
+        "Полностью электрический шаттл на подводных крыльях для 10 пассажиров, созданный для частых городских рейсов и трансферов на премиальные курорты.",
       stats: [
         ["10", "пассажиров"],
         ["22", "узла, крейсерская"],
