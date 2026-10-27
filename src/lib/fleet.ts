@@ -69,14 +69,14 @@ export const evolutionCopy = {
         description: "Faster, quieter, and effortlessly stable water mobility.",
       },
       {
-        title: ["A new perspective.", "Above the water."],
+        title: ["Radically Lower OPEX.", "Zero Fuel Volatility."],
         description:
-          "Everyday freedom. Dedicated transit. Discover two distinct ways to move above the water with FLYMAR.",
+          "Hydrofoils cut water resistance by up to 80%—delivering massive energy savings and zero diesel maintenance.",
       },
       {
-        title: ["More freedom.", "Every nautical mile."],
+        title: ["De-Risk Your Operations", "at Every Mile"],
         description:
-          "Turn open water into new opportunities. Connect people, places and possibilities with FLYMAR.",
+          "Active collision avoidance prevents obstacles automatically, backed by full maritime-standard cabin safety.",
       },
     ],
     autonomyLabel: "01 / AUTONOMY FIRST",
@@ -115,14 +115,14 @@ export const evolutionCopy = {
         description: "Передвижение по воде — быстрее, тише и с исключительной устойчивостью.",
       },
       {
-        title: ["Новый взгляд.", "Выше волн."],
+        title: ["Радикально ниже расходы.", "Без скачков цен на топливо."],
         description:
-          "Свобода каждый день. Регулярные перевозки. Два разных пути выше волн вместе с FLYMAR.",
+          "Подводные крылья снижают сопротивление воды до 80% — значительная экономия энергии без обслуживания дизельного двигателя.",
       },
       {
-        title: ["Больше свободы.", "В каждой миле."],
+        title: ["Меньше рисков", "на каждой миле"],
         description:
-          "Превратите водные пути в новые возможности. Соединяйте людей, места и идеи вместе с FLYMAR.",
+          "Активная система предотвращения столкновений автоматически избегает препятствий. Безопасность салона обеспечена в соответствии с морскими стандартами.",
       },
     ],
     autonomyLabel: "01 / AUTONOMY FIRST",
@@ -171,7 +171,7 @@ export const productCopy = {
       eyebrow: "THE EVERYDAY ELECTRIC HYDROFOIL",
       title: "One vessel.\nEndless missions.",
       intro:
-        "Your electric SUV of the water. A versatile hydrofoil platform for family weekends, island hopping, resort transfers and everyday work. Built to make fast electric boating accessible.",
+        "The Flymar F8 is an all-electric, 10-passenger hydrofoil shuttle engineered for high-frequency urban transit and luxury resort connectivity.",
       storyTitle: "Thoughtful in every detail.",
       story:
         "Front and rear entrances keep boarding simple. Dedicated luggage space and a comfortable interior leave room to enjoy the journey.",
@@ -235,7 +235,7 @@ export const productCopy = {
       eyebrow: "ЭЛЕКТРИЧЕСКОЕ СУДНО НА КАЖДЫЙ ДЕНЬ",
       title: "Одно судно.\nМножество задач.",
       intro:
-        "Ваш электрический внедорожник на воде. Универсальная платформа для семейных выходных, островных путешествий, курортных трансферов и повседневной работы. Скоростной электрический ход становится доступнее.",
+        "Flymar F8 — полностью электрический шаттл на подводных крыльях для 10 пассажиров, созданный для частых городских рейсов и сообщения с премиальными курортами.",
       storyTitle: "Продуман в каждой детали.",
       story:
         "Входы спереди и сзади упрощают посадку. Предусмотренное место для багажа и комфортный интерьер позволяют наслаждаться путешествием.",

@@ -8,7 +8,8 @@ import { productCopy, fleetCopy, modelHref, type ModelId } from "@/lib/fleet";
 import type { Locale } from "@/lib/content";
 import { track } from "@/lib/analytics";
 import { positioning } from "@/lib/positioning";
-import { EverydayMissions, TransitOperations } from "./product-purpose";
+import { TransitOperations } from "./product-purpose";
+import { F8Business } from "./f8-business";
 
 export function VesselDetail({
   model,
@@ -89,8 +90,8 @@ export function VesselDetail({
           <>
             <a href="#missions">
               {locale === "ru"
-                ? "Возможности и владение"
-                : "Explore & ownership"}
+                ? "Для бизнеса"
+                : "For business"}
             </a>
             <a href="#interior">{identity.inside}</a>
           </>
@@ -130,9 +131,7 @@ export function VesselDetail({
           </button>
         </div>
       )}
-      {model === "f8" ? (
-        <EverydayMissions locale={locale} onContact={onContact} />
-      ) : (
+      {model === "f11" && (
         <TransitOperations locale={locale} onContact={onContact} />
       )}
       <section id="interior" className="product-story section-pad">
@@ -147,7 +146,7 @@ export function VesselDetail({
         </Reveal>
         <Reveal className="product-interior">
           <Photo
-            src={model === "f8" ? "interior" : "f11-interior"}
+            src={model === "f8" ? "f8-comfort" : "f11-interior"}
             alt={identity.inside}
           />
           <button className="button button-light" onClick={onInterior}>
@@ -167,13 +166,14 @@ export function VesselDetail({
           </div>
         )}
       </section>
+      {model === "f8" && <F8Business locale={locale} />}
       {model === "f8" && (
         <section
           id="specifications"
           className="product-engineering section-pad"
         >
           <Reveal className="engineering-copy">
-            <p className="eyebrow muted">03 / {t.specs.toUpperCase()}</p>
+            <p className="eyebrow muted">04 / {t.specs.toUpperCase()}</p>
             <h2>{p.engineeringTitle}</h2>
             <p>{p.engineering}</p>
             <div className="engineering-image">

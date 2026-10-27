@@ -26,7 +26,7 @@ import {
 } from "@/lib/fleet";
 
 type Modal = "contact" | "technology" | "specs" | "interior" | null;
-const heroImages = ["hero", "hero-city", "hero-open-water"];
+const heroImages = ["hero", "hero-opex", "hero-safety"];
 export function Home({
   locale,
   model,
@@ -456,7 +456,7 @@ export function Home({
                 </button>
               </Reveal>
               <div className="autonomy-visual">
-                <Photo src="autonomy-control" alt={e.autonomyImage} />
+                <Photo src="autonomy-fleet-control" alt={e.autonomyImage} />
               </div>
             </section>
             <FleetCarousel
@@ -530,7 +530,7 @@ export function Home({
                     >
                       <Photo
                         src={
-                          i === 0 ? "application-resort" : "application-city"
+                          i === 0 ? "application-city-f8" : "application-resort-f8"
                         }
                         alt={item.title}
                       />
