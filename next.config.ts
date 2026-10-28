@@ -5,6 +5,7 @@ const config: NextConfig = {
   devIndicators: false,
   images: { unoptimized: true },
   redirects: async () => [{ source: "/ru/:path*", destination: "/:path*", permanent: false }],
+  experimental: { agentUpgrade: "security" },
   headers: async () =>
     ["/admin/:path*", "/api/admin/:path*"].map((source) => ({
       source,
