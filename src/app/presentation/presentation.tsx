@@ -102,7 +102,7 @@ export function Presentation() {
               </>}
 
               {index === 1 && <>
-                <Photo name="f8-main-extended" alt="Passengers disembarking from FLYMAR F8 at a floating pontoon" className={styles.hero} />
+                <Photo name="presentation-waterfront" alt="FLYMAR F8 waterfront view" className={styles.hero} />
                 <div className={styles.heroShade} />
                 <div className={styles.whyCopy}>
                   <h2>The Inevitable Future<br />of Water mobility</h2>
