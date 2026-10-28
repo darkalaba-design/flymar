@@ -83,16 +83,15 @@ export function Presentation() {
               <header className={styles.slideHeader}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/media/logo.svg" width="156" height="35" alt="FLYMAR" className={styles.logo} />
-                {index !== 0 && index !== 5 && <span>{title}</span>}
               </header>
 
               {index === 0 && <>
                 <div className={styles.coverPhotos}>
                   <Photo name="f8-inside-open" alt="FLYMAR F8 cutaway showing the passenger cabin" />
-                  <Photo name="f8-outside-closed" alt="FLYMAR F8 exterior viewed from above" />
+                  <Photo name="presentation-f8-exterior-cutout" alt="FLYMAR F8 exterior viewed from above" />
                 </div>
                 <div className={styles.coverCopy}>
-                  <h1>WE BUILD NEXT-GENERATION<br />ELECTRIC HYDROFOIL FLEETS</h1>
+                  <h1>We build next-generation<br />electric hydrofoil fleets</h1>
                 </div>
                 <div className={styles.coverBenefits}>
                   <div><h3>High-Speed Efficiency:</h3><p><strong>30+ knots</strong> with <strong>80% less energy</strong> consumed per nautical mile.</p></div>
@@ -103,7 +102,7 @@ export function Presentation() {
               </>}
 
               {index === 1 && <>
-                <Photo name="application-city" alt="FLYMAR electric vessels at a neutral city waterfront" className={styles.hero} />
+                <Photo name="f8-main-extended" alt="Passengers disembarking from FLYMAR F8 at a floating pontoon" className={styles.hero} />
                 <div className={styles.heroShade} />
                 <div className={styles.whyCopy}>
                   <h2>The Inevitable Future<br />of Water mobility</h2>
@@ -137,7 +136,6 @@ export function Presentation() {
               </>}
 
               {index === 3 && <>
-                <div className={styles.modelsTitle}><h2>Two models</h2></div>
                 <div className={styles.models}>
                   <article>
                     <h3>FLYMAR F8</h3>
@@ -174,7 +172,7 @@ export function Presentation() {
                   <a href="mailto:d.filatov@flymar.tech">d.filatov@flymar.tech</a>
                 </div>
               </>}
-              <footer className={styles.slideFooter}><span>FLYMAR / Electric water mobility</span><span>{String(index + 1).padStart(2, "0")} / {String(titles.length).padStart(2, "0")}</span></footer>
+              <footer className={styles.slideFooter}><span>{String(index + 1).padStart(2, "0")} / {String(titles.length).padStart(2, "0")}</span></footer>
             </section>
           ))}
         </div>
