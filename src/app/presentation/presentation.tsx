@@ -1,10 +1,18 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { productCopy } from "@/lib/fleet";
 import styles from "./presentation.module.css";
 
-const titles = ["What we do", "Why hydrofoils", "What we do differently", "F8 & F11", "Target specifications"];
+const titles = ["What we do", "Why hydrofoils", "What we do differently", "F8 & F11", "Target specifications", "Let’s connect"];
+const f8Targets = [
+  ["Max Capacity", "10 passengers + 1 Crew"],
+  ["Range", "45 NM"],
+  ["Max Speed", "30 knots"],
+  ["Cruise Speed", "25 knots"],
+  ["Motor", "2 × 50 kW"],
+  ["Charging", "Shore Power & DC Fast Charging"],
+  ["Battery Capacity", "80 kWh or 120 kWh"],
+];
 
 function Photo({ name, alt, className = "" }: { name: string; alt: string; className?: string }) {
   // Original site assets stay full-resolution for presentation and print.
@@ -52,8 +60,8 @@ export function Presentation() {
       if (["ArrowRight", "ArrowDown", "PageDown", " "].includes(event.key)) { event.preventDefault(); go(active + 1); }
       if (["ArrowLeft", "ArrowUp", "PageUp"].includes(event.key)) { event.preventDefault(); go(active - 1); }
       if (event.key === "Home") { event.preventDefault(); go(0); }
-      if (event.key === "End") { event.preventDefault(); go(4); }
-      if (/^[1-5]$/.test(event.key)) go(Number(event.key) - 1);
+      if (event.key === "End") { event.preventDefault(); go(titles.length - 1); }
+      if (/^[1-9]$/.test(event.key) && Number(event.key) <= titles.length) go(Number(event.key) - 1);
       if (event.key.toLowerCase() === "f") { event.preventDefault(); void toggleFullscreen(); }
     };
     window.addEventListener("keydown", key);
@@ -75,12 +83,14 @@ export function Presentation() {
               <header className={styles.slideHeader}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/media/logo.svg" width="156" height="35" alt="FLYMAR" className={styles.logo} />
-                <span>{title}</span>
+                {index !== 0 && index !== 5 && <span>{title}</span>}
               </header>
 
               {index === 0 && <>
-                <Photo name="application-city" alt="FLYMAR electric vessels at a neutral city waterfront" className={styles.hero} />
-                <div className={styles.heroShade} />
+                <div className={styles.coverPhotos}>
+                  <Photo name="f8-inside-open" alt="FLYMAR F8 cutaway showing the passenger cabin" />
+                  <Photo name="f8-outside-closed" alt="FLYMAR F8 exterior viewed from above" />
+                </div>
                 <div className={styles.coverCopy}>
                   <h1>WE BUILD NEXT-GENERATION<br />ELECTRIC HYDROFOIL FLEETS</h1>
                 </div>
@@ -93,58 +103,78 @@ export function Presentation() {
               </>}
 
               {index === 1 && <>
+                <Photo name="application-city" alt="FLYMAR electric vessels at a neutral city waterfront" className={styles.hero} />
+                <div className={styles.heroShade} />
                 <div className={styles.whyCopy}>
-                  <p className={styles.eyebrow}>THE CASE FOR ELECTRIC FOILING</p>
-                  <h2>Less resistance.<br />More possibility.</h2>
-                  <p className={styles.intro}>Hydrofoils lift the hull clear of the water.<br />Lower drag makes electric speed practical.</p>
-                  <div className={styles.reason}><b>Low wake</b><p>Less disturbance along urban waterfronts.</p></div>
-                  <div className={styles.reason}><b>Lower energy demand</b><p>Less resistance at cruising speed.</p></div>
-                  <div className={styles.reason}><b>A smoother journey</b><p>Active foil control helps keep the vessel stable.</p></div>
+                  <h2>The Inevitable Future<br />of Water mobility</h2>
+                  <div className={styles.reason}><strong>The only way for high-speed city commute (no wake) and electric propulsion (low drag)</strong></div>
+                  <div className={styles.reason}><strong>Bypasses saturated land transit with zero road or rail CAPEX</strong></div>
+                  <div className={styles.reason}><strong>Radically lower unit economics and total decarbonization</strong></div>
                 </div>
-                <Photo name="company-foils" alt="FLYMAR hydrofoil engineering" className={styles.whyImage} />
-                <div className={styles.imageCaption}>Electric propulsion + actively controlled hydrofoils</div>
               </>}
 
               {index === 2 && <>
-                <div className={styles.automationCopy}>
-                  <p className={styles.eyebrow}>OUR AUTOMATION ADVANTAGE</p>
-                  <h2>Autonomy First</h2>
-                  <p className={styles.automationLead}>Software-defined vessel</p>
-                  <p className={styles.intro}>We develop the intelligence and the core control<br />systems together, from the start.</p>
-                  <div className={styles.automationRows}>
-                    <div><span>01</span><p><b>Understand the environment</b>Computer vision and sensors for situational awareness.</p></div>
-                    <div><span>02</span><p><b>Control the vessel</b>In-house electronics, drive by wire and active foils.</p></div>
-                    <div><span>03</span><p><b>Connect to operations</b>Remote operation from shore. Digital integration with the external environment is a design priority.</p></div>
-                  </div>
+                <div className={styles.technologyTitle}>
+                  <h2><span>What We Do Differently:</span>Software-Defined Vessels</h2>
                 </div>
-                <Photo name="autonomy-fleet-control" alt="FLYMAR concept for connected vessel and fleet control" className={styles.automationImage} />
-                <p className={styles.automationFoot}>Automation is part of the architecture of both F8 and F11.</p>
+                <div className={styles.technologyColumns}>
+                  <article>
+                    <Photo name="navigation-sensor-cutout" alt="FLYMAR navigation sensor unit on a transparent background" />
+                    <h3>Autonomy First — Built Around Software &amp; Sensors</h3>
+                    <p>Unlike traditional shipyards that add electronics as an afterthought, we design intelligence first and build the vessel around it. Computer vision and multi-sensor suites provide total situational awareness natively.</p>
+                  </article>
+                  <article>
+                    <Photo name="control-unit" alt="FLYMAR proprietary control unit" />
+                    <h3>FLYMAR Control Unit — In-House Digital Architecture</h3>
+                    <p>Proprietary core electronics eliminate third-party black boxes. Full drive-by-wire controls enable real-time agility and seamless remote operation from shore or autonomous repositioning.</p>
+                  </article>
+                  <article>
+                    <Photo name="wings" alt="FLYMAR active hydrofoil flight control surfaces" />
+                    <h3>Intelligent Flight Control &amp; Direct E-Drive</h3>
+                    <p>Millisecond dynamic foil adjustments ensure maximum efficiency and an unshakable ride, paired with an in-house underwater direct-drive electric propulsion unit with minimal moving parts for radically lower maintenance.</p>
+                  </article>
+                </div>
               </>}
 
               {index === 3 && <>
-                <div className={styles.modelsTitle}><p className={styles.eyebrow}>ONE TECHNOLOGY PLATFORM</p><h2>Two vessels. Different missions.</h2></div>
+                <div className={styles.modelsTitle}><h2>Two models</h2></div>
                 <div className={styles.models}>
-                  <article><Photo name="f8-main" alt="FLYMAR F8 electric hydrofoil" /><div className={styles.modelHeading}><h3>F8</h3><span>VERSATILE SHUTTLE</span></div><h4>One vessel, many applications</h4><p>Resort transfers, private journeys and local passenger services. A flexible platform for everyday operation.</p></article>
-                  <article><Photo name="f11-hero" alt="FLYMAR F11 commercial hydrofoil concept" /><div className={styles.modelHeading}><h3>F11</h3><span>COMMERCIAL TRANSIT</span></div><h4>Designed for transport economics</h4><p>A dedicated platform for cities and fleet operators, with passenger flow and fleet deployment at its core.</p></article>
+                  <article>
+                    <h3>FLYMAR F8</h3>
+                    <Photo name="presentation-f8" alt="FLYMAR F8 electric hydrofoil" />
+                    <p>All-electric, 10-passenger hydrofoil shuttle engineered for high-frequency urban transit and luxury resort connectivity.</p>
+                    <dl className={styles.modelStats}>
+                      <div><dd>10</dd><dt>passengers capacity</dt></div>
+                      <div><dd>22</dd><dt>knots cruise</dt></div>
+                      <div><dd>40</dd><dt>NM range</dt></div>
+                    </dl>
+                  </article>
+                  <article>
+                    <h3>FLYMAR F11</h3>
+                    <Photo name="presentation-f11" alt="FLYMAR F11 commercial hydrofoil concept" />
+                    <p>Designed to move people profitably. A commercial transit platform in development for cities, transport authorities and fleet operators.</p>
+                    <div className={styles.comingSoon}>Coming in <strong>2027</strong></div>
+                  </article>
                 </div>
               </>}
 
               {index === 4 && <>
-                <div className={styles.specsTitle}><p className={styles.eyebrow}>PERFORMANCE & OPERATING BRIEF</p><h2>Target specifications</h2></div>
-                <div className={styles.specColumns}>
-                  <article><div className={styles.specHeading}><h3>F8</h3><span>Current published specifications</span></div>
-                    <dl className={styles.numbers}>{productCopy.en.f8.specifications.slice(0, 3).map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
-                    <dl className={styles.specDetails}>{productCopy.en.f8.specifications.slice(3).map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
-                    <p className={styles.specNote}>{productCopy.en.f8.note}</p>
-                  </article>
-                  <article><div className={styles.specHeading}><h3>F11</h3><span>Commercial platform in development</span></div>
-                    <div className={styles.f11Brief}><h4>Built around the route</h4><p>Capacity and cabin layout</p><p>Service speed and route range</p><p>Charging and turnaround</p><p>Fleet operation and lifecycle cost</p></div>
-                    <p className={styles.specNote}>F11 technical specifications will be shared at launch. These are design priorities, not confirmed performance figures.</p>
-                  </article>
-                </div>
-                <a className={styles.contact} href="mailto:hello@flymar.tech">Let’s discuss your route <span>hello@flymar.tech</span></a>
+                <div className={styles.specsTitle}><h2>Target specifications<br />of FLYMAR F8</h2></div>
+                <dl className={styles.targetSpecs}>
+                  {f8Targets.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
+                </dl>
+                <Photo name="presentation-f8-profile" alt="FLYMAR F8 side profile showing its hydrofoils and electric propulsion" className={styles.targetImage} />
               </>}
-              <footer className={styles.slideFooter}><span>FLYMAR / Electric water mobility</span><span>{String(index + 1).padStart(2, "0")} / 05</span></footer>
+
+              {index === 5 && <>
+                <Photo name="presentation-connect" alt="FLYMAR F8 approaching over the water" className={styles.connectImage} />
+                <div className={styles.connectCopy}>
+                  <h2>Let’s connect</h2>
+                  <p>Dmitry Filatov</p>
+                  <a href="mailto:d.filatov@flymar.tech">d.filatov@flymar.tech</a>
+                </div>
+              </>}
+              <footer className={styles.slideFooter}><span>FLYMAR / Electric water mobility</span><span>{String(index + 1).padStart(2, "0")} / {String(titles.length).padStart(2, "0")}</span></footer>
             </section>
           ))}
         </div>
@@ -154,12 +184,12 @@ export function Presentation() {
         <div className={styles.pagination}>
           <button onClick={() => go(active - 1)} disabled={active === 0} aria-label="Previous slide">←</button>
           {titles.map((title, index) => <button key={title} aria-label={`Slide ${index + 1}: ${title}`} aria-current={active === index ? "step" : undefined} onClick={() => go(index)} className={styles.dot}>{String(index + 1).padStart(2, "0")}</button>)}
-          <button onClick={() => go(active + 1)} disabled={active === 4} aria-label="Next slide">→</button>
+          <button onClick={() => go(active + 1)} disabled={active === titles.length - 1} aria-label="Next slide">→</button>
         </div>
         <button onClick={() => void toggleFullscreen()} aria-label={fullscreen ? "Exit full screen" : "Full screen"}>{fullscreen ? "Exit full screen" : "Full screen ↗"}</button>
       </nav>
       <p className={styles.hint}>← → to navigate <span>F for full screen</span></p>
-      <p className={styles.srOnly} aria-live="polite">Slide {active + 1} of 5: {titles[active]}. {notice}</p>
+      <p className={styles.srOnly} aria-live="polite">Slide {active + 1} of {titles.length}: {titles[active]}. {notice}</p>
     </main>
   );
 }
