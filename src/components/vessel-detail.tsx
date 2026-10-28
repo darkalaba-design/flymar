@@ -69,30 +69,8 @@ export function VesselDetail({
             alt={`FLYMAR ${model.toUpperCase()}`}
             priority
           />
-          {model === "f11" && <div className="product-image-caption">
-            <span>FLYMAR {model.toUpperCase()}</span>
-            <a href="#operations">
-              {locale === "ru"
-                  ? "Для операторов"
-                  : "Operator brief"}
-              <Arrow className="rotate-90" />
-            </a>
-          </div>}
         </div>
       </section>
-      {model === "f11" && <nav
-        className="product-section-nav"
-        aria-label={locale === "ru" ? "Разделы модели" : "Model sections"}
-      >
-        <span>FLYMAR {model.toUpperCase()}</span>
-            <a href="#operations">
-              {locale === "ru" ? "Маршруты и флот" : "Routes & fleet"}
-            </a>
-            <a href="#economics">
-              {locale === "ru" ? "Экономика" : "Operating economics"}
-            </a>
-            <a href="#interior">{locale === "ru" ? "Концепция" : "Concept"}</a>
-      </nav>}
       {model === "f8" ? (
         <section className="product-numbers" aria-label={t.specs}>
           {summary.stats.map(([value, label]) => (
@@ -140,7 +118,7 @@ export function VesselDetail({
           </div>
         ) : <Reveal className="product-interior">
           <Photo
-            src="f11-interior"
+            src="f11-cabin-updated"
             alt={identity.inside}
           />
           {model === "f11" && <button className="button button-light" onClick={onInterior}>

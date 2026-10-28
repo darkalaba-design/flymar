@@ -490,6 +490,7 @@
   padding-top: var(--fm-space-20);
 }
 .product-numbers span {
+  flex: 1;
   font-size: var(--fm-font-13);
   color: var(--fm-tone-acc2b6);
 }

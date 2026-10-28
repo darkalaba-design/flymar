@@ -843,3 +843,23 @@
     transform: none;
   }
 }
+
+/* Keep adjacent F8 sections compact without stacking full section paddings. */
+.vessel-page-f8 .product-story,
+.vessel-page-f8 .everyday-missions {
+  padding-bottom: var(--fm-space-30);
+}
+.vessel-page-f8 .everyday-missions,
+.vessel-page-f8 #intelligence {
+  padding-top: var(--fm-space-55);
+}
+@media (max-width: 760px) {
+  .vessel-page-f8 .product-story,
+  .vessel-page-f8 .everyday-missions {
+    padding-bottom: var(--fm-space-20);
+  }
+  .vessel-page-f8 .everyday-missions,
+  .vessel-page-f8 #intelligence {
+    padding-top: var(--fm-space-35);
+  }
+}

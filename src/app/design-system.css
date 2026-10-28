@@ -36,7 +36,6 @@ form textarea {
   border-radius: var(--fm-radius);
 }
 .fleet-card,
-.mission-card,
 .company-capabilities article {
   border-radius: var(--fm-card-radius);
   overflow: hidden;

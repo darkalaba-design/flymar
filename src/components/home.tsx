@@ -26,7 +26,7 @@ import {
 } from "@/lib/fleet";
 
 type Modal = "contact" | "technology" | "specs" | "interior" | null;
-const heroImages = ["hero-dubai", "hero-opex-v2", "hero-safety"];
+const heroImages = ["hero-dubai", "hero-update-02", "hero-safety-16"];
 export function Home({
   locale,
   model,
@@ -416,9 +416,6 @@ export function Home({
                   </div>
                 </div>
               </div>
-              <span className="hero-side-label" aria-hidden="true">
-                DESIGNED TO RISE ABOVE
-              </span>
             </section>
 
             <section id="vision" className="autonomy-section">
