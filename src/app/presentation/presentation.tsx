@@ -106,9 +106,9 @@ export function Presentation() {
                 <div className={styles.heroShade} />
                 <div className={styles.whyCopy}>
                   <h2>The Inevitable Future<br />of Water mobility</h2>
-                  <div className={styles.reason}><strong>The only way for high-speed city commute (no wake) and electric propulsion (low drag)</strong></div>
-                  <div className={styles.reason}><strong>Bypasses saturated land transit with zero road or rail CAPEX</strong></div>
-                  <div className={styles.reason}><strong>Radically lower unit economics and total decarbonization</strong></div>
+                  <div className={styles.reason}>The only way for high-speed city commute (no wake) and electric propulsion (low&nbsp;drag)</div>
+                  <div className={styles.reason}>Bypasses saturated land transit with zero road or rail CAPEX</div>
+                  <div className={styles.reason}>Radically lower unit economics and total decarbonization</div>
                 </div>
               </>}
 
@@ -184,7 +184,10 @@ export function Presentation() {
           {titles.map((title, index) => <button key={title} aria-label={`Slide ${index + 1}: ${title}`} aria-current={active === index ? "step" : undefined} onClick={() => go(index)} className={styles.dot}>{String(index + 1).padStart(2, "0")}</button>)}
           <button onClick={() => go(active + 1)} disabled={active === titles.length - 1} aria-label="Next slide">→</button>
         </div>
-        <button onClick={() => void toggleFullscreen()} aria-label={fullscreen ? "Exit full screen" : "Full screen"}>{fullscreen ? "Exit full screen" : "Full screen ↗"}</button>
+        <div className={styles.actions}>
+          <a href="/downloads/flymar-presentation.pdf" download="FLYMAR-Presentation.pdf">Download PDF ↓</a>
+          <button onClick={() => void toggleFullscreen()} aria-label={fullscreen ? "Exit full screen" : "Full screen"}>{fullscreen ? "Exit full screen" : "Full screen ↗"}</button>
+        </div>
       </nav>
       <p className={styles.hint}>← → to navigate <span>F for full screen</span></p>
       <p className={styles.srOnly} aria-live="polite">Slide {active + 1} of {titles.length}: {titles[active]}. {notice}</p>
