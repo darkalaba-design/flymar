@@ -15,7 +15,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: productCopy.en[model].intro,
     alternates: {
       canonical: `/models/${model}`,
-      languages: { en: `/models/${model}`, ru: `/ru/models/${model}` },
     },
     openGraph: {
       title: `FLYMAR ${model.toUpperCase()}`,

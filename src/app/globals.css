@@ -907,10 +907,10 @@ h1 span {
 }
 .contact-modal-photo {
   position: relative;
-  min-height: 670px;
+  min-height: 0;
 }
 .contact-modal-photo img {
-  object-position: 37% center;
+  object-position: 55% center;
 }
 .contact-modal-photo:after {
   content: "";
@@ -932,7 +932,26 @@ h1 span {
   letter-spacing: var(--fm-tracking-neg0p04);
 }
 .contact-modal .modal-copy {
-  padding: var(--fm-space-65) var(--fm-space-45) var(--fm-space-40);
+  padding: var(--fm-space-40) var(--fm-space-45) var(--fm-space-30);
+}
+.contact-modal .modal-copy .eyebrow {
+  margin-bottom: var(--fm-space-12);
+}
+.contact-modal .modal-intro {
+  margin: var(--fm-space-12) 0 var(--fm-space-20);
+  line-height: var(--fm-leading-1p5);
+}
+.contact-modal form label {
+  margin-bottom: var(--fm-space-14);
+}
+.contact-modal form input:not([type="checkbox"]),
+.contact-modal form textarea {
+  padding-top: var(--fm-space-10);
+  padding-bottom: var(--fm-space-10);
+}
+.contact-modal .form-submit {
+  min-height: var(--fm-space-45);
+  height: var(--fm-space-45);
 }
 .contact-modal h2 {
   font-size: var(--fm-font-37);
@@ -989,6 +1008,20 @@ form .consent {
 .form-submit {
   width: 100%;
 }
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--fm-space-20);
+  flex-wrap: wrap;
+}
+.contact-modal .form-actions .consent {
+  flex: 1 1 180px;
+  align-items: center;
+  margin-bottom: 0;
+}
+.form-actions .consent input { margin-top: 0; }
+.form-actions .form-submit { width: auto; margin-left: auto; flex-shrink: 0; }
+.form-actions .form-error { flex-basis: 100%; order: 1; }
 .form-error {
   background: var(--fm-tone-e9dfd2);
   padding: var(--fm-space-12);
@@ -1086,7 +1119,7 @@ form .consent {
     height: 310px;
   }
   .contact-modal .modal-copy {
-    padding: var(--fm-space-60) var(--fm-space-30) var(--fm-space-35);
+    padding: var(--fm-space-40) var(--fm-space-30) var(--fm-space-30);
   }
   .contact-modal h2 {
     font-size: var(--fm-font-32);
@@ -1435,7 +1468,7 @@ form .consent {
   }
   .modal-copy,
   .contact-modal .modal-copy {
-    padding: var(--fm-space-65) var(--fm-space-24) var(--fm-space-30);
+    padding: var(--fm-space-55) var(--fm-space-24) var(--fm-space-30);
   }
   .modal-copy h2,
   .contact-modal h2 {

@@ -3,6 +3,8 @@ const config: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
   devIndicators: false,
+  images: { unoptimized: true },
+  redirects: async () => [{ source: "/ru/:path*", destination: "/:path*", permanent: false }],
   headers: async () =>
     ["/admin/:path*", "/api/admin/:path*"].map((source) => ({
       source,

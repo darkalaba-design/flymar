@@ -60,13 +60,6 @@ export function Home({
       page: "contacts",
     },
   ];
-  const alternatePath = page
-    ? companyHref(page, locale === "en" ? "ru" : "en")
-    : model
-      ? modelHref(model, locale === "en" ? "ru" : "en")
-      : locale === "en"
-        ? "/ru"
-        : "/";
   const reduced = useReducedMotion();
   const [slide, setSlide] = useState(0);
   const [modal, setModal] = useState<Modal>(null);
@@ -241,31 +234,6 @@ export function Home({
           ))}
         </nav>
         <div className="header-actions">
-          <Link
-            className="locale"
-            href={alternatePath}
-            scroll={false}
-            aria-label={
-              locale === "en" ? "Переключить на русский" : "Switch to English"
-            }
-          >
-            {locale === "en" ? "EN" : "RU"}
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="m3 4.5 3 3 3-3"
-                stroke="currentColor"
-                strokeWidth="1.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
           <button
             className="header-cta"
             onClick={() => open("contact", "header")}
@@ -628,35 +596,7 @@ export function Home({
         <div className="footer-bottom">
           <span>{t.rights}</span>
           <span>ELECTRIC HYDROFOIL TECHNOLOGY</span>
-          <div>
-            <Link
-              href={
-                page
-                  ? companyHref(page, "en")
-                  : model
-                    ? modelHref(model, "en")
-                    : "/"
-              }
-              aria-current={locale === "en" ? "page" : undefined}
-              scroll={false}
-            >
-              EN
-            </Link>
-            <span>/</span>
-            <Link
-              href={
-                page
-                  ? companyHref(page, "ru")
-                  : model
-                    ? modelHref(model, "ru")
-                    : "/ru"
-              }
-              aria-current={locale === "ru" ? "page" : undefined}
-              scroll={false}
-            >
-              RU
-            </Link>
-          </div>
+
         </div>
       </footer>
 
@@ -699,7 +639,7 @@ export function Home({
                     className={`contact-modal-photo ${model === "f11" ? "contact-modal-transit" : ""}`}
                   >
                     <Photo
-                      src={model === "f11" ? "f11-profile" : "hero-city"}
+                      src={model === "f11" ? "f11-profile" : "contact-front-7.jpg"}
                       alt={model ? `FLYMAR ${model.toUpperCase()}` : "FLYMAR"}
                     />
                     <div>
@@ -794,6 +734,7 @@ export function Home({
                               />
                             </label>
                           </div>
+                          <div className="form-actions">
                           <label className="consent">
                             <input type="checkbox" name="consent" required />
                             <span>{t.consent}</span>
@@ -814,6 +755,7 @@ export function Home({
                             {formState === "sending" ? t.sending : t.submit}
                             <Arrow diagonal />
                           </button>
+                          </div>
                         </form>
                       </>
                     )}

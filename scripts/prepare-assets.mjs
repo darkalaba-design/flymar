@@ -15,19 +15,14 @@ const assets = {
   leisure: [f82, "пассажиры.jpg"],
   foils: [f82, "крыло3.png"],
   motor: [f8, "двигатель3.png"],
-  marina: [f82, "Причал.jpg"],
   autonomy: [f82, "Ф4.jpg"],
   "f8-cockpit": [f82, "Интерьер9.jpg"],
   "f8-boarding": [f82, "пассажиры4.jpg"],
-  "f8-profile": [f8, "Вид сбоку2.png"],
   "f11-hero": [f11, "1.jpg"],
-  "f11-specifications": [f11, "2.jpg"],
   "f11-views": [f11, "3.jpg"],
   "f11-plan": [f11, "4.jpg"],
   "f11-profile": [f11, "5.jpg"],
   "f11-interior": [f11, "6.jpg"],
-  "urban-marina": [f82, "Причал10.jpg"],
-  "resort-arrival": [f82, "пассажиры2.jpg"],
 };
 await fs.mkdir("public/media", { recursive: true });
 for (const [name, parts] of Object.entries(assets)) {

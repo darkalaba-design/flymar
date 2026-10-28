@@ -263,7 +263,6 @@ export function companyMetadata(page: CompanyPage, locale: Locale): Metadata {
     description: t[page].description,
     alternates: {
       canonical: companyHref(page, locale),
-      languages: { en: companyHref(page, "en"), ru: companyHref(page, "ru") },
     },
     openGraph: {
       title,

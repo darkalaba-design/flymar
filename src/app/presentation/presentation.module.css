@@ -10,19 +10,21 @@
 .photo { object-fit:cover; display:block; }
 .hero,.heroShade { position:absolute; inset:0; width:100%; height:100%; }
 .hero { object-position:center 57%; }
-.heroShade { background:linear-gradient(90deg,rgba(8,31,36,.78),rgba(8,31,36,.18) 75%),linear-gradient(0deg,rgba(8,31,36,.86),transparent 45%); }
+.heroShade { background:linear-gradient(90deg,rgba(8,31,36,.78),rgba(8,31,36,.25) 85%),linear-gradient(0deg,rgba(8,31,36,.95),rgba(8,31,36,.5) 40%,transparent 75%); }
 .slide1,.slide3 { color:var(--fm-paper); background:var(--fm-ink); }
 .slide1 .logo,.slide3 .logo { filter:brightness(0) invert(1); opacity:1; }
-.coverCopy { position:absolute; top:23%; left:4.6%; }
+.slide1 .logo { width:20cqw; }
+.coverCopy { position:absolute; top:23%; left:4.6%; right:4.6%; }
 .eyebrow { margin:0 0 1.5cqw; font-size:.9cqw; letter-spacing:.16em; font-weight:500; }
 .slide h1,.slide h2,.slide h3,.slide h4,.slide p { margin-top:0; }
-.slide h1 { font-size:5.05cqw; line-height:1.04; letter-spacing:-.055em; font-weight:400; margin-bottom:2cqw; }
+.slide h1 { font-size:4.2cqw; line-height:1.1; letter-spacing:-.045em; font-weight:400; margin-bottom:0; }
 .slide h2 { font-size:4.1cqw; line-height:1.07; letter-spacing:-.05em; font-weight:400; margin-bottom:1.7cqw; }
 .intro { font-size:1.45cqw; line-height:1.5; opacity:.84; }
-.coverBenefits { position:absolute; left:4.6%; right:4.6%; bottom:11%; display:grid; grid-template-columns:repeat(3,1fr); gap:3cqw; }
-.coverBenefits div { border-top:1px solid #ffffff60; padding-top:1.2cqw; }
-.coverBenefits b { display:block; font-size:1.4cqw; font-weight:400; margin-bottom:.65cqw; }
-.coverBenefits span { font-size:1.04cqw; opacity:.75; }
+.coverBenefits { position:absolute; left:4.6%; right:4.6%; bottom:10%; display:grid; grid-template-columns:repeat(2,1fr); column-gap:4.5cqw; row-gap:2cqw; }
+.coverBenefits div { border-top:1px solid #ffffff60; padding-top:1cqw; }
+.slide .coverBenefits h3 { font-size:1.55cqw; line-height:1.25; letter-spacing:-.01em; font-weight:600; margin-bottom:.6cqw; }
+.coverBenefits p { font-size:1.4cqw; line-height:1.5; margin-bottom:0; color:rgb(from var(--fm-paper) r g b / .88); }
+.coverBenefits strong { font-weight:700; color:var(--fm-paper); }
 .whyCopy { position:absolute; top:19%; left:4.6%; width:47%; }
 .whyCopy .intro { margin-bottom:2.2cqw; }
 .reason { border-top:1px solid var(--line); padding-top:1cqw; margin-top:1cqw; width:88%; }

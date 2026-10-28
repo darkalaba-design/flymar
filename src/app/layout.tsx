@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://flymar.tech",
   ),
-  alternates: { languages: { en: "/", ru: "/ru" } },
   title: "FLYMAR — A new perspective on water",
   description:
     "FLYMAR F8: the everyday electric hydrofoil for adventure, transport and freedom. FLYMAR F11: a dedicated commercial hydrofoil for cities and fleet operators.",

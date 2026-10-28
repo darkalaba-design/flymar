@@ -19,7 +19,7 @@ const copy = {
     ],
   },
 };
-const images = ["f8-business-01", "f8-business-02", "f8-business-03"];
+const images = ["f8-business-01", "f8-charging", "f8-business-03"];
 
 export function F8Business({ locale }: { locale: Locale }) {
   const t = copy[locale];

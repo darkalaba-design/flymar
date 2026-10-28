@@ -82,14 +82,13 @@ export function Presentation() {
                 <Photo name="application-city" alt="FLYMAR electric vessels at a neutral city waterfront" className={styles.hero} />
                 <div className={styles.heroShade} />
                 <div className={styles.coverCopy}>
-                  <p className={styles.eyebrow}>ELECTRIC HYDROFOILS</p>
-                  <h1>High-speed travel.<br />Above the water.</h1>
-                  <p className={styles.intro}>Efficient waterborne transport, engineered<br />around passenger comfort and digital control.</p>
+                  <h1>WE BUILD NEXT-GENERATION<br />ELECTRIC HYDROFOIL FLEETS</h1>
                 </div>
                 <div className={styles.coverBenefits}>
-                  <div><b>Commercial efficiency</b><span>Lower energy and maintenance needs</span></div>
-                  <div><b>Simple infrastructure</b><span>Landing access and electric charging</span></div>
-                  <div><b>Digital DNA</b><span>Software at the core of the vessel</span></div>
+                  <div><h3>High-Speed Efficiency:</h3><p><strong>30+ knots</strong> with <strong>80% less energy</strong> consumed per nautical mile.</p></div>
+                  <div><h3>Low-OPEX Comfort:</h3><p><strong>90% less wave impact</strong> and <strong>up to 70% lower</strong> lifecycle operating costs.</p></div>
+                  <div><h3>Minimal Infrastructure:</h3><p><strong>Zero wake</strong> at speed; operates directly from standard floating pontoons.</p></div>
+                  <div><h3>Software-Defined Mobility:</h3><p><strong>100% digital architecture</strong> ready for remote transit and autonomous dispatch.</p></div>
                 </div>
               </>}
 
