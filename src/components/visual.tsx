@@ -58,15 +58,18 @@ export function Photo({
   alt,
   className = "",
   priority = false,
+  unoptimized = false,
 }: {
   src: string;
   alt: string;
   className?: string;
   priority?: boolean;
+  unoptimized?: boolean;
 }) {
   return (
     <Image
-      src={`/media/${src}.webp`}
+      src={`/media/${/\.(jpg|jpeg|png|webp)$/i.test(src) ? src : `${src}.webp`}`}
+      unoptimized={unoptimized}
       alt={alt}
       fill
       sizes="(max-width: 760px) 100vw, 80vw"

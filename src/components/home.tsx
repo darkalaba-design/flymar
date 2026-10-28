@@ -26,7 +26,7 @@ import {
 } from "@/lib/fleet";
 
 type Modal = "contact" | "technology" | "specs" | "interior" | null;
-const heroImages = ["hero-dubai", "hero-update-02", "hero-safety-16"];
+const heroImages = ["hero-dubai", "hero-update-02", "hero-safety-m003.jpg"];
 export function Home({
   locale,
   model,
@@ -351,6 +351,7 @@ export function Home({
                     >
                       <Photo
                         src={heroImages[slide]}
+                        unoptimized={slide === 2}
                         alt={
                           locale === "ru"
                             ? "FLYMAR F8 на подводных крыльях"
