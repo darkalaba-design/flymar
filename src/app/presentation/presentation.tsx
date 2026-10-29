@@ -94,10 +94,10 @@ export function Presentation() {
                   <h1>We build next-generation<br />electric hydrofoil fleets</h1>
                 </div>
                 <div className={styles.coverBenefits}>
-                  <div><h3>High-Speed Efficiency:</h3><p><strong>30+ knots</strong> with <strong>80% less energy</strong> consumed per nautical mile.</p></div>
-                  <div><h3>Low-OPEX Comfort:</h3><p><strong>90% less wave impact</strong> and <strong>up to 70% lower</strong> lifecycle operating costs.</p></div>
-                  <div><h3>Minimal Infrastructure:</h3><p><strong>Zero wake</strong> at speed; operates directly from standard floating pontoons.</p></div>
-                  <div><h3>Software-Defined Mobility:</h3><p><strong>100% digital architecture</strong> ready for remote transit and autonomous dispatch.</p></div>
+                  <div><h3>High-Speed Efficiency:</h3><p>30+ knots with 80% less energy consumed per nautical mile.</p></div>
+                  <div><h3>Low-OPEX Comfort:</h3><p>90% less wave impact and up to 70% lower lifecycle operating costs.</p></div>
+                  <div><h3>Minimal Infrastructure:</h3><p>Zero wake at speed; operates directly from standard floating pontoons.</p></div>
+                  <div><h3>Software-Defined Mobility:</h3><p>100% digital architecture ready for remote transit and autonomous dispatch.</p></div>
                 </div>
               </>}
 

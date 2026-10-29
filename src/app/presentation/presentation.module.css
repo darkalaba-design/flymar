@@ -27,7 +27,6 @@
 .coverBenefits div { border-top:1px solid var(--line); padding-top:1cqw; }
 .slide .coverBenefits h3 { font-size:1.8cqw; line-height:1.25; letter-spacing:normal; font-weight:600; margin-bottom:.55cqw; }
 .coverBenefits p { font-size:1.5cqw; line-height:1.4; margin-bottom:0; color:rgb(from var(--fm-ink) r g b / .8); }
-.coverBenefits strong { font-weight:700; color:var(--fm-ink); }
 .whyCopy { position:absolute; top:21%; left:4.6%; width:48%; }
 .slide .whyCopy h2 { font-size:4.6cqw; margin-bottom:3.3cqw; }
 .reason { border-top:1px solid #ffffff60; padding-top:1.35cqw; margin-top:1.5cqw; width:78%; font-size:1.8cqw; line-height:1.45; }
