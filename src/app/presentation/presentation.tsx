@@ -88,6 +88,7 @@ export function Presentation() {
               {index === 0 && <>
                 <div className={styles.coverPhotos}>
                   <Photo name="f8-inside-open" alt="FLYMAR F8 cutaway showing the passenger cabin" />
+                  <div className={styles.coverVersions}><strong>10 and 30</strong><span>passenger versions</span></div>
                   <Photo name="presentation-f8-exterior-cutout" alt="FLYMAR F8 exterior viewed from above" />
                 </div>
                 <div className={styles.coverCopy}>
@@ -96,7 +97,7 @@ export function Presentation() {
                 <div className={styles.coverBenefits}>
                   <div><h3>High-Speed Efficiency:</h3><p>30+ knots with 80% less energy consumed per nautical mile.</p></div>
                   <div><h3>Low-OPEX Comfort:</h3><p>90% less wave impact and up to 70% lower lifecycle operating costs.</p></div>
-                  <div><h3>Minimal Infrastructure:</h3><p>Zero wake at speed; operates directly from standard floating pontoons.</p></div>
+                  <div><h3>Retractable Foils · Minimal Infrastructure:</h3><p>Min draft 0.6 m. Zero wake at speed; standard floating pontoons.</p></div>
                   <div><h3>Software-Defined Mobility:</h3><p>100% digital architecture ready for remote transit and autonomous dispatch.</p></div>
                 </div>
               </>}
@@ -106,7 +107,7 @@ export function Presentation() {
                 <div className={styles.heroShade} />
                 <div className={styles.whyCopy}>
                   <h2>The Inevitable Future<br />of Water mobility</h2>
-                  <div className={styles.reason}>The only way for high-speed city commute (no wake) and electric propulsion (low&nbsp;drag)</div>
+                  <div className={styles.reason}>The only way for environmantal friendly(electric propulsion) high-speed city commute (no wake)</div>
                   <div className={styles.reason}>Bypasses saturated land transit with zero road or rail CAPEX</div>
                   <div className={styles.reason}>Radically lower unit economics and total decarbonization</div>
                 </div>
@@ -148,10 +149,14 @@ export function Presentation() {
                     </dl>
                   </article>
                   <article>
-                    <h3>FLYMAR F11</h3>
+                    <h3>FLYMAR F11 <span className={styles.comingSoon}>Coming in 2027</span></h3>
                     <Photo name="presentation-f11" alt="FLYMAR F11 commercial hydrofoil concept" />
                     <p>Designed to move people profitably. A commercial transit platform in development for cities, transport authorities and fleet operators.</p>
-                    <div className={styles.comingSoon}>Coming in <strong>2027</strong></div>
+                    <dl className={styles.modelStats}>
+                      <div><dd>30</dd><dt>passengers capacity</dt></div>
+                      <div><dd>25</dd><dt>knots cruise</dt></div>
+                      <div><dd>50</dd><dt>miles range</dt></div>
+                    </dl>
                   </article>
                 </div>
               </>}
@@ -165,7 +170,7 @@ export function Presentation() {
               </>}
 
               {index === 5 && <>
-                <Photo name="presentation-connect" alt="FLYMAR F8 approaching over the water" className={styles.connectImage} />
+                <Photo name="interior-enhanced" alt="Passenger reading in the FLYMAR cabin" className={styles.connectImage} />
                 <div className={styles.connectCopy}>
                   <h2>Let’s connect</h2>
                   <p>Dmitry Filatov</p>
