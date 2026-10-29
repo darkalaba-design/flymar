@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./presentation.module.css";
 
-const titles = ["What we do", "Why hydrofoils", "What we do differently", "F8 & F11", "Target specifications", "Let’s connect"];
+const titles = ["What we do", "Why hydrofoils", "What we do differently", "F8 & F11", "F8 target specifications", "F11 target specifications", "Let’s connect"];
 const f8Targets = [
   ["Max Capacity", "10 passengers + 1 Crew"],
   ["Range", "45 NM"],
@@ -12,6 +12,12 @@ const f8Targets = [
   ["Motor", "2 × 50 kW"],
   ["Charging", "Shore Power & DC Fast Charging"],
   ["Battery Capacity", "80 kWh or 120 kWh"],
+];
+const f11Targets = [
+  ["Passenger Capacity", "30 passengers"],
+  ["Range", "50 miles"],
+  ["Cruise Speed", "25 knots"],
+  ["Availability", "In development · Coming in 2027"],
 ];
 
 function Photo({ name, alt, className = "" }: { name: string; alt: string; className?: string }) {
@@ -170,6 +176,14 @@ export function Presentation() {
               </>}
 
               {index === 5 && <>
+                <div className={styles.specsTitle}><h2>Target specifications<br />of FLYMAR F11</h2></div>
+                <dl className={styles.targetSpecs}>
+                  {f11Targets.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
+                </dl>
+                <Photo name="presentation-f11-profile-cutout" alt="FLYMAR F11 side cutaway showing its passenger cabin" className={styles.targetImage} />
+              </>}
+
+              {index === 6 && <>
                 <Photo name="interior-enhanced" alt="Passenger reading in the FLYMAR cabin" className={styles.connectImage} />
                 <div className={styles.connectCopy}>
                   <h2>Let’s connect</h2>
