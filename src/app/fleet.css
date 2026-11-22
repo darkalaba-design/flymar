@@ -713,7 +713,6 @@
   }
   .autonomy-section {
     grid-template-columns: 1fr;
-    border-top: 40px solid #fff;
   }
   .autonomy-copy {
     padding: var(--fm-space-30) var(--fm-space-24);
@@ -741,7 +740,6 @@
     line-height: var(--fm-leading-1p6);
   }
   .autonomy-visual {
-    order: -1;
     min-height: 0;
     aspect-ratio: 15 / 7;
   }
