@@ -62,6 +62,7 @@ export function Home({
   ];
   const reduced = useReducedMotion();
   const [slide, setSlide] = useState(0);
+  const [heroPaused, setHeroPaused] = useState(false);
   const [modal, setModal] = useState<Modal>(null);
   const [previewSubmission, setPreviewSubmission] = useState(false);
   const enquiryId = useRef<string | null>(null);
@@ -74,6 +75,16 @@ export function Home({
   >("idle");
   const formStarted = useRef(false);
   const seen = useRef(new Set<string>());
+
+  useEffect(() => {
+    if (model || page || modal || menu || heroPaused || reduced || theme.motion === 0)
+      return;
+    const timer = window.setInterval(() => {
+      if (document.visibilityState === "visible")
+        setSlide((current) => (current + 1) % heroImages.length);
+    }, 7000);
+    return () => window.clearInterval(timer);
+  }, [slide, model, page, modal, menu, heroPaused, reduced, theme.motion]);
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -302,7 +313,17 @@ export function Home({
           />
         ) : (
           <>
-            <section className={`hero hero-slide-${slide}`} id="top">
+            <section
+              className={`hero hero-slide-${slide}`}
+              id="top"
+              onMouseEnter={() => setHeroPaused(true)}
+              onMouseLeave={() => setHeroPaused(false)}
+              onFocusCapture={() => setHeroPaused(true)}
+              onBlurCapture={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget))
+                  setHeroPaused(false);
+              }}
+            >
               <div className="hero-photographs">
                 <AnimatePresence initial={false}>
                   {
@@ -332,7 +353,7 @@ export function Home({
                 </AnimatePresence>
               </div>
               <div className="hero-shade" />
-              <div className="hero-content" aria-live="polite">
+              <div className="hero-content" aria-live={heroPaused ? "polite" : "off"}>
                 <motion.div
                   key={slide}
                   initial={reduced ? false : { opacity: 0, y: 22 }}

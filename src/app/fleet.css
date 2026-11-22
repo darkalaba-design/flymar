@@ -713,6 +713,7 @@
   }
   .autonomy-section {
     grid-template-columns: 1fr;
+    border-top: 40px solid #fff;
   }
   .autonomy-copy {
     padding: var(--fm-space-30) var(--fm-space-24);
